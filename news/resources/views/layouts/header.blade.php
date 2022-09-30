@@ -47,7 +47,7 @@
 
                             <li>
                                 <i class='bx bx-user'></i>
-                                <a href="login.html">Login</a>
+                                <a href="login.html">Loginn</a>
                             </li>
                         </ul>
                     </div>

@@ -14,15 +14,16 @@
           <div class="section-title">
             <h2>تازہ ترین</h2>
           </div>
+          
           <div class="row">
             <div class="col-md-6">
               <a href="">
-                <img alt="breaking news" src="/assets/img/main-news/breaking_news.jpg" / id="breaking_news">
+                <img alt="breaking news" src="{{ $web[0]->image}}" / id="breaking_news">
               </a>
             </div>
             <div class="col-md-6">
               <h3>
-                <a href="">ر ڈھانپنے کی شرط پر خاتون اینکر کا ایرانی صدر کا انٹرویو لینے سے انکار، ایران میں مظاہروں میں 23 ہلاکتیں</a>
+                <a href="">{{ $web[0]->title}}</a>
               </h3>
               <p>ی این این کی اینکر کرسچیئن امان پور نے ایران کے صدر ابراہیم رئیسی کا انٹرویو منسوخ کر دیا کیونکہ صدر چاہتے تھے کہ امان پور اُن کا انٹرویو سر پر سکارف پہن کر کریں۔ دوسری جانب مہسا امینی کی ہلاکت کے بعد شروع ہونے والے مظاہروں میں اب تک 23 افراد ہلاک ہو چکے ہیں جبکہ ملک کے بیشتر حصے میں انٹرنیٹ سروس معطل ہے۔</p>
               <a href="">
@@ -30,6 +31,7 @@
               </a>
             </div>
           </div>
+         
         </div>
       </div>
       <div class="row" style="margin-top: 10px;">

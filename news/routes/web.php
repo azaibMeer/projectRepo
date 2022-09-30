@@ -21,7 +21,7 @@ use App\Http\Controllers\CategoryController;
 // });
 Route::get('/', [WebsiteController::class,'index']);
 Route::get('/contactUs', [ContactUsController::class,'index']);
-Route::get('/', [CategoryController::class,'index']);
+/*Route::get('/', [CategoryController::class,'index']);*/
 
  Route::get('/detail', function () {
      return view('layouts.detail');

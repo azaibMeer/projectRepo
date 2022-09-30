@@ -3,7 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\web;
+use App\Models\Category;
 use Illuminate\Http\Request;
+
+use App\Http\Controllers\WebsiteController;
+
+
+
 
 class WebsiteController extends Controller
 {
@@ -14,8 +20,9 @@ class WebsiteController extends Controller
      */
     public function index()
     {
-        // dd($request);
-        return view("layouts.index");
+        $data['categories'] = Category::get();
+         $data['web'] = web::get();
+         return view('layouts.index',$data );
     }
 
     /**

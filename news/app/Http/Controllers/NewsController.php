@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\web;
+use App\Models\News;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
-use App\Http\Controllers\WebsiteController;
+use App\Http\Controllers\NewsController;
 
 
 
 
-class WebsiteController extends Controller
+class NewsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -21,7 +21,7 @@ class WebsiteController extends Controller
     public function index()
     {
         $data['categories'] = Category::get();
-         $data['web'] = web::get();
+         $data['web'] = News::get();
          return view('layouts.index',$data );
     }
 

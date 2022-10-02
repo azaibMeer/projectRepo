@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Contact;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\CategoryController;
 
 class ContactUsController extends Controller
 {
@@ -14,7 +15,8 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-       return view("layouts.contactUs");
+       $data['categories'] = Category::get();
+       return view("layouts.contactUs",$data);
     }
 
     /**

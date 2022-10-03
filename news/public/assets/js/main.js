@@ -27,6 +27,7 @@ jQuery(function ($) {
 		nav: true,
 		rtl: true,
 		dots: false,
+	
 		autoplayHoverPause: true,
 		autoplay: true,
 		autoplayTimeout: 2000,

@@ -22,6 +22,7 @@ class NewsController extends Controller
     {
         $data['categories'] = Category::get();
          $data['web'] = News::get();
+         
          return view('layouts.index',$data );
     }
 

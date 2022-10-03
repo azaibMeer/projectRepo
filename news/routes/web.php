@@ -14,5 +14,6 @@ Route::get('/', [NewsController::class,'index']);
 Route::get('/contactUs', [ContactUsController::class,'index']);
 
 
- 
-
+Route::get('/detail', function () {
+   return view('layouts.detail');
+});

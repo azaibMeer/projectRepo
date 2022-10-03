@@ -23,7 +23,7 @@
             </div>
             <div class="col-md-6">
               <h3>
-                <a href="">{{ $web[0]->title}}</a>
+                <a href="">{{$web[0]->title}}</a>
               </h3>
               <p>{{ $web[0]->content}}</p>
               <a href="">
@@ -34,15 +34,19 @@
          
         </div>
       </div>
+     
       <div class="row" style="margin-top: 10px;">
+       
+       @for($i=1;$i<=4;$i++)
+
         <div class="col-md-3">
           <div class="card mb-4 box-shadow">
             <a href="">
-              <img class="card-img-top" src="/assets/img/main-news/latest_news_1.jpg">
+              <img class="card-img-top" src="{{$web[$i]->image}}">
             </a>
             <div class="card-body">
               <p class="card-text">
-                <a href="">کشمیر سے بالی وڈ کا رومانس، جس نے کئی فلموں اور گیتوں کو امر کر دیا</a>
+                <a href="">{{$web[$i]->content}}</a>
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="">
@@ -52,177 +56,66 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
-          <div class="card mb-4 box-shadow">
-            <a href="">
-              <img class="card-img-top" src="/assets/img/main-news/latest_news_2.jpg">
-            </a>
-            <div class="card-body">
-              <p class="card-text">
-                <a href="">کشمیر سے بالی وڈ کا رومانس، جس نے کئی فلموں اور گیتوں کو امر کر دیا</a>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="">
-                  <small class="text-muted">ایک گھنٹہ قبل</small>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card mb-4 box-shadow">
-            <a href="">
-              <img class="card-img-top" src="/assets/img/main-news/latest_news_3.jpg">
-            </a>
-            <div class="card-body">
-              <p class="card-text">
-                <a href="">مفتی مینک: سوشل میڈیا پر معروف عالم دین نے پاکستان کا دورہ کیوں کیا؟</a>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="">
-                  <small class="text-muted">ایک گھنٹہ قبل</small>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card mb-4 box-shadow">
-            <a href="">
-              <img class="card-img-top" src="/assets/img/main-news/latest_news_4.jpg">
-            </a>
-            <div class="card-body">
-              <p class="card-text">
-                <a href="">ی این این کی اینکر کرسچیئن امان پور نے ایران کے صدر ابراہیم رئیسی کا انٹرویو</a>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="">
-                  <small class="text-muted">ایک گھنٹہ قبل</small>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card mb-4 box-shadow">
-            <a href="">
-              <img class="card-img-top" src="/assets/img/main-news/latest_news_3.jpg">
-            </a>
-            <div class="card-body">
-              <p class="card-text">
-                <a href="">ی این این کی اینکر کرسچیئن امان پور نے ایران کے صدر ابراہیم رئیسی کا انٹرویو</a>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="">
-                  <small class="text-muted">ایک گھنٹہ قبل</small>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card mb-4 box-shadow">
-            <a href="">
-              <img class="card-img-top" src="/assets/img/main-news/latest_news_4.jpg">
-            </a>
-            <div class="card-body">
-              <p class="card-text">
-                <a href="">ی این این کی اینکر کرسچیئن امان پور نے ایران کے صدر ابراہیم رئیسی کا انٹرویو</a>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="">
-                  <small class="text-muted">ایک گھنٹہ قبل</small>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card mb-4 box-shadow">
-            <a href="">
-              <img class="card-img-top" src="/assets/img/main-news/latest_news_1.jpg">
-            </a>
-            <div class="card-body">
-              <p class="card-text">
-                <a href="">ی این این کی اینکر کرسچیئن امان پور نے ایران کے صدر ابراہیم رئیسی کا انٹرویو</a>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="">
-                  <small class="text-muted">ایک گھنٹہ قبل</small>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="card mb-4 box-shadow">
-            <a href="">
-              <img class="card-img-top" src="/assets/img/main-news/latest_news_2.jpg">
-            </a>
-            <div class="card-body">
-              <p class="card-text">
-                <a href="">ی این این کی اینکر کرسچیئن امان پور نے ایران کے صدر ابراہیم رئیسی کا انٹرویو</a>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                <a href="">
-                  <small class="text-muted">ایک گھنٹہ قبل</small>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+       @endfor
+        
       </div>
+     
       <div class="row">
         <div class="col-md-12">
           <div class="section-title">
             <h2>شہر</h2>
           </div>
           <div class="row">
+            
+            @for($i=5;$i<8;$i++)
             <div class="col-md-4" style="margin-bottom: 10px;">
               <div class="card">
-                <h5 class="card-header">لاہور</h5>
+                <h5 class="card-header">{{$web[$i]->city}}</h5>
                 <div class="card-body">
                   <div class="col-lg-12">
                     <a href="">
-                      <img class="card-img-top" src="/assets/img/main-news/latest_news_2.jpg">
+                      <img class="card-img-top" src="{{$web[$i]->image}}">
                     </a>
                     <p class="card-text">
-                      <a href="">ی این این کی اینکر کرسچیئن امان پور نے ایران کے صدر ابراہیم رئیسی کا انٹرویو</a>
+                      <a href="">{{Str::limit($web[$i]->content, 70, ' ...')}}</a>
                     </p>
                     <aside class="widget-area">
                       <section class="widget widget_latest_news_thumb">
                         <article class="item">
                           <a href="#" class="thumb">
-                            <span class="fullimage cover bg3" role="img">
+                            <span  role="img">
+                              <img  style="height: 100%" src="{{$web[$i]->image}}" >
                             </span>
                           </a>
                           <div class="info">
                             <h4 class="title usmall">
-                              <a href="#">نکر کرسچیئن امان پور نے ایران کے صدر </a>
+                              <a href="#"> {{Str::limit($web[$i]->title, 45, ' ...')}}</a>
                             </h4>
                             <span>ایک گھنٹہ قبل</span>
                           </div>
                         </article>
                         <article class="item">
                           <a href="#" class="thumb">
-                            <span class="fullimage cover bg4" role="img">
+                            <span  role="img">
+                               <img  style="height: 100%" src="{{$web[$i]->image}}" >
                             </span>
                           </a>
                           <div class="info">
                             <h4 class="title usmall">
-                              <a href="#">ن این کی اینکر کرسچیئن امان پور نے </a>
+                              <a href="#">{{Str::limit($web[$i]->title, 45, ' ...')}}</a>
                             </h4>
                             <span>ایک گھنٹہ قبل</span>
                           </div>
                         </article>
                         <article class="item">
                           <a href="#" class="thumb">
-                            <span class="fullimage cover bg5" role="img">
+                            <span  role="img">
+                               <img  style="height: 100%" src="{{$web[$i]->image}}" >
                             </span>
                           </a>
                           <div class="info">
                             <h4 class="title usmall">
-                              <a href="#">ر کرسچیئن امان پور نے ایران کے صدر </a>
+                              <a href="#">{{Str::limit($web[$i]->title, 45, ' ...')}}</a>
                             </h4>
                             <span>ایک گھنٹہ قبل</span>
                           </div>
@@ -237,125 +130,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-4" style="margin-bottom: 10px;">
-              <div class="card">
-                <h5 class="card-header">کراچی</h5>
-                <div class="card-body">
-                  <div class="col-lg-12">
-                    <a href="">
-                      <img class="card-img-top" src="/assets/img/main-news/latest_news_2.jpg">
-                    </a>
-                    <p class="card-text">
-                      <a href="">ی این این کی اینکر کرسچیئن امان پور نے ایران کے صدر ابراہیم رئیسی کا انٹرویو</a>
-                    </p>
-                    <aside class="widget-area">
-                      <section class="widget widget_latest_news_thumb">
-                        <article class="item">
-                          <a href="#" class="thumb">
-                            <span class="fullimage cover bg3" role="img">
-                            </span>
-                          </a>
-                          <div class="info">
-                            <h4 class="title usmall">
-                              <a href="#">نکر کرسچیئن امان پور نے ایران کے صدر </a>
-                            </h4>
-                            <span>ایک گھنٹہ قبل</span>
-                          </div>
-                        </article>
-                        <article class="item">
-                          <a href="#" class="thumb">
-                            <span class="fullimage cover bg4" role="img">
-                            </span>
-                          </a>
-                          <div class="info">
-                            <h4 class="title usmall">
-                              <a href="#">ن این کی اینکر کرسچیئن امان پور نے </a>
-                            </h4>
-                            <span>ایک گھنٹہ قبل</span>
-                          </div>
-                        </article>
-                        <article class="item">
-                          <a href="#" class="thumb">
-                            <span class="fullimage cover bg5" role="img">
-                            </span>
-                          </a>
-                          <div class="info">
-                            <h4 class="title usmall">
-                              <a href="#">ر کرسچیئن امان پور نے ایران کے صدر </a>
-                            </h4>
-                            <span>ایک گھنٹہ قبل</span>
-                          </div>
-                        </article>
-                      </section>
-                    </aside>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <button type="button" class="btn btn-secondary">مزید دیکھے</button>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4" style="margin-bottom: 10px;">
-              <div class="card">
-                <h5 class="card-header">ملتان</h5>
-                <div class="card-body">
-                  <div class="col-lg-12">
-                    <a href="">
-                      <img class="card-img-top" src="/assets/img/main-news/latest_news_2.jpg">
-                    </a>
-                    <p class="card-text">
-                      <a href="">ی این این کی اینکر کرسچیئن امان پور نے ایران کے صدر ابراہیم رئیسی کا انٹرویو</a>
-                    </p>
-                    <aside class="widget-area">
-                      <section class="widget widget_latest_news_thumb">
-                        <article class="item">
-                          <a href="#" class="thumb">
-                            <span class="fullimage cover bg3" role="img">
-                            </span>
-                          </a>
-                          <div class="info">
-                            <h4 class="title usmall">
-                              <a href="#">نکر کرسچیئن امان پور نے ایران کے صدر </a>
-                            </h4>
-                            <span>ایک گھنٹہ قبل</span>
-                          </div>
-                        </article>
-                        <article class="item">
-                          <a href="#" class="thumb">
-                            <span class="fullimage cover bg4" role="img">
-                            </span>
-                          </a>
-                          <div class="info">
-                            <h4 class="title usmall">
-                              <a href="#">ن این کی اینکر کرسچیئن امان پور نے </a>
-                            </h4>
-                            <span>ایک گھنٹہ قبل</span>
-                          </div>
-                        </article>
-                        <article class="item">
-                          <a href="#" class="thumb">
-                            <span class="fullimage cover bg5" role="img">
-                            </span>
-                          </a>
-                          <div class="info">
-                            <h4 class="title usmall">
-                              <a href="#">ر کرسچیئن امان پور نے ایران کے صدر </a>
-                            </h4>
-                            <span>ایک گھنٹہ قبل</span>
-                          </div>
-                        </article>
-                      </section>
-                    </aside>
-                  </div>
-                </div>
-                <div class="card-footer">
-                  <button type="button" class="btn btn-secondary">مزید دیکھے</button>
-
-                </div>
-              </div>
-            </div>
-
+            @endfor
           </div>
         </div>
       </div>

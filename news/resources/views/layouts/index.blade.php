@@ -46,7 +46,7 @@
             </a>
             <div class="card-body">
               <p class="card-text">
-                <a href="">{{$web[$i]->content}}</a>
+                <a href="">{{Str::limit($web[$i]->content, 50, ' ...')}}</a>
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="">
@@ -67,7 +67,7 @@
           </div>
           <div class="row">
             
-            @for($i=5;$i<8;$i++)
+            @for($i=5;$i<=10;$i++)
             <div class="col-md-4" style="margin-bottom: 10px;">
               <div class="card">
                 <h5 class="card-header">{{$web[$i]->city}}</h5>
@@ -76,9 +76,9 @@
                     <a href="">
                       <img class="card-img-top" src="{{$web[$i]->image}}">
                     </a>
-                    <p class="card-text">
-                      <a href="">{{Str::limit($web[$i]->content, 70, ' ...')}}</a>
-                    </p>
+                    <h6 class="card-text">
+                      <a href="">{{Str::limit($web[$i]->title, 70, ' ...')}}</a>
+                    </h6>
                     <aside class="widget-area">
                       <section class="widget widget_latest_news_thumb">
                         <article class="item">
@@ -89,7 +89,7 @@
                           </a>
                           <div class="info">
                             <h4 class="title usmall">
-                              <a href="#"> {{Str::limit($web[$i]->title, 45, ' ...')}}</a>
+                              <a href="#"> {{Str::limit($web[$i]->content, 45, ' ...')}}</a>
                             </h4>
                             <span>ایک گھنٹہ قبل</span>
                           </div>
@@ -102,7 +102,7 @@
                           </a>
                           <div class="info">
                             <h4 class="title usmall">
-                              <a href="#">{{Str::limit($web[$i]->title, 45, ' ...')}}</a>
+                              <a href="#">{{Str::limit($web[$i]->content, 45, ' ...')}}</a>
                             </h4>
                             <span>ایک گھنٹہ قبل</span>
                           </div>
@@ -115,7 +115,7 @@
                           </a>
                           <div class="info">
                             <h4 class="title usmall">
-                              <a href="#">{{Str::limit($web[$i]->title, 45, ' ...')}}</a>
+                              <a href="#">{{Str::limit($web[$i]->content, 45, ' ...')}}</a>
                             </h4>
                             <span>ایک گھنٹہ قبل</span>
                           </div>
@@ -144,46 +144,20 @@
             
             <div class="col-md-12">
              <div class="owl-carousel owl-theme">
-    <div class="item">
-      <a href="">
-      <img src="/assets/img/main-news/image_3.jpg">
-      </a>
-    </div>
-    <div class="item">
-      <a href="">
-      <img src="/assets/img/main-news/image_3.jpg">
-      </a>
-      
-    </div>
-     <div class="item">
-      <a href="">
-      <img src="/assets/img/main-news/image_3.jpg">
-      </a>
-      
-    </div>
-     <div class="item">
-     <a href="">
-      <img src="/assets/img/main-news/image_3.jpg">
-      </a>
-      
-    </div>
-     <div class="item">
-      <a href="">
-      <img src="/assets/img/main-news/image_3.jpg">
-      </a>
-      
-    </div>
-    <div class="item">
-      <a href="">
-      <img src="/assets/img/main-news/image_3.jpg">
-      </a>
-      
-    </div>
-     
-     
-     
-    
-</div>
+                
+                  <div class="item">
+                    <a href="">
+                    <img src="/assets/img/main-news/image_3.jpg">
+                    </a>
+                  </div>
+                  <div class="item">
+                    <a href="">
+                    <img src="/assets/img/main-news/image_3.jpg">
+                    </a>
+                  </div>
+                
+              </div>
+
             </div>
           </div>
         </div>

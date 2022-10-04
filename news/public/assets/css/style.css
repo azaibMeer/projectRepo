@@ -670,7 +670,7 @@ Navbar Area CSS
 }
 
 .main-navbar {
-  background-color: #f6f6f6;
+  background-color: #b90000;
 }
 
 .main-navbar .navbar {
@@ -719,7 +719,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav .nav-item a:hover, .main-navbar .navbar .navbar-nav .nav-item a:focus, .main-navbar .navbar .navbar-nav .nav-item a.active {
-  color: #09101f;
+  color: #ffffff;
   /*background-color: #ff661f;*/
 }
 

@@ -11,7 +11,7 @@ use App\Http\Controllers\CategoryController;
 
 
 Route::get('/', [NewsController::class,'index']);
-Route::get('/contactUs', [ContactUsController::class,'index']);
+Route::get('/contact', [ContactUsController::class,'index']);
 
 
 Route::get('/detail', function () {

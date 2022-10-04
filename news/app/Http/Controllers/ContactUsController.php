@@ -16,7 +16,7 @@ class ContactUsController extends Controller
     public function index()
     {
        $data['categories'] = Category::get();
-       return view("layouts.contactUs",$data);
+       return view("layouts.contact",$data);
     }
 
     /**

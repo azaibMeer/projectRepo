@@ -81,6 +81,7 @@
                     </h6>
                     <aside class="widget-area">
                       <section class="widget widget_latest_news_thumb">
+                        
                         <article class="item">
                           <a href="#" class="thumb">
                             <span  role="img">
@@ -89,37 +90,13 @@
                           </a>
                           <div class="info">
                             <h4 class="title usmall">
-                              <a href="#"> {{Str::limit($web[$i]->content, 45, ' ...')}}</a>
+                              <a href="#">شہریوں کو پاکستان س ریاستوں میں جانے سے کیوں منع کیا؟</a>
                             </h4>
                             <span>ایک گھنٹہ قبل</span>
                           </div>
                         </article>
-                        <article class="item">
-                          <a href="#" class="thumb">
-                            <span  role="img">
-                               <img  style="height: 100%" src="{{$web[$i]->image}}" >
-                            </span>
-                          </a>
-                          <div class="info">
-                            <h4 class="title usmall">
-                              <a href="#">{{Str::limit($web[$i]->content, 45, ' ...')}}</a>
-                            </h4>
-                            <span>ایک گھنٹہ قبل</span>
-                          </div>
-                        </article>
-                        <article class="item">
-                          <a href="#" class="thumb">
-                            <span  role="img">
-                               <img  style="height: 100%" src="{{$web[$i]->image}}" >
-                            </span>
-                          </a>
-                          <div class="info">
-                            <h4 class="title usmall">
-                              <a href="#">{{Str::limit($web[$i]->content, 45, ' ...')}}</a>
-                            </h4>
-                            <span>ایک گھنٹہ قبل</span>
-                          </div>
-                        </article>
+                        
+                        
                       </section>
                     </aside>
                   </div>
@@ -144,17 +121,13 @@
             
             <div class="col-md-12">
              <div class="owl-carousel owl-theme">
-                
+                 @for($i=11;$i<=18;$i++)
                   <div class="item">
                     <a href="">
-                    <img src="/assets/img/main-news/image_3.jpg">
+                    <img src="{{$web[$i]->image}}">
                     </a>
                   </div>
-                  <div class="item">
-                    <a href="">
-                    <img src="/assets/img/main-news/image_3.jpg">
-                    </a>
-                  </div>
+                   @endfor
                 
               </div>
 

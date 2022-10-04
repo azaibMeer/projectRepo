@@ -1,4 +1,4 @@
-<div class="top-header-area">
+<!-- <div class="top-header-area">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
@@ -53,7 +53,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- End Top Header Area -->
 
         <!-- Start Navbar Area -->
@@ -83,7 +83,7 @@
                             
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="{{ url('/') }}" class="nav-link active">
                                        صفحہ اول
                                     </a>
                                     
@@ -96,7 +96,12 @@
                                     
                                 </li>
                         @endforeach
-                                
+                                  <li class="nav-item">
+                                    <a href="{{ url('/contact') }}" class="nav-link active">
+                                        رابطہ کریں
+                                    </a>
+                                    
+                                </li>
                             </ul>
                             
                             <!-- <div class="others-options d-flex align-items-center">

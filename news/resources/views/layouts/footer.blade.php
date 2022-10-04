@@ -76,24 +76,7 @@
                                 </div>
                             </div>
 
-                            <div class="post-content">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="post-image">
-                                            <a href="#">
-                                                <img src="assets/img/recent-post/recent-post-3.jpg" alt="image">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-8">
-                                        <h4>
-                                            <a href="#">مقبوضہ مغربی کنارے پر اسرائیلی فائرنگ سے 4 فلسطینی جاں بحق، 44 زخمی</a>
-                                        </h4>
-                                        <span>28 ستمبر 2022</span>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\News;
 use App\Models\Category;
+use App\Models\City;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\NewsController;
@@ -21,8 +22,13 @@ class NewsController extends Controller
     public function index()
     {
         $data['categories'] = Category::get();
-         $data['web'] = News::get();
-         
+        $data['web'] = News::where('status','1')->
+                            orderBy('news_id','DESC')->take(5)->get();
+
+
+        $data['cities'] = City::where('status','1')->get();
+    
+
          return view('layouts.index',$data );
     }
 

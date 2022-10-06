@@ -46,7 +46,7 @@
             </a>
             <div class="card-body">
               <p class="card-text">
-                <a href="">{{Str::limit($web[$i]->content, 50, ' ...')}}</a>
+                <a href="">{{Str::limit($web[$i]->title, 50, ' ...')}}</a>
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 <a href="">
@@ -67,36 +67,64 @@
           </div>
           <div class="row">
             
-            @for($i=5;$i<=10;$i++)
+            
+            @foreach($cities as $city)
+
+            @php
+              $cityid = $city->id;
+
+
+              $citynews  = App\Models\News::where('city_id',$cityid)
+                            ->where('status','1')
+                            ->orderBy('news_id','DESC')
+                            ->take(5)
+                            ->get();
+
+              if(count($citynews) == 0)
+                continue;
+
+            @endphp
             <div class="col-md-4" style="margin-bottom: 10px;">
               <div class="card">
-                <h5 class="card-header">{{$web[$i]->city}}</h5>
+                <h5 class="card-header">{{$city->city_name}}</h5>
                 <div class="card-body">
                   <div class="col-lg-12">
+                    
                     <a href="">
-                      <img class="card-img-top" src="{{$web[$i]->image}}">
+                      <img class="card-img-top" src="{{$citynews[0]->image}}">
                     </a>
                     <h6 class="card-text">
-                      <a href="">{{Str::limit($web[$i]->title, 70, ' ...')}}</a>
+                      <a href="">
+                        {{Str::limit($citynews[0]->title, 70, ' ...')}}
+                      </a>
                     </h6>
+
                     <aside class="widget-area">
                       <section class="widget widget_latest_news_thumb">
-                        
+                        @for($i=1;  $i<=4; $i++)
+
+                          @php
+                            if(!isset($citynews[$i]))
+                              continue;
+                          @endphp
                         <article class="item">
                           <a href="#" class="thumb">
                             <span  role="img">
-                              <img  style="height: 100%" src="{{$web[$i]->image}}" >
+                              <img  style="height: 100%" src="{{$citynews[$i]->image}}" >
                             </span>
                           </a>
                           <div class="info">
                             <h4 class="title usmall">
-                              <a href="#">شہریوں کو پاکستان س ریاستوں میں جانے سے کیوں منع کیا؟</a>
+                              <a href="#">
+                        {{Str::limit($citynews[$i]->title, 40, ' ...')}}
+                                
+                              </a>
                             </h4>
                             <span>ایک گھنٹہ قبل</span>
                           </div>
                         </article>
                         
-                        
+                        @endfor
                       </section>
                     </aside>
                   </div>
@@ -107,12 +135,12 @@
                 </div>
               </div>
             </div>
-            @endfor
+            @endforeach
           </div>
         </div>
       </div>
       
-      <div class="row" style="margin-top: 15px;">
+       <div class="row" style="margin-top: 15px;">
         <div class="col-md-12">
           <div class="section-title">
             <h2> پروگرام </h2>
@@ -121,14 +149,16 @@
             
             <div class="col-md-12">
              <div class="owl-carousel owl-theme">
-                 @for($i=11;$i<=18;$i++)
-                  <div class="item">
+                <div class="item">
                     <a href="">
-                    <img src="{{$web[$i]->image}}">
+                    <img src="/assets/img/main-news/image_3.jpg">
                     </a>
                   </div>
-                   @endfor
-                
+                  <div class="item">
+                    <a href="">
+                    <img src="/assets/img/main-news/image_3.jpg">
+                    </a>
+                  </div>
               </div>
 
             </div>

@@ -106,12 +106,12 @@ img {
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   color: #09101f;
   font-family: system-ui;
-  font-weight: 500;
-  line-height: 30px;
+
+  
 }
 
 .h1:last-child, .h2:last-child, .h3:last-child, .h4:last-child, .h5:last-child, .h6:last-child, h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:last-child {
-  margin-bottom: 0;
+
 }
 
 .pt-100 {
@@ -460,7 +460,7 @@ Section Title CSS
 Top Header Area CSS
 =================================================*/
 .top-header-area {
-  background-color: #cf0832;
+  background-color:#0d0657;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -536,15 +536,15 @@ Top Header Area CSS
   line-height: 30px;
   text-align: center;
   background-color: #ffffff;
-  color: #ff661f;
+  color: #0d0657;
   font-size: 16px;
-  border-radius: 50px;
+  
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .top-header-social li a i:hover {
-  background-color: #ff661f;
+  background-color: #cc0303;
   color: #ffffff;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
@@ -573,7 +573,7 @@ Top Header Area CSS
 .top-header-others li i {
   position: absolute;
   left: 0;
-  color: #ff661f;
+  color: #ffffff;
   top: 4px;
 }
 
@@ -582,7 +582,7 @@ Top Header Area CSS
 }
 
 .top-header-others li a:hover {
-  color: #ff661f;
+  color: #cc0303;
 }
 
 .top-header-others .languages-list .nice-select {
@@ -670,7 +670,7 @@ Navbar Area CSS
 }
 
 .main-navbar {
-  background-color: #b90000;
+  background-color: #cc0303;
 }
 
 .main-navbar .navbar {
@@ -725,7 +725,7 @@ Navbar Area CSS
 
 .main-navbar .navbar .navbar-nav .nav-item:hover a, .main-navbar .navbar .navbar-nav .nav-item.active a {
   color: #ffffff;
-  background-color: #ff661f;
+  background-color: #0d0657;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item .dropdown-menu {
@@ -1155,10 +1155,10 @@ Navbar Area CSS
             box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
   }
   .main-responsive-nav .mean-container a.meanmenu-reveal {
-    color: #09101f;
+    color: #ffffff;
   }
   .main-responsive-nav .mean-container a.meanmenu-reveal span {
-    background: #09101f;
+    background: #ffffff;
     position: relative;
   }
   .main-responsive-nav .logo {
@@ -1168,7 +1168,7 @@ Navbar Area CSS
     max-width: 100px !important;
   }
   .navbar-area {
-    background-color: #ffffff;
+    background-color: #cc0303;
     -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
             box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
     padding-top: 15px;
@@ -4408,7 +4408,7 @@ Page Title CSS
   display: inline-block;
   margin-left: 15px;
   font-weight: 400;
-  color: #ff661f;
+  color: #000000;
   position: relative;
 }
 
@@ -5659,18 +5659,18 @@ News Details Area CSS
 
 .article-footer .article-share .social li a {
   display: block;
-  color: #dc472e;
+  color: #1b1464;
   width: 30px;
   height: 30px;
   line-height: 34px;
-  border-radius: 50%;
+  
   background-color: #eeeef0;
   text-align: center;
 }
 
 .article-footer .article-share .social li a:hover {
   color: #ffffff;
-  background-color: #dc472e;
+  background-color: #cc0303;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
 }

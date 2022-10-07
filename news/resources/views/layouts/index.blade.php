@@ -27,7 +27,7 @@
               <h3>
                 <a href="{{url('/detail/'.$web[0]->news_id)}}">{{$web[0]->title}}</a>
               </h3>
-              <p>{{ $web[0]->content}}</p>
+              <p> {{Str::limit($web[0]->content, 250, ' ...')}}</p>
               
                 <small class="text-muted">{{ $web[0]->created_at}}</small>
            

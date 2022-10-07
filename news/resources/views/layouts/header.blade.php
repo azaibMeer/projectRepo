@@ -63,7 +63,7 @@
                     <div class="main-responsive-menu">
                         <div class="logo">
                             <a href="index.html">
-                            <img src="assets/img/logo/pak_awami.png" class="black-logo" alt="image">
+                            <img src="{{url('assets/img/logo/pak_awami.png')}}" class="black-logo" alt="image">
                                
                             </a>
                         </div>
@@ -90,7 +90,7 @@
                                 </li>
                                 @foreach($categories as $category)
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="{{url('category/'.$category->category_id)}}" class="nav-link active">
                                         {{ $category->name }}
                                     </a>
                                     

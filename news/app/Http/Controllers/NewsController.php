@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\News;
 use App\Models\Category;
 use App\Models\City;
+use App\Models\Program;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\NewsController;
@@ -27,6 +28,7 @@ class NewsController extends Controller
 
 
         $data['cities'] = City::where('status','1')->get();
+        $data['programs'] = Program::where('status','1')->get();
     
 
          return view('layouts.index',$data );

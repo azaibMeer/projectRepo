@@ -149,16 +149,13 @@
             
             <div class="col-md-12">
              <div class="owl-carousel owl-theme">
+              @foreach($programs as $program)
                 <div class="item">
                     <a href="">
-                    <img src="/assets/img/main-news/image_3.jpg">
+                    <img src="{{$program->image}}">
                     </a>
                   </div>
-                  <div class="item">
-                    <a href="">
-                    <img src="/assets/img/main-news/image_3.jpg">
-                    </a>
-                  </div>
+                  @endforeach
               </div>
 
             </div>

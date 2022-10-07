@@ -1,4 +1,4 @@
-<!-- <div class="top-header-area">
+ <div class="top-header-area">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
@@ -34,7 +34,7 @@
                     <div class="col-lg-6">
                         <ul class="top-header-others">
                             <li>
-                                <div class="languages-list">
+                                <!-- <div class="languages-list">
                                     <select>
                                         <option value="1">English</option>
                                         <option value="2">العربيّة</option>
@@ -42,18 +42,18 @@
                                         <option value="3">Português</option>
                                         <option value="3">简体中文</option>
                                     </select>
-                                </div>
+                                </div> -->
                             </li>
 
                             <li>
                                 <i class='bx bx-user'></i>
-                                <a href="login.html">Loginn</a>
+                                <a href="login.html">Login</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div> 
         <!-- End Top Header Area -->
 
         <!-- Start Navbar Area -->

@@ -5,7 +5,7 @@
 <div class="page-title-area">
             <div class="container">
                 <div class="page-title-content">
-                    <h2> پانچواں T20:مڈل آرڈر بری طرح ناکام، پاکستان کا انگلینڈ کو جیف</h2>
+                    <h2>{{ $web->title}}</h2>
                     <ul>
                         <li><a href="index.html">
                                         صفحہ اول</a></li>
@@ -20,20 +20,12 @@
                     <div class="col-lg-12 col-md-12">
                         <div class="blog-details-desc">
                             <div class="article-image">
-                                <img src="assets/img/news-details/news-details-3.jpg" alt="image">
+                                <img src="{{ $web->image}}" alt="image">
                             </div>
         
                             <div class="article-content">
-                                <span>  28 ستمبر 2022 / <a href="#">کمینٹ</a></span>
-                                <h3>7 میچز پر مشتمل سیریز کے پانچویں ٹی ٹوئنٹی میں  پاکستان نے انگلینڈ کو جیت کیلئے 146 رنز کا ہدف دیا ہے۔.</h3>
-        
-                                <p>پاکستان کی پوری ٹیم19 اوورز میں145 رنز پر آؤٹ ہوگئی، محمد رضوان 46 گیندوں پر 63 رنز بناکر نمایاں رہے۔
-
-قذافی اسٹیڈیم لاہور میں کھیلے جارہے میچ میں انگلینڈ کے کپتان معین علی نے ٹاس جیت کر پاکستان کو پہلے بیٹنگ کی دعوت  دی۔
-
-انگلش ٹیم میں 4 جبکہ پاکستان ٹیم میں 3 تبدیلیاں کی گئی ہیں،گرین شرٹس کی جانب سے  آل راؤنڈر عامر جمال انٹرنیشنل ڈیبیو کررہے ہیں، اس کے علاوہ نائب کپتان شاداب خان اور حیدر علی کی فائنل الیون میں واپسی ہوئی ہے۔
-
-عثمان قادر،خوشدل شاہ اور فاسٹ بولر محمد حسنین کو آج آرام دیا گیا ہے۔</p>
+                                <span>{{ $web->created_at}}</span>
+                                <p>{{ $web->content}}</p>
                                 
                                 
                             </div>
@@ -67,7 +59,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="politics-news">
+                <!-- <div class="politics-news">
                     <div class="section-title"> 
                         <h2>مزید خبریں :</h2> 
                     </div>
@@ -144,7 +136,7 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
         @endsection

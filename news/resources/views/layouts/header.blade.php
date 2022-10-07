@@ -75,7 +75,7 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-md navbar-light">
                         <a class="navbar-brand" href="{{ url('/') }}">
-                            <img src="assets/img/logo/pak_awami.png" class="black-logo" alt="image">
+                            <img src="{{ url('assets/img/logo/pak_awami.png') }}" class="black-logo" alt="image">
                             
                         </a>
 

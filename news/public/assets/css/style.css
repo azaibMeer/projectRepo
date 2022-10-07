@@ -5583,8 +5583,9 @@ News Details Area CSS
 }
 
 .blog-details-desc .article-content p {
-  font-size: 15px;
-  font-weight: 400;
+  font-size: 1rem;
+  color:black;
+  line-height: 28px;
 }
 
 .blog-details-desc .article-content .features-list {

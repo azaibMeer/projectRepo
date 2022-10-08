@@ -13,9 +13,11 @@ class CategoryDetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        $data['categories'] = Category::get();
+        $data['categories'] = Category::where('status','1')->get();
+       $data['web'] = News::where('category_id',$id)->
+                            orderBy('news_id','DESC')->take(6)->get();
         
         return view('layouts.category_detail',$data);
     }

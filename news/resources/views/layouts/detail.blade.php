@@ -33,7 +33,7 @@
                             </div>
         
                             <div class="article-content">
-                                <span>{{ $web->created_at}}</span>
+                                <span>{{ $web->created_at->format('M/d/Y')}}</span>
                                 <p>{{ $web->content}}</p>
                                 
                                 

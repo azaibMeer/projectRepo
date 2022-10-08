@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\News;
 
 class CategoryDetailController extends Controller
 {
@@ -15,6 +16,7 @@ class CategoryDetailController extends Controller
     public function index()
     {
         $data['categories'] = Category::get();
+        
         return view('layouts.category_detail',$data);
     }
 

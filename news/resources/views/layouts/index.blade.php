@@ -29,7 +29,7 @@
               </h3>
               <p> {{Str::limit($web[0]->content, 250, ' ...')}}</p>
               
-                <small class="text-muted">{{ $web[0]->created_at}}</small>
+                <small class="text-muted">{{ $web[0]->created_at->format('M/d/Y')}}</small>
            
             </div>
           </div>
@@ -52,7 +52,7 @@
               </p>
               <div class="d-flex justify-content-between align-items-center">
                 
-                  <small class="text-muted">{{ $web[$i]->created_at}}</small>
+                  <small class="text-muted">{{ $web[$i]->created_at->format('M/d/Y')}}</small>
               
               </div>
             </div>
@@ -122,7 +122,7 @@
                                 
                               </a>
                             </h4>
-                            <span>ایک گھنٹہ قبل</span>
+                            <span>{{ $citynews[$i]->created_at->format('M/d/Y')}}</span>
                           </div>
                         </article>
                         
@@ -153,7 +153,7 @@
              <div class="owl-carousel owl-theme">
               @foreach($programs as $program)
                 <div class="item">
-                    <a href="{{url('/detail/'.$program->id)}}">
+                    <a href="{{url('program/'.$program->id)}}">
                     <img src="{{$program->image}}">
                     </a>
                   </div>

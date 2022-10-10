@@ -47,7 +47,7 @@
 
                             <li>
                                 <i class='bx bx-user'></i>
-                                <a href="login.html">Login</a>
+                                <a href="{{url('login')}}">Login</a>
                             </li>
                         </ul>
                     </div>

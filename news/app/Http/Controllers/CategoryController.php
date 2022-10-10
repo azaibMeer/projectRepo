@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\News;
 
-class CategoryDetailController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,9 +15,11 @@ class CategoryDetailController extends Controller
      */
     public function index($id)
     {
-         $data['categories'] = Category::get();
-         $data['web'] = News::where('news_id',$id)->first();
-        return view("layouts.category_detail",$data);
+        $data['categories'] = Category::where('status','1')->get();
+       $data['web'] = News::where('category_id',$id)->
+                            orderBy('news_id','DESC')->take(6)->get();
+        
+        return view('layouts.category',$data);
     }
 
     /**

@@ -4,7 +4,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="single-footer-widget">
                             <a href="#">
-                                <img src="assets/img/logo/pak_awami.png" alt="image">
+                                <img src="{{url('assets/img/logo/pak_awami.png')}}" alt="image">
                             </a>
                             <p>جولائی دو ہزار دو میں لانچ ہونے کے بعد بی بی سی اردو ڈاٹ کام نے نیوز ویب سائٹوں میں اپنا ایک منفرد مقام بنا لیا ہے۔</p>
 

@@ -62,7 +62,7 @@
                 <div class="container">
                     <div class="main-responsive-menu">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{{url('/')}}">
                             <img src="{{url('assets/img/logo/pak_awami.png')}}" class="black-logo" alt="image">
                                
                             </a>

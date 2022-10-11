@@ -21,7 +21,11 @@
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div class="login_screen">
             
-
+@if ($error = $errors->first('password'))
+  <div class="alert alert-danger">
+    {{ $error }}
+  </div>
+@endif
             <h2>Please Login</h2>
             
             <p>Login in. To Pak Awami News.</p>

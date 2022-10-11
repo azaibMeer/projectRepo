@@ -1509,8 +1509,9 @@ button:focus {
   outline: 0 !important;
 }
 .btn {
-  border-radius: 3px;
+  border-radius: 0px;
   font-size: inherit;
+  background-color: #304151;
 }
 .btn:focus {
   box-shadow: none;
@@ -4883,7 +4884,7 @@ code {
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
-  background-color: #ffffff;
+  background-color: #2f4050;
   border-color: #e7eaec;
   border-image: none;
   border-style: solid solid none;
@@ -4894,6 +4895,7 @@ code {
   min-height: 48px;
   position: relative;
   clear: both;
+  color:white;
 }
 .ibox-content {
   background-color: #ffffff;

@@ -31,9 +31,9 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Categories</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Category</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="table_basic.html">Add</a></li>
+                            <li><a href="{{url('/create')}}">Add</a></li>
                             <li><a href="table_data_tables.html">List</a></li>
                             
                         </ul>

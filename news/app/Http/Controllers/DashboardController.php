@@ -16,12 +16,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        /*if(Auth::User()){
+        if(Auth::User()){
          return view("dashboard.welcome");
     }
     else{
         return redirect("/login");
-        }*/
+        }
        
     }
 

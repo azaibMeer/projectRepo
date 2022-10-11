@@ -15,7 +15,7 @@ class CategoryDetailController extends Controller
      */
     public function index($id)
     {
-         $data['categories'] = Category::get();
+        $data['categories'] = Category::where('status','1')->get();
          $data['web'] = News::where('news_id',$id)->first();
         return view("layouts.category_detail",$data);
     }

@@ -30,7 +30,7 @@
 
         <div id="page-wrapper" class="gray-bg dashbard-1">
         @include('dashboard.header')
-       
+        @yield('content')
         @include('dashboard.footer')
                 
         

@@ -15,7 +15,7 @@ class ContactUsController extends Controller
      */
     public function index()
     {
-       $data['categories'] = Category::get();
+       $data['categories'] = Category::where('status','1')->get();
        return view("layouts.contact",$data);
     }
 

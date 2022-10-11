@@ -30,6 +30,8 @@ Route::get('category/detail/{id}', [CategoryDetailController::class,'index']);
 Route::get('/dashboard', [DashboardController::class,'index']);
 Route::get('/login', [AuthController::class,'index'])->name('login');
 Route::post('/dashboard', [AuthController::class,'login']);
+Route::get('/create', [CategoryController::class,'create']);
+Route::post('/store', [CategoryController::class,'store']);
 
 
 		

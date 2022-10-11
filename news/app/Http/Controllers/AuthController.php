@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\MessageBag;
     
 use App\Models\User;
 use Auth;
@@ -26,7 +26,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
        /*dd($request);*/
-
+       $errors = new MessageBag;
        $request->validate([
 
         'email' => 'required',
@@ -40,12 +40,14 @@ class AuthController extends Controller
         $user = Auth::User();
         
         return view("dashboard.welcome");
-        //$request->session()->regenerate();
+        
         
        }
        else {
-        return redirect("/login");
-       }
+         
+            $errors = new MessageBag(['password' => ['Email or Password is invalid.']]); 
+            return redirect('/login')->withErrors($errors);
+            }
     }
 
   

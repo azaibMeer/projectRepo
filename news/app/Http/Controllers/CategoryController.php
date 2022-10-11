@@ -29,7 +29,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view("dashboard.category.add");
     }
 
     /**
@@ -40,7 +40,18 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $request->validate([
+
+        'category_name' => 'required'
+
+       ]);
+
+        $categories = new Category();
+        $categories->name = $request->category_name;
+        $categories->save();
+        return back()->with('success', 'Data inserted Successfully');
+        
     }
 
     /**

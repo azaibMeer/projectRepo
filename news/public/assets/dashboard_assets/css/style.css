@@ -11,7 +11,10 @@
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg') format('svg');
 }
-
+.category_add{
+  margin-top:35px;
+  margin-left:60%;
+}
 .login_screen{
   background-color: white;
   padding: 10px;
@@ -1509,9 +1512,9 @@ button:focus {
   outline: 0 !important;
 }
 .btn {
-  border-radius: 0px;
+  
   font-size: inherit;
-  background-color: #304151;
+  
 }
 .btn:focus {
   box-shadow: none;

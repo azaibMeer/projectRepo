@@ -2,7 +2,7 @@
 @section('content')
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
-                    <h2>Update Category</h2>
+                    <h2>Edit Category</h2>
                     
                 </div>
                 
@@ -15,7 +15,7 @@
                 <div class="col-lg-5">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h3>Edit Category</h3>
+                            <h5>Edit Category</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -47,7 +47,7 @@
                                 
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        <button class="btn btn-lg btn-secondary" type="submit">Update</button>
+                                        <button class="btn btn-lg btn-success" type="submit">Update</button>
                                     </div>
                                 </div>
                             </form>

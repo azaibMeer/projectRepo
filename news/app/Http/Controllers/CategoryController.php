@@ -71,8 +71,13 @@ class CategoryController extends Controller
      */
     public function show()
     {
-       $data['categories'] = Category::get();
-        return view("dashboard.category.list",$data);
+        if(Auth::User()){
+            $data['categories'] = Category::get();
+            return view("dashboard.category.list",$data);
+        }else{
+            return redirect('/login');
+        }
+       
     }
 
     /**
@@ -116,6 +121,6 @@ class CategoryController extends Controller
     {
         $category = Category::find($id);
         $category->delete();
-        return redirect('/categories/list')->with('success', 'Category delete Successfully');
+        return redirect('/categories/list')->with('danger', 'Category delete Successfully');
     }
 }

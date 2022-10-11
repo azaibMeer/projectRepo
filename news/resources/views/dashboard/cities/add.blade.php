@@ -2,23 +2,23 @@
 @section('content')
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-8">
-                    <h2>Add Categories</h2>
+                    <h2>Add Cities</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="{{url('/dashboard')}}">Home</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{url('categories/create')}}">Forms</a>
+                            <a href="{{url('cities/create')}}">Forms</a>
                         </li>
                         <li class="breadcrumb-item active">
-                            <strong>Category</strong>
+                            <strong>cities</strong>
                         </li>
                     </ol>
                 </div>
                 <div class="col-lg-4">
-                    <a href="{{url('/categories/list')}}" class="btn-secondary btn btn-lg category_add">
+                    <a href="{{url('/cities/list')}}" class="btn-secondary btn btn-lg category_add">
                     
-                    Category List
+                    Cities List
                     </a>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                 <div class="col-lg-5">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Add Category</h5>
+                            <h5>Add City</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -50,18 +50,18 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="post" action="{{url('/categories/store')}}">
+                            <form method="post" action="{{url('/cities/store')}}">
                                 @csrf
-                                <div class="form-group row"><label class="col-lg-4 col-form-label"><strong>Category Name</strong></label>
+                                <div class="form-group row"><label class="col-lg-4 col-form-label"><strong>City Name</strong></label>
 
-                                    <div class="col-lg-8"><input type="name" placeholder="Enter Category" class="form-control" name="category_name" required> 
+                                    <div class="col-lg-8"><input type="name" placeholder="Enter City" class="form-control" name="city_name" required> 
                                     </div>
                                 </div>
                                 
                                 
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        <button class="btn btn-lg btn-success" type="submit">Add Category</button>
+                                        <button class="btn btn-lg btn-success" type="submit">Add City</button>
                                     </div>
                                 </div>
                             </form>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\News;
+use Auth;
 
 class CategoryController extends Controller
 {
@@ -29,7 +30,12 @@ class CategoryController extends Controller
      */
     public function create()
     {
+        if(Auth::User()){
         return view("dashboard.category.add");
+    }else{
+        return redirect('/login');
+    }
+
     }
 
     /**
@@ -50,7 +56,7 @@ class CategoryController extends Controller
         $categories = new Category();
         $categories->name = $request->category_name;
         $categories->save();
-        return back()->with('success', 'Data inserted Successfully');
+        return back()->with('success', 'Category inserted Successfully');
         
     }
 
@@ -60,9 +66,10 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+       $data['categories'] = Category::get();
+        return view("dashboard.category.list",$data);
     }
 
     /**

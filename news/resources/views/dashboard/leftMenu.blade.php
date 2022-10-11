@@ -34,7 +34,7 @@
                         <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Category</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{url('/create')}}">Add</a></li>
-                            <li><a href="table_data_tables.html">List</a></li>
+                            <li><a href="{{url('/list')}}">List</a></li>
                             
                         </ul>
                     </li>

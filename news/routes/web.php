@@ -32,6 +32,7 @@ Route::get('/login', [AuthController::class,'index'])->name('login');
 Route::post('/dashboard', [AuthController::class,'login']);
 Route::get('/create', [CategoryController::class,'create']);
 Route::post('/store', [CategoryController::class,'store']);
+Route::get('/list', [CategoryController::class,'show']);
 
 
 		

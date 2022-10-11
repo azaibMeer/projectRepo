@@ -33,8 +33,8 @@
                     <li>
                         <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Category</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/create')}}">Add</a></li>
-                            <li><a href="{{url('/list')}}">List</a></li>
+                            <li><a href="{{url('/categories/create')}}">Add</a></li>
+                            <li><a href="{{url('/categories/list')}}">List</a></li>
                             
                         </ul>
                     </li>

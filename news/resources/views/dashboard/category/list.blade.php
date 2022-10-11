@@ -4,23 +4,22 @@
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-10">
                     <h2>Categories</h2>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item">
-                            <a href="{{url('/dashboard')}}">Home</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a href="{{url('/list')}}">Tables</a>
-                        </li>
-                        <li class="breadcrumb-item active">
-                            <strong>Categories</strong>
-                        </li>
-                    </ol>
+                    
                 </div>
-                <div class="col-lg-2">
+                
 
-                </div>
             </div>
             <div class="wrapper wrapper-content animated fadeInRight">
+                <div class="row">
+            <div class="col-lg-12">
+                 @if(session()->has('success'))
+    <div class="alert alert-success">
+        {{ session()->get('success') }}
+    </div>
+   
+@endif
+            </div>
+          </div>
             <div class="row">
                 <div class="col-lg-12">
                 <div class="ibox ">
@@ -47,8 +46,8 @@
                     <div class="ibox-content">
 
                         <div class="table-responsive">
-                    <table class="table table-striped table-bordered table-hover dataTables-example" >
-                    <thead>
+                    <table class="table  table-bordered table-hover dataTables-example" >
+                    <thead >
                     <tr>
                         <th>category id </th>
                         <th>category name</th>
@@ -62,12 +61,24 @@
                     <tr class="gradeU">
                         <td>{{$category->category_id}}</td>
                         <td>{{$category->name}}</td>
-                        <td>{{$category->status}}</td>
+                        <td>
+                            @if($category->status == "0")
+                            <span class="label label-danger">Inactive</span>
+                            @else
+                            <span class="label label-primary">Active</span>
+                            @endif
+
+                        </td>
                         <td class="text-right">
                                 <div class="btn-group">
-                                      <button class="btn-secondary btn btn-xs">
-                                       Edit  <i class="fa fa-edit"></i></button>
-                                      <button class="btn-danger btn btn-xs">Delete  <i class="fa fa-trash" aria-hidden="true"></i></button>
+                                    <a href="{{url('/categories/edit/'.$category->category_id)}}" class="btn-secondary btn btn-xs">
+                                         <i class="fa fa-edit"></i>
+                                    </a>
+                                    &nbsp
+                                    <a href="{{url('/categories/delete/'.$category->category_id)}}" class="btn-danger btn btn-xs">
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                               
                                 </div>
                         </td>
                     </tr>

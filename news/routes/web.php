@@ -30,9 +30,12 @@ Route::get('category/detail/{id}', [CategoryDetailController::class,'index']);
 Route::get('/dashboard', [DashboardController::class,'index']);
 Route::get('/login', [AuthController::class,'index'])->name('login');
 Route::post('/dashboard', [AuthController::class,'login']);
-Route::get('/create', [CategoryController::class,'create']);
-Route::post('/store', [CategoryController::class,'store']);
-Route::get('/list', [CategoryController::class,'show']);
+Route::get('/categories/create', [CategoryController::class,'create']);
+Route::post('/categories/store', [CategoryController::class,'store']);
+Route::get('/categories/list', [CategoryController::class,'show']);
+Route::get('/categories/edit/{id}', [CategoryController::class,'edit']);
+Route::post('/categories/update/{id}', [CategoryController::class,'update']);
+Route::get('/categories/delete/{id}', [CategoryController::class,'destroy']);
 
 
 		

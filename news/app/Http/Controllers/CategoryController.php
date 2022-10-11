@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\News;
 use Auth;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class CategoryController extends Controller
 {
@@ -55,8 +57,9 @@ class CategoryController extends Controller
 
         $categories = new Category();
         $categories->name = $request->category_name;
+        $categories->status = "0";
         $categories->save();
-        return back()->with('success', 'Category inserted Successfully');
+        return redirect('/categories/list')->with('success', 'Category inserted Successfully');
         
     }
 
@@ -80,7 +83,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        $data['categories'] = Category::where('category_id',$id)->first();
+        return view("dashboard.category.edit",$data);
     }
 
     /**
@@ -90,9 +94,16 @@ class CategoryController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
-        //
+        //dd($request);
+        
+        //$data['categories'] = Category::where('category_id',$id)->first();
+        $category = Category::find($id);
+        $category->name = $request->category_name;
+        $category->update();
+        return redirect('/categories/list')->with('success', 'Category Updated Successfully');
+
     }
 
     /**
@@ -103,6 +114,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::find($id);
+        $category->delete();
+        return redirect('/categories/list')->with('success', 'Category delete Successfully');
     }
 }

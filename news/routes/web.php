@@ -51,7 +51,8 @@ Route::get('/cities/delete/{id}', [CityController::class,'destroy']);
 // News routes // 
 Route::get('/news/create', [NewsController::class,'create']);
 Route::post('/news/store', [NewsController::class,'store']);
-/*Route::get('/news/list', [NewsController::class,'show']);
+Route::get('/news/list', [NewsController::class,'show']);
+/*
 Route::get('/news/edit/{id}', [NewsController::class,'edit']);
 Route::post('/news/update/{id}', [NewsController::class,'update']);
 Route::get('/news/delete/{id}', [NewsController::class,'destroy']);*/

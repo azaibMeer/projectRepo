@@ -25,20 +25,20 @@
 <div class="wrapper wrapper-content animated fadeInRight">
           
             <div class="row">
- <div class="col-lg-12">
+                            <div class="col-lg-12">
                  @if(session()->has('success'))
-    <div class="alert alert-success">
-        {{ session()->get('success') }}
-    </div>
-   @elseif(session()->has('danger'))
-   <div class="alert alert-danger">
-        {{ session()->get('danger') }}
-    </div>
-@endif
-
+                 <div class="alert alert-success">
+                 {{ session()->get('success') }}
             </div>
+                @elseif(session()->has('danger'))
+            <div class="alert alert-danger">
+                {{ session()->get('danger') }}
+            </div>
+            @endif
             
-                <div class="col-lg-10">
+        </div>
+
+          <div class="col-lg-10">
                     <div class="ibox ">
                         <div class="ibox-title">
                             <h5>Add News</h5>
@@ -76,7 +76,7 @@
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label"><strong>News Image</strong></label>
 
-                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" required><span>File Must be 2Mb</span>
+                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" required><span>File Must be 1920 px by 1000 px</span>
 
                                     </div> 
                                     <!--  <label class="col-lg-2 col-form-label"><strong>Select City</strong></label>

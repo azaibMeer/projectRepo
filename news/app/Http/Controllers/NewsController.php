@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\City;
 use App\Models\Program;
 use Illuminate\Http\Request;
+use Validator;
 
 use App\Http\Controllers\NewsController;
 
@@ -54,35 +55,40 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        
          $request->validate([
 
         'title' => 'required',
         'content' => 'required',
-        /*'image' => 'dimensions:width=330,height=215'*/
-
-        
-
-       ]);
-
+         ]);
+       
         $news = new News();
         $news->title = $request->title;
         $news->content = $request->content;
         $news->status = "0";
-        $cheackImg = $request->image;
-
+        
         if($request->hasfile('image')){
             
             $file = $request->file('image');
+            
+            $fileArray = array('image'=>$file);
+            $rules = array(
+                'image' => 'required|image|dimensions:width=1920,height=1000'
+            );
+            $validator = Validator::make($fileArray,$rules);
+            if($validator->fails()){
+                 return redirect('/news/create')->with('danger', 'image Must Contain 1920 by 1000px ... News Not Added Successfully');
+            }else{
             $imageName = $file->GetClientOriginalName();
             $filename = 'assets/img/main-news/'.$imageName;
             $file->move('assets/img/main-news/', $filename);
             $news->image = $filename;
+            }
+            
         }
 
         $news->save();
-        return redirect('/news/create')->with('success', 'News inserted Successfully');
-
+        return redirect('/news/list')->with('success', 'News inserted Successfully');
 
       
     }
@@ -93,9 +99,9 @@ class NewsController extends Controller
      * @param  \App\Models\web  $web
      * @return \Illuminate\Http\Response
      */
-    public function show(web $web)
+    public function show()
     {
-        //
+        return view("dashboard.news.list");
     }
 
     /**

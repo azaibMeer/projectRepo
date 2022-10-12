@@ -19,9 +19,12 @@ class CategoryController extends Controller
     public function index($id)
     {
         $data['categories'] = Category::where('status','1')->get();
-       $data['web'] = News::where('category_id',$id)->
+       
+       $data['news'] = News::join('categories','categories.category_id','news.category_id')->select('categories.*','news.*')->where('news.category_id',$id)->orderBy('news_id','DESC')->first();
+       
+       $data['web'] = News::where('news.category_id',$id)->
                             orderBy('news_id','DESC')->take(6)->get();
-        
+        // dd($data);
         return view('layouts.category',$data);
     }
 

@@ -41,23 +41,23 @@
        
        @for($i=1;$i<=4;$i++)
 
-        <div class="col-md-3">
-          <div class="card mb-4 box-shadow">
-            <a href="{{url('/detail/'.$web[$i]->news_id)}}">
-              <img class="card-img-top" src="{{$web[$i]->image}}">
-            </a>
-            <div class="card-body">
-              <p class="card-text">
-                <a href="{{url('/detail/'.$web[$i]->news_id)}}">{{Str::limit($web[$i]->title, 50, ' ...')}}</a>
-              </p>
-              <div class="d-flex justify-content-between align-items-center">
-                
-                  <small class="text-muted">{{ $web[$i]->created_at->format('M/d/Y')}}</small>
-              
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="col-lg-3 col-md-6">
+                            <div class="single-politics-news">
+                                <div class="politics-news-image">
+                                    <a href="{{url('/detail/'.$web[$i]->news_id)}}">
+                                        <img src="{{url($web[$i]->image)}}" alt="image">
+                                    </a>
+                                </div>
+                                
+                                <div class="politics-news-content">
+                                   
+                                    <h3>
+                                        <a href="{{url('/detail/'.$web[$i]->news_id)}}">{{Str::limit($web[$i]->title, 50, ' ...')}}</a>
+                                    </h3>
+                                     <span>{{ $web[$i]->created_at->format('M/d/Y')}}</span>
+                                </div>
+                            </div>
+                        </div>
        @endfor
         
       </div>

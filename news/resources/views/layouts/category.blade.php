@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="politics-news">
                     <div class="section-title"> 
-                        <h2></h2> 
+                        <h2>{{$news->name}}</h2> 
                     </div>
 
                     <div class="row">

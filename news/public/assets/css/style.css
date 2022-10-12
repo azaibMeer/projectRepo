@@ -1845,7 +1845,7 @@ Default News Area CSS
 .single-politics-news .politics-news-content span {
   font-size: 14px;
   font-weight: 500;
-  color: #ff661f;
+  color: #160b84;
 }
 
 .single-politics-news .politics-news-content h3 {
@@ -1925,7 +1925,7 @@ Default News Area CSS
 }
 
 .single-politics-news:hover .politics-news-content h3 a {
-  color: #ff661f;
+  color: #160b84;
 }
 
 .single-politics-news:hover .politics-news-content h3 a::before {

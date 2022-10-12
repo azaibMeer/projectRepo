@@ -46,7 +46,7 @@ class CityController extends Controller
         $city->city_name = $request->city_name;
         $city->status = "0";
         $city->save();
-        return redirect('/cities/list')->with('success', 'Category inserted Successfully');
+        return redirect('/cities/list')->with('success', 'City inserted Successfully');
     }
 
     /**
@@ -85,7 +85,7 @@ class CityController extends Controller
         $city = City::find($id);
         $city->city_name = $request->city_name;
         $city->update();
-        return redirect('/cities/list')->with('success', 'cities Updated Successfully');
+        return redirect('/cities/list')->with('success', 'city Updated Successfully');
     }
 
     /**
@@ -98,6 +98,6 @@ class CityController extends Controller
     {
          $city = City::find($id);
         $city->delete();
-        return redirect('/cities/list')->with('danger', 'Cities delete Successfully');
+        return redirect('/cities/list')->with('danger', 'City delete Successfully');
     }
 }

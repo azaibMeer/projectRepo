@@ -41,7 +41,9 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        $data['cities'] = City::where('status','1')->get();
+        $data['categories'] = Category::where('status','1')->get();
+        return view("dashboard.news.add",$data);
     }
 
     /**
@@ -52,7 +54,37 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
+         $request->validate([
+
+        'title' => 'required',
+        'content' => 'required',
+        /*'image' => 'dimensions:width=330,height=215'*/
+
+        
+
+       ]);
+
+        $news = new News();
+        $news->title = $request->title;
+        $news->content = $request->content;
+        $news->status = "0";
+        $cheackImg = $request->image;
+
+        if($request->hasfile('image')){
+            
+            $file = $request->file('image');
+            $imageName = $file->GetClientOriginalName();
+            $filename = 'assets/img/main-news/'.$imageName;
+            $file->move('assets/img/main-news/', $filename);
+            $news->image = $filename;
+        }
+
+        $news->save();
+        return redirect('/news/create')->with('success', 'News inserted Successfully');
+
+
+      
     }
 
     /**

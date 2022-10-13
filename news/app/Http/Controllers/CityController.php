@@ -25,7 +25,13 @@ class CityController extends Controller
      */
     public function create()
     {
-        return view("dashboard.cities.add");
+        if(Auth::User()){
+         return view("dashboard.cities.add");
+    }
+    else{
+        return redirect("/login");
+        }
+        
     }
 
     /**
@@ -58,7 +64,13 @@ class CityController extends Controller
     public function show()
     {
        $data['cities'] = City::get();
-            return view("dashboard.cities.list",$data);
+       if(Auth::User()){
+         return view("dashboard.cities.list",$data);
+    }
+    else{
+        return redirect("/login");
+        }
+            
     }
 
     /**

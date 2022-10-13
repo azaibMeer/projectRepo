@@ -88,10 +88,10 @@
 
                                     <div class="col-sm-4"><select class="form-control m-b" name="city">
                                         <option>Select City</option>
-                                        @foreach($cities as $city)
+                                        
 
-                                        <option value="{{$city->id}}">{{$city->city_name}}</option>
-                                        @endforeach
+                                        <option></option>
+                                        
                                         <option value="0">None</option>
                                     </select>
                                     </div> 
@@ -104,10 +104,10 @@
                                     <div class="col-sm-10">
                                         <select class="form-control m-b" name="category">
                                         <option>Select Category</option>
-                                        @foreach($categories as $category)
+                                        
 
-                                        <option value="{{$category->category_id}}">{{$category->name}}</option>
-                                        @endforeach
+                                    <option value=""></option>
+                                       
                                        <option value="0">None</option>
                                         
                                     </select>

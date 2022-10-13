@@ -71,35 +71,44 @@
                     <table class="table  table-bordered table-hover dataTables-example" >
                     <thead >
                     <tr>
-                        <th>category id </th>
-                        <th>category name</th>
-                        <th>category status</th>
+                        <th>News Id </th>
+                        <th>News Title</th>
+                        <th>News description</th>
+                        <th>News Image</th>
+                        <th>Author</th>
+                        <th>status</th>
                         <th>Action</th>
                         
                     </tr>
                     </thead>
                     <tbody>
-                    
+                    @foreach($news as $news_data)
                     <tr class="gradeU">
-                        <td></td>
-                        <td></td>
+                        <td>{{$news_data->news_id}}</td>
+                        <td>{{Str::limit($news_data->title, 10, ' ...')}}</td>
+                        <td>{{Str::limit($news_data->content, 30, ' ...')}}</td>
                         <td>
-                           
+                            <img src="{{ $news_data->image }}" height="30px" width="30px" />
+                        </td>
+                        <td>{{$news_data->author}}</td>
+                        
+                        <td>
+                            @if($news_data->status == "0")
                             <span class="label label-danger">Inactive</span>
-                            
+                            @else
                             <span class="label label-primary">Active</span>
-                            
+                            @endif
 
                         </td>
                         <td class="text-right">
                                 
                                     
-                                    <a href="" class="btn-secondary btn btn-xs">
+                                    <a href="{{url('/news/edit/'.$news_data->news_id)}}" class="btn-secondary btn btn-xs">
                                          <i class="fa fa-edit"></i>
                                          Edit
                                     </a>
                                     
-                                    <a href="" class="btn-danger btn btn-xs">
+                                    <a href="{{url('/news/delete/'.$news_data->news_id)}}" class="btn-danger btn btn-xs">
                                         <i class="fa fa-trash"></i>
                                         Delete
                                     </a> 
@@ -107,7 +116,7 @@
                                 
                         </td>
                     </tr>
-                   
+                   @endforeach
                     </tbody>
                     
                     </table>

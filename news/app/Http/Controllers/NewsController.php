@@ -8,7 +8,7 @@ use App\Models\City;
 use App\Models\Program;
 use Illuminate\Http\Request;
 use Validator;
-
+use Auth;
 use App\Http\Controllers\NewsController;
 
 
@@ -44,7 +44,13 @@ class NewsController extends Controller
     {
         $data['cities'] = City::where('status','1')->get();
         $data['categories'] = Category::where('status','1')->get();
-        return view("dashboard.news.add",$data);
+        if(Auth::User()){
+         return view("dashboard.news.add",$data);
+    }
+    else{
+        return redirect("/login");
+        }
+        
     }
 
     /**
@@ -56,17 +62,29 @@ class NewsController extends Controller
     public function store(Request $request)
     {
         
+        /*$city = $request->get('city');
+        dd($city);*/
+
          $request->validate([
 
         'title' => 'required',
         'content' => 'required',
+        'author_name' => 'required',
+        'city' => 'required',
+        'category' => 'required',
          ]);
-       
+
+        
         $news = new News();
         $news->title = $request->title;
         $news->content = $request->content;
+        $news->author = $request->author_name;
         $news->status = "0";
         
+        $news->city_id = $request->city;
+        $news->category_id = $request->category;
+
+
         if($request->hasfile('image')){
             
             $file = $request->file('image');
@@ -77,11 +95,11 @@ class NewsController extends Controller
             );
             $validator = Validator::make($fileArray,$rules);
             if($validator->fails()){
-                 return redirect('/news/create')->with('danger', 'image Must Contain 1920 by 1000px ... News Not Added Successfully');
+                 return redirect('/news/create')->with('danger', 'Image Must Contain 1920 px by 1000 px ... News Not Added Successfully');
             }else{
             $imageName = $file->GetClientOriginalName();
-            $filename = 'assets/img/main-news/'.$imageName;
-            $file->move('assets/img/main-news/', $filename);
+            $filename = '/assets/img/main-news/'.$imageName;
+            $file->move('/assets/img/main-news/', $filename);
             $news->image = $filename;
             }
             
@@ -100,8 +118,14 @@ class NewsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show()
-    {
-        return view("dashboard.news.list");
+    {   
+        $data['news'] = News::get();
+        if(Auth::User()){
+         return view("dashboard.news.list",$data);
+    }
+    else{
+        return redirect("/login");
+        }
     }
 
     /**
@@ -110,9 +134,10 @@ class NewsController extends Controller
      * @param  \App\Models\web  $web
      * @return \Illuminate\Http\Response
      */
-    public function edit(web $web)
-    {
-        //
+    public function edit()
+    {   
+        
+        return view("dashboard.news.edit");
     }
 
     /**

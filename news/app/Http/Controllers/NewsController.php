@@ -64,7 +64,7 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //dd($request->all());
         /*$city = $request->get('city');
         dd($city);*/
 
@@ -75,6 +75,7 @@ class NewsController extends Controller
         'author_name' => 'required',
         'city' => 'required',
         'category' => 'required',
+        'status' => 'required',
          ]);
 
         
@@ -82,7 +83,7 @@ class NewsController extends Controller
         $news->title = $request->title;
         $news->content = $request->content;
         $news->author = $request->author_name;
-        $news->status = "0";
+        $news->status = $request->status;
         
         $news->city_id = $request->city;
         $news->category_id = $request->category;
@@ -172,7 +173,7 @@ class NewsController extends Controller
         $news->title = $request->title;
         $news->content = $request->content;
         $news->author = $request->author_name;
-        $news->status = "0";
+        $news->status = $request->status;
         
         $news->city_id = $request->city;
         $news->category_id = $request->category;

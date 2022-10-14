@@ -113,15 +113,15 @@
                                     </select>
                                     </div>
                                 </div>
-                                <div class="form-group row">
-                               <label class="col-lg-2 col-form-label"><strong>News Status</strong></label>
+                                <div class="form-group row"><label class="col-sm-2 col-form-label"><strong>News Publish</strong><br/></label>
 
-                                   <div class="ibox-content">
-                            
-                           
-                            <input type="checkbox" class="js-switch" checked />
-                            
-                        </div>
+                                    <div class="col-sm-10">
+                                        
+                                        
+                                        <div class="i-checks"><label> <input type="radio" value="1" name="status"> <i></i> publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio"  value="0" name="status"> <i></i> Not Publish </label></div>
+                                        
+                                    </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">

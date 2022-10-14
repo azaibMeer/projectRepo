@@ -2,7 +2,7 @@
 @section('content')
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-8">
-                    <h2>Add News</h2>
+                    <h2>Edit News</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="{{url('/dashboard')}}">Home</a>
@@ -41,7 +41,7 @@
           <div class="col-lg-10">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Add News</h5>
+                            <h5>Edit News</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -124,10 +124,22 @@
                                     </select>
                                     </div>
                                 </div>
-                                
+                                <div class="form-group row"><label class="col-sm-2 col-form-label"><strong>News Publish</strong><br/></label>
+
+                                    <div class="col-sm-10">
+                                        
+                                        
+                                        <div class="i-checks"><label> <input type="radio" name="status" value="1" 
+                                            {{$news->status == 1 ? 'checked':''}} > <i></i> publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio" name="status" 
+                                            value="0" 
+                                            {{$news->status == 0 ? 'checked':''}} > <i></i> Not Publish </label></div>
+                                        
+                                    </div>
+                                </div>
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        <button class="btn btn-lg btn-success" type="submit">Add News</button>
+                                        <button class="btn btn-lg btn-success" type="submit">Update News</button>
                                     </div>
                                 </div>
                             </form>

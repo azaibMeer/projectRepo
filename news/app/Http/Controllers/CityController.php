@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\City;
+
 use Auth;
 use Illuminate\Database\Eloquent\SoftDeletes;
 class CityController extends Controller

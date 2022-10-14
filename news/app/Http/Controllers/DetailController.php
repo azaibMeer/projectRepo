@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Setting;
 use App\Models\News;
 
 class DetailController extends Controller
@@ -14,7 +15,8 @@ class DetailController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index($id)
-    {
+    {   
+        $data['setting'] = Setting::first();
         $data['categories'] = Category::where('status','1')->get();
          $data['web'] = News::where('news_id',$id)->first();
         return view('layouts.detail',$data);

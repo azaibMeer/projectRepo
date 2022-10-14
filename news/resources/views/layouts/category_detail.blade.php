@@ -33,9 +33,8 @@
                             </div>
         
                             <div class="article-content">
+                                 <h6>خبر رساں  : {{$web->author}}</h6>
                                 <span>{{$web->created_at->format('M/d/Y')}}</span>
-                                <br>
-                                <h6>{{$web->author}}</h6>
                                 <p>{{ $web->content}}</p>
                                 
                                 

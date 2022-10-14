@@ -6,30 +6,37 @@
                             <a href="#">
                                 <img src="{{url('assets/img/logo/pak_awami.png')}}" alt="image">
                             </a>
-                            <p>جولائی دو ہزار دو میں لانچ ہونے کے بعد بی بی سی اردو ڈاٹ کام نے نیوز ویب سائٹوں میں اپنا ایک منفرد مقام بنا لیا ہے۔</p>
-
                             <ul class="social">
+                                @if($setting->facebook_link != "")
                                 <li>
-                                    <a href="#" class="facebook" target="_blank">
+                                    <a href="{{url($setting->facebook_link)}}" class="facebook" target="_blank">
                                         <i class='bx bxl-facebook'></i>
                                     </a>
                                 </li>
+                                @endif
+                                @if($setting->instagram_link != "")
                                 <li>
-                                    <a href="#" class="twitter" target="_blank">
+                                    <a href="{{url($setting->instagram_link)}}" class="twitter" target="_blank">
                                         <i class='bx bxl-instagram'></i>
                                     </a>
                                 </li>
-                                
+                                @endif
+                                @if($setting->twitter_link != "")
                                 <li>
-                                    <a href="#" class="linkedin" target="_blank">
+                                    <a href="{{url($setting->twitter_link)}}" class="linkedin" target="_blank">
                                         <i class='bx bxl-twitter'></i>
                                     </a>
                                 </li>
+                                @endif
+                                 @if($setting->youtube_link != "")
                                 <li>
-                                    <a href="#" class="linkedin" target="_blank">
+                                    <a href="{{url($setting->youtube_link)}}" class="linkedin" target="_blank">
                                         <i class='bx bxl-youtube'></i>
                                     </a>
                                 </li>
+                                 @endif
+                                 
+
                             </ul>
                         </div>
                     </div>
@@ -40,14 +47,6 @@
 
                             <div class="post-content">
                                 <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="post-image">
-                                            <a href="#">
-                                                <img src="assets/img/recent-post/recent-post-1.jpg" alt="image">
-                                            </a>
-                                        </div>
-                                    </div>
-
                                     <div class="col-md-8">
                                         <h4>
                                             <a href="#">مقبوضہ مغربی کنارے پر اسرائیلی فائرنگ سے 4 فلسطینی جاں بحق، 44 زخمی</a>
@@ -85,33 +84,11 @@
                             <h2>کوئک لنکز</h2>
 
                             <ul class="useful-links-list">
+                                 @foreach($categories as $category)
                                 <li>
-                                    <a href="#">ہم سے رابطہ کریں۔</a>
+                                    <a href="{{url('category/'.$category->category_id)}}">{{ $category->name }}</a>
                                 </li>
-                                <li>
-                                    <a href="#">خبریں</a>
-                                </li>
-                                <li>
-                                    <a href="#">رازداری</a>
-                                </li>
-                                <li>
-                                    <a href="#">شرائط</a>
-                                </li>
-                                <li>
-                                    <a href="#">ملحقہ اشتہارات</a>
-                                </li>
-                                <li>
-                                    <a href="#">کاروبار</a>
-                                </li>
-                                <li>
-                                    <a href="#">ٹیکنالوجی</a>
-                                </li>
-                                <li>
-                                    <a href="#">ٹیکنالوجی انٹرٹینمنٹ</a>
-                                </li>
-                                <li>
-                                    <a href="#">سیاست</a>
-                                </li>
+                                    @endforeach
                             </ul>
                         </div>
                     </div>

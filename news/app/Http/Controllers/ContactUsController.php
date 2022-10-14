@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Contact;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\CategoryController;
 
@@ -14,7 +16,8 @@ class ContactUsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
+        $data['setting'] = Setting::first();
        $data['categories'] = Category::where('status','1')->get();
        return view("layouts.contact",$data);
     }
@@ -37,7 +40,26 @@ class ContactUsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request);
+        $request->validate([
+
+        'name' => 'required',
+        'email' => 'required',
+        'phone' => 'required',
+        'subject' => 'required',
+        'message' => 'required'
+
+       ]);
+
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->email = $request->email;
+        $contact->phone = $request->phone;
+        $contact->subject = $request->subject;
+        $contact->description = $request->message;
+        
+        $contact->save();
+        return redirect('/contact')->with('success', 'ہم سے رابطہ کرنے کا شکریہ');
     }
 
     /**

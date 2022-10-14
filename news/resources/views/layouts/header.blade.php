@@ -3,31 +3,49 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <ul class="top-header-social">
+                            @if($setting->facebook_link != "")
                             <li>
-                                <a href="#" class="facebook" target="_blank">
+
+                                <a href="{{url($setting->facebook_link)}}" class="facebook" target="_blank">
                                     <i class='bx bxl-facebook'></i>
                                 </a>
                             </li>
+                            @endif
+                            @if($setting->instagram_link != "")
                             <li>
-                                <a href="#" class="pinterest" target="_blank">
+                                <a href="{{url($setting->instagram_link)}}" class="pinterest" target="_blank">
                                     <i class='bx bxl-instagram'></i>
                                 </a>
                             </li>
+                            @endif
+                            @if($setting->linkedin_link != "")
                             <li>
-                                <a href="#" class="pinterest" target="_blank">
+                                <a href="{{url($setting->linkedin_link)}}" class="pinterest" target="_blank">
                                     <i class='bx bxl-linkedin'></i>
                                 </a>
                             </li>
+                            @endif
+                             @if($setting->twitter_link != "")
                             <li>
-                                <a href="#" class="twitter" target="_blank">
+                                <a href="{{url($setting->twitter_link)}}" class="twitter" target="_blank">
                                     <i class='bx bxl-twitter'></i>
                                 </a>
                             </li>
+                            @endif
+                             @if($setting->youtube_link != "")
                             <li>
-                                <a href="#" class="linkedin" target="_blank">
+                                <a href="{{url($setting->youtube_link)}}" class="linkedin" target="_blank">
                                     <i class='bx bxl-youtube'></i>
                                 </a>
                             </li>
+                             @endif
+                             @if($setting->whatsapp_link != "")
+                             <li>
+                                <a href="{{url($setting->whatsapp_link)}}" class="linkedin" target="_blank">
+                                    <i class='bx bxl-whatsapp'></i>
+                                </a>
+                            </li>
+                            @endif
                         </ul>
                     </div>
 

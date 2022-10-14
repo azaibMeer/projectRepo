@@ -113,7 +113,16 @@
                                     </select>
                                     </div>
                                 </div>
-                                
+                                <div class="form-group row">
+                               <label class="col-lg-2 col-form-label"><strong>News Status</strong></label>
+
+                                   <div class="ibox-content">
+                            
+                           
+                            <input type="checkbox" class="js-switch" checked />
+                            
+                        </div>
+                                </div>
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">
                                         <button class="btn btn-lg btn-success" type="submit">Add News</button>

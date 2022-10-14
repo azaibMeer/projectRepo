@@ -24,7 +24,6 @@ Route::get('/logout', function(Request $request){
 
 
 Route::get('/', [NewsController::class,'index']);
-Route::get('/contact', [ContactUsController::class,'index']);
 Route::get('/detail/{id}', [DetailController::class,'index']);
 Route::get('category/{id}', [CategoryController::class,'index']);
 Route::get('category/detail/{id}', [CategoryDetailController::class,'index']);
@@ -52,13 +51,12 @@ Route::get('/cities/delete/{id}', [CityController::class,'destroy']);
 Route::get('/news/create', [NewsController::class,'create']);
 Route::post('/news/store', [NewsController::class,'store']);
 Route::get('/news/list', [NewsController::class,'show']);
-
 Route::get('/news/edit/{id}', [NewsController::class,'edit']);
-/*
 Route::post('/news/update/{id}', [NewsController::class,'update']);
-Route::get('/news/delete/{id}', [NewsController::class,'destroy']);*/
+Route::get('/news/delete/{id}', [NewsController::class,'destroy']);
 
-
+Route::get('/contact', [ContactUsController::class,'index']);
+Route::post('/contact/store', [ContactUsController::class,'store']);
 		
 
 

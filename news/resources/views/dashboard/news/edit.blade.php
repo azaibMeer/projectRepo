@@ -61,37 +61,46 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="post" action="{{url('/news/store')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{url('/news/update/'.$news->news_id)}}" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Title</strong></label>
 
-                                    <div class="col-lg-10"><input type="name" placeholder="Enter News Title" class="form-control" name="title" required> 
+                                    <div class="col-lg-10"><input type="name" placeholder="Enter News Title" class="form-control" name="title" value="{{$news->title}}" required> 
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>
 
-                                    <div class="col-lg-10"><input type="name" placeholder="Enter News Description" class="form-control" name="content" required> 
+                                    <div class="col-lg-10"><input type="name" placeholder="Enter News Description" class="form-control" name="content" value="{{$news->content}}"  required> 
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Author Name</strong></label>
 
-                                    <div class="col-lg-10"><input type="text" placeholder="Enter Author Name" class="form-control" name="author_name" required> 
+                                    <div class="col-lg-10"><input type="text" placeholder="Enter Author Name" class="form-control" name="author_name" value="{{$news->author}}" required> 
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label"><strong>News Image</strong></label>
 
-                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" required><span>File Must be 1920 px by 1000 px</span>
-
+                                    <div class="col-lg-4">
+                                         
+                                    <input type="file"  class="form-control " name="image" value="{{ $news->image }}" required><span>File Must be 1920 px by 1000 px</span>
+                                    @if ("{{ $news->image }}")
+                        <img src="{{ $news->image }}" height="50px" width="80px;">
+                            @else
+                            <p>No image found</p>
+                            @endif
                                     </div> 
                                       <label class="col-lg-2 col-form-label"><strong>Select City</strong></label>
 
-                                    <div class="col-sm-4"><select class="form-control m-b" name="city">
+                                    <div class="col-sm-4">
+                               
+                                        <select class="form-control m-b" name="city" >
                                         <option>Select City</option>
                                         
-
-                                        <option></option>
-                                        
+                                        @foreach($cities as $city)
+                                        <option value="{{$city->id}}"
+                                        {{ $city->id == $news->city_id ? 'selected' : '' }}>{{$city->city_name}}</option>
+                                        @endforeach
                                         <option value="0">None</option>
                                     </select>
                                     </div> 
@@ -106,7 +115,9 @@
                                         <option>Select Category</option>
                                         
 
-                                    <option value=""></option>
+                                    @foreach($categories as $category)
+                                        <option value="{{$category->category_id}} " {{$category->category_id ==$news->category_id ? 'selected' : ''  }} >{{$category->name}}</option>
+                                        @endforeach
                                        
                                        <option value="0">None</option>
                                         

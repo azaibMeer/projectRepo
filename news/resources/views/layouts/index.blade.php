@@ -79,7 +79,7 @@
               $citynews  = App\Models\News::where('city_id',$cityid)
                             ->where('status','1')
                             ->orderBy('news_id','DESC')
-                            ->take(5)
+                            ->take(4)
                             ->get();
 
               if(count($citynews) == 0)

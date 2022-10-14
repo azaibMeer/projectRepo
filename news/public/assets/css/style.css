@@ -5299,7 +5299,7 @@ Contact Area CSS
   margin-top: 25px;
   padding: 40px;
   -webkit-box-shadow: 0 0 20px rgba(158, 158, 158, 0.16);
-          box-shadow: 0 0 20px rgba(158, 158, 158, 0.16);
+          box-shadow: 0 0 20px rgba(158, 158, 158, 71);
   background-color: #ffffff;
 }
 
@@ -5361,7 +5361,7 @@ Contact Area CSS
 }
 
 .contact-form form .form-group .form-control:focus {
-  border-color: #ff661f;
+  border-color: #1806d9;
   background-color: transparent;
 }
 

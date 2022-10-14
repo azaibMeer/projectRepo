@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Setting;
 use App\Models\News;
 use Auth;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -18,6 +19,7 @@ class CategoryController extends Controller
      */
     public function index($id)
     {
+        $data['setting'] = Setting::first();
         $data['categories'] = Category::where('status','1')->get();
        
        $data['news'] = News::join('categories','categories.category_id','news.category_id')->select('categories.*','news.*')->where('news.category_id',$id)->orderBy('news_id','DESC')->first();

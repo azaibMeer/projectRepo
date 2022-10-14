@@ -29,7 +29,7 @@
         <!-- RTL CSS -->
         <link rel="stylesheet" href="/assets/css/rtl.css">
         
-        <title>Depan - News Magazine HTML Template</title>
+        <title>{{$setting->website_name}}</title>
 
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
     </head>

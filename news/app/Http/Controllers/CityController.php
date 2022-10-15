@@ -30,7 +30,7 @@ class CityController extends Controller
          return view("dashboard.cities.add");
     }
     else{
-        return redirect("/login");
+        return redirect("/login")->with('danger', 'plese login first');
         }
         
     }
@@ -71,7 +71,7 @@ class CityController extends Controller
          return view("dashboard.cities.list",$data);
     }
     else{
-        return redirect("/login");
+        return redirect("/login")->with('danger', 'plese login first');
         }
             
     }
@@ -85,7 +85,11 @@ class CityController extends Controller
     public function edit($id)
     {
         $data['cities'] = City::where('id',$id)->first();
+        if(Auth::User()){
         return view("dashboard.cities.edit",$data);
+    }else{
+        return redirect("/login")->with('danger', 'plese login first');
+    }
     }
 
     /**

@@ -40,7 +40,7 @@ class CategoryController extends Controller
         if(Auth::User()){
         return view("dashboard.category.add");
     }else{
-        return redirect('/login');
+        return redirect('/login')->with('danger', 'plese login first');
     }
 
     }
@@ -82,7 +82,7 @@ class CategoryController extends Controller
             $data['categories'] = Category::orderBy('category_id','DESC')->get();
             return view("dashboard.category.list",$data);
         }else{
-            return redirect('/login');
+            return redirect('/login')->with('danger', 'plese login first');
         }
        
     }
@@ -96,7 +96,11 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $data['categories'] = Category::where('category_id',$id)->first();
+        if(Auth::User()){
         return view("dashboard.category.edit",$data);
+    }else{
+        return redirect('/login')->with('danger', 'plese login first');
+    }
     }
 
     /**

@@ -51,7 +51,7 @@ class NewsController extends Controller
          return view("dashboard.news.add",$data);
     }
     else{
-        return redirect("/login");
+        return redirect("/login")->with('danger', 'please login first');
         }
         
     }
@@ -114,7 +114,7 @@ class NewsController extends Controller
         return redirect('/news/list')->with('success', 'News inserted Successfully');
     }
     else{
-        return redirect("/login");
+        return redirect("/login")->with('danger', 'please login first');
         }
         
 
@@ -134,7 +134,7 @@ class NewsController extends Controller
          return view("dashboard.news.list",$data);
     }
     else{
-        return redirect("/login");
+        return redirect("/login")->with('danger', 'please login first');
         }
     }
 
@@ -154,7 +154,7 @@ class NewsController extends Controller
         return view("dashboard.news.edit",$data);
     }
     else{
-        return redirect("/login");
+        return redirect("/login")->with('danger', 'please login first');
         }
         
     }
@@ -198,8 +198,11 @@ class NewsController extends Controller
             
         }
         $news->update();
-        
+        if(Auth::User()){
         return redirect('/news/list')->with('success', 'News Updated Successfully');
+        }else{
+            return redirect("/login")->with('danger', 'please login first');
+        }
     }
 
     /**

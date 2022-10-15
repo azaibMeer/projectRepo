@@ -70,7 +70,8 @@
                                 </div>
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>
 
-                                    <div class="col-lg-10"><input type="name" placeholder="Enter News Description" class="form-control" name="content" value="{{$news->content}}"  required> 
+                                    <div class="col-lg-10"><!-- <input type="name" placeholder="Enter News Description" class="form-control" name="content" value="{{$news->content}}"  required> --> 
+                                        <textarea class="form-control" name="content" placeholder="Enter News Description" required>{{$news->content}}</textarea>
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Author Name</strong></label>

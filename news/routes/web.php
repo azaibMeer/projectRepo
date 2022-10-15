@@ -20,7 +20,7 @@ Route::get('/logout', function(Request $request){
     	$request->session()->regenerateToken();
         return redirect('/login');
 });
-
+Route::get('/user/create', [AuthController::class,'create']);
 
 
 Route::get('/', [NewsController::class,'index']);

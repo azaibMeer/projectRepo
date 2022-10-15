@@ -49,8 +49,8 @@
                     <li>
                         <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Users</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="table_basic.html">Add</a></li>
-                            <li><a href="table_data_tables.html">List</a></li>
+                            <li><a href="{{url('/user/create')}}">Add</a></li>
+                            <li><a href="{{url('/user/list')}}">List</a></li>
                             
                         </ul>
                     </li>

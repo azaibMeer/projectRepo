@@ -43,6 +43,16 @@
                                     value="{{$cities->city_name}}" required> 
                                     </div>
                                 </div>
+                                <div class="form-group row"><label class="col-sm-4 col-form-label"><strong>City Publish</strong><br/></label>
+
+                                    <div class="col-sm-8">
+                                        
+                                        
+                                        <div class="i-checks"><label> <input type="radio" value="1" name="status" {{$cities->status == 1 ? 'checked':''}}> <i></i> publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio"  value="0" name="status" {{$cities->status == 0 ? 'checked':''}}> <i></i> Not Publish </label></div>
+                                        
+                                    </div>
+                                </div>
                                 
                                 
                                 <div class="form-group row">

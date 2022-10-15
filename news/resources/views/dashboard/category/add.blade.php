@@ -57,7 +57,16 @@
                                     <div class="col-lg-8"><input type="name" placeholder="Enter Category" class="form-control" name="category_name" required> 
                                     </div>
                                 </div>
-                                
+                                <div class="form-group row"><label class="col-sm-4 col-form-label"><strong>Category Publish</strong><br/></label>
+
+                                    <div class="col-sm-8">
+                                        
+                                        
+                                        <div class="i-checks"><label> <input type="radio" value="1" name="status" > <i></i> publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio"  value="0" name="status"> <i></i> Not Publish </label></div>
+                                        
+                                    </div>
+                                </div>
                                 
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">

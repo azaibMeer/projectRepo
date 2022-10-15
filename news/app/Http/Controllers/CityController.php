@@ -45,13 +45,15 @@ class CityController extends Controller
     {
         $request->validate([
 
-        'city_name' => 'required'
+        'city_name' => 'required',
+        'status' => 'required'
 
        ]);
 
         $city = new City();
         $city->city_name = $request->city_name;
-        $city->status = "0";
+        $city->status = $request->status;
+        
         $city->save();
         return redirect('/cities/list')->with('success', 'City inserted Successfully');
     }
@@ -64,7 +66,7 @@ class CityController extends Controller
      */
     public function show()
     {
-       $data['cities'] = City::get();
+       $data['cities'] = City::orderBy('id','DESC')->get();
        if(Auth::User()){
          return view("dashboard.cities.list",$data);
     }
@@ -97,6 +99,7 @@ class CityController extends Controller
     {
         $city = City::find($id);
         $city->city_name = $request->city_name;
+        $city->status = $request->status;
         $city->update();
         return redirect('/cities/list')->with('success', 'city Updated Successfully');
     }

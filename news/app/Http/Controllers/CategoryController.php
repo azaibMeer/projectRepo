@@ -53,16 +53,18 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
+        
         //dd($request);
         $request->validate([
 
-        'category_name' => 'required'
+        'category_name' => 'required',
+        'status' => 'required'
 
        ]);
 
         $categories = new Category();
         $categories->name = $request->category_name;
-        $categories->status = "0";
+        $categories->status = $request->status;
         $categories->save();
         return redirect('/categories/list')->with('success', 'Category inserted Successfully');
         
@@ -77,7 +79,7 @@ class CategoryController extends Controller
     public function show()
     {
         if(Auth::User()){
-            $data['categories'] = Category::get();
+            $data['categories'] = Category::orderBy('category_id','DESC')->get();
             return view("dashboard.category.list",$data);
         }else{
             return redirect('/login');
@@ -106,11 +108,12 @@ class CategoryController extends Controller
      */
     public function update(Request $request,$id)
     {
-        //dd($request);
+        //dd($request->all());
         
         //$data['categories'] = Category::where('category_id',$id)->first();
         $category = Category::find($id);
         $category->name = $request->category_name;
+        $category->status = $request->status;
         $category->update();
         return redirect('/categories/list')->with('success', 'Category Updated Successfully');
 

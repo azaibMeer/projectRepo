@@ -44,6 +44,16 @@
                                     </div>
                                 </div>
                                 
+                                 <div class="form-group row"><label class="col-sm-4 col-form-label"><strong>Category Publish</strong><br/></label>
+
+                                    <div class="col-sm-8">
+                                        
+                                        
+                                        <div class="i-checks"><label> <input type="radio" value="1" name="status" {{$categories->status == 1 ? 'checked':''}}> <i></i> publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio"  value="0" name="status" {{$categories->status == 0 ? 'checked':''}}> <i></i> Not Publish </label></div>
+                                        
+                                    </div>
+                                </div>
                                 
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">

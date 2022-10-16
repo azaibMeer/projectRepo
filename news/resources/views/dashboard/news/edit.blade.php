@@ -96,13 +96,13 @@
                                     <div class="col-sm-4">
                                
                                         <select class="form-control m-b" name="city" >
-                                        <option>Select City</option>
-                                        
+                                        <option disabled="">Select City</option>
+                                        <option value="0">None</option>
                                         @foreach($cities as $city)
                                         <option value="{{$city->id}}"
                                         {{ $city->id == $news->city_id ? 'selected' : '' }}>{{$city->city_name}}</option>
                                         @endforeach
-                                        <option value="0">None</option>
+                                        
                                     </select>
                                     </div> 
                                 
@@ -113,14 +113,14 @@
 
                                     <div class="col-sm-10">
                                         <select class="form-control m-b" name="category">
-                                        <option>Select Category</option>
-                                        
+                                    <option disabled="">Select Category</option>
+                                        <option value="0">None</option>
 
                                     @foreach($categories as $category)
                                         <option value="{{$category->category_id}} " {{$category->category_id ==$news->category_id ? 'selected' : ''  }} >{{$category->name}}</option>
                                         @endforeach
                                        
-                                       <option value="0">None</option>
+                                       
                                         
                                     </select>
                                     </div>

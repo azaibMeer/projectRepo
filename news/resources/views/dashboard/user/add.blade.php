@@ -19,7 +19,7 @@
                 <div class="col-lg-4">
                     <a href="{{url('/user/list')}}" class="btn-secondary btn btn-lg category_add">
                     
-                    News List
+                    user List
                     </a>
                 </div>
             </div>
@@ -68,20 +68,26 @@
 
                                     <div class="col-lg-9"><input type="password" placeholder="Password" class="form-control"></div>
                                 </div>
-                                
+                                <div class="form-group row">
+                                    <label class="col-lg-3 col-form-label">User Image</label>
+
+                                    <div class="col-lg-9"><input type="file"  class="form-control " name="image" required><span>Image Must be 192 px by 192 px & 1 Mb </span>
+
+                                    </div> 
+                                  </div>
                                 <div class="form-group row"><label class="col-lg-3 col-form-label">Address</label>
 
-                                    <div class="col-lg-9"><textarea class="form-control" ></textarea>  
+                                    <div class="col-lg-9"><textarea class="form-control" placeholder="Enter address" ></textarea>  
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-lg-3 col-form-label">Phone</label>
+
+                                    <div class="col-lg-9"><input type="number" class="form-control" name="phone" placeholder="eg. 0123 - 4567890" required>  
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        <div class="i-checks"><label> <input type="checkbox"><i></i> Remember me </label></div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <div class="col-lg-offset-2 col-lg-10">
-                                        <button class="btn btn-sm btn-white" type="submit">Sign in</button>
+                                        <button class="btn btn-lg btn-success" type="submit">Add User</button>
                                     </div>
                                 </div>
                             </form>

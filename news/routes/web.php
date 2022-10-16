@@ -10,6 +10,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CityController;
+use App\Http\Controllers\SubscribeController;
+use App\Http\Controllers\CityDetailController;
 
 
 
@@ -47,6 +49,10 @@ Route::post('/cities/update/{id}', [CityController::class,'update']);
 Route::get('/cities/delete/{id}', [CityController::class,'destroy']);
 
 
+Route::get('/city/{id}', [CityController::class,'index']);
+Route::get('city/detail/{id}', [CityDetailController::class,'index']);
+
+
 // News routes // 
 Route::get('/news/create', [NewsController::class,'create']);
 Route::post('/news/store', [NewsController::class,'store']);
@@ -57,6 +63,9 @@ Route::get('/news/delete/{id}', [NewsController::class,'destroy']);
 
 Route::get('/contact', [ContactUsController::class,'index']);
 Route::post('/contact/store', [ContactUsController::class,'store']);
+
+
+Route::post('/subscribe/store', [SubscribeController::class,'store']);
 		
 
 

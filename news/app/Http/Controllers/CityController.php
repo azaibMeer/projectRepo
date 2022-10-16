@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\City;
+use App\Models\News;
+use App\Models\Setting;
+use App\Models\Category;
 
 use Auth;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -14,9 +17,20 @@ class CityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($id)
     {
-        
+         
+         $data['setting'] = Setting::first();
+         
+        $data['categories'] = Category::where('status','1')->get();
+
+        $data['news'] = News::join('cities','cities.id','news.city_id')->select('cities.*','news.*')->where('news.city_id',$id)->orderBy('news_id','DESC')->first();
+
+         $data['web'] = News::where('city_id',$id)->where('status','1')
+                            ->orderBy('news_id','DESC')
+                            ->take(5)
+                            ->get();
+         return view("layouts.cities",$data);
     }
 
     /**

@@ -132,8 +132,8 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <button type="button" class="btn btn-secondary">مزید دیکھے</button>
-
+                  <a href="{{url('/city/'.$city->id)}}" class="btn btn-primary">مزید دیکھے
+                  </a>
                 </div>
               </div>
             </div>

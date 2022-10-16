@@ -41,43 +41,7 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single-footer-widget">
-                            <h2>حالیہ پوسٹ</h2>
-
-                            <div class="post-content">
-                                <div class="row align-items-center">
-                                    <div class="col-md-8">
-                                        <h4>
-                                            <a href="#">مقبوضہ مغربی کنارے پر اسرائیلی فائرنگ سے 4 فلسطینی جاں بحق، 44 زخمی</a>
-                                        </h4>
-                                        <span>28 ستمبر 2022</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="post-content">
-                                <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="post-image">
-                                            <a href="#">
-                                                <img src="assets/img/recent-post/recent-post-2.jpg" alt="image">
-                                            </a>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-8">
-                                        <h4>
-                                            <a href="#">مقبوضہ مغربی کنارے پر اسرائیلی فائرنگ سے 4 فلسطینی جاں بحق، 44 زخمی</a>
-                                        </h4>
-                                        <span>28 ستمبر 2022</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
-                        </div>
-                    </div>
+                    
 
                     <div class="col-lg-3 col-md-6">
                         <div class="single-footer-widget">
@@ -98,12 +62,11 @@
                             <h2>سبسکرائب</h2>
 
                             <div class="widget-subscribe-content">
-                                <p>جولائی دو ہزار دو میں لانچ ہونے کے بعد بی بی سی اردو ڈاٹ کام نے نیوز ویب سائٹوں میں اپنا ایک منفرد مقام بنا لیا ہے۔</p>
-
-                                <form class="newsletter-form">
-                                    <input type="email" class="input-newsletter" placeholder="اپنا ای میل درج کریں۔" name="EMAIL" required>
-            
-                                    <button type="submit">جمع کرائیں</button>
+                    <form  method="post" action="{{url('/subscribe/store')}}">
+                        @csrf
+                                    <input type="email" class="form-control" placeholder="اپنا ای میل درج کریں۔" name="email" required>
+                                        <br>
+                                    <input type="submit" class="btn btn-primary" value="submit" style="margin-left: 70%;">
                                 </form>
                             </div>
                         </div>

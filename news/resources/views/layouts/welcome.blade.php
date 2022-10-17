@@ -90,7 +90,8 @@
         <script src="/assets/js/wow.min.js"></script>
         <!-- Custom JS -->
         <script src="/assets/js/main.js"></script>
-        
+        <link rel="stylesheet" href="src/css/ideabox-news-ticker.min.css">
+        <script src="src/js/ideabox-news-ticker.min.js"></script>
         
     </body>
 </html>

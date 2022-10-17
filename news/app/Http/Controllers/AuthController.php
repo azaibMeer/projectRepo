@@ -5,6 +5,7 @@ use Illuminate\Support\MessageBag;
     
 use App\Models\User;
 use Auth;
+use Validator;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 
@@ -69,7 +70,49 @@ class AuthController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+        $request->validate([
+
+        'name' => 'required',
+        'fname' => 'required',
+        'email' => 'required',
+        'password' => 'required',
+        'address' => 'required',
+        'phone' => 'required'
+        
+
+       ]);
+
+        $user = new User();
+        $user->name = $request->name;
+        $user->father_name = $request->fname;
+        $user->email = $request->email;
+        $user->password = Hash::make($request->password);
+        $user->address = $request->name;
+        $user->phone = $request->phone;
+        
+        if($request->hasfile('image')){
+            
+            $file = $request->file('image');
+            
+            $fileArray = array('image'=>$file);
+            $rules = array(
+                'image' => 'required|image|dimensions:width=192,height=192|max:2000'
+            );
+            $validator = Validator::make($fileArray,$rules);
+            if($validator->fails()){
+                 return redirect('/user/create')->with('danger', 'Image Must Contain 192 px by 192 px & 2 Mb ... User Not Added Successfully');
+            }else{
+            $imageName = time(). "_".$file->GetClientOriginalName();
+            $filename = '/assets/img/user_images/'.$imageName;
+            $file->move(public_path('/assets/img/user_images/'), $filename);
+            $user->image = $filename;
+            }
+            
+        }
+        
+        $user->save();
+        return redirect('/user/create')->with('success', 'User Add Successfully');
     }
 
     /**
@@ -78,9 +121,10 @@ class AuthController extends Controller
      * @param  \App\Models\Auth  $auth
      * @return \Illuminate\Http\Response
      */
-    public function show(Auth $auth)
+    public function show()
     {
-        //
+        $data['users'] = User::get();
+        return view("dashboard.user.list",$data);
     }
 
     /**
@@ -89,9 +133,10 @@ class AuthController extends Controller
      * @param  \App\Models\Auth  $auth
      * @return \Illuminate\Http\Response
      */
-    public function edit(Auth $auth)
+    public function edit($id)
     {
-        //
+        $data['users'] = User::where('id',$id)->first();
+        return view("dashboard.user.edit",$data);
     }
 
     /**

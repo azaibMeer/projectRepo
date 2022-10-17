@@ -42,28 +42,7 @@
                                 
                             </div>
         
-                            <div class="article-footer">
-                                <div class="article-share">
-                                    <ul class="social">
-                                        <li><span>شعیر کریں:</span></li>
-                                        <li>
-                                            <a href="#" target="_blank">
-                                                <i class='bx bxl-facebook'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">
-                                                <i class='bx bxl-twitter'></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" target="_blank">
-                                                <i class='bx bxl-instagram'></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
         
                             
             

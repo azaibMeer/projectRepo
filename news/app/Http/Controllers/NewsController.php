@@ -101,9 +101,10 @@ class NewsController extends Controller
             if($validator->fails()){
                  return redirect('/news/create')->with('danger', 'Image Must Contain 1920 px by 1000 px ... News Not Added Successfully');
             }else{
-            $imageName = $file->GetClientOriginalName();
+            $imageName = time(). "_".$file->GetClientOriginalName();
             $filename = '/assets/img/main-news/'.$imageName;
-            $file->move('/assets/img/main-news/', $filename);
+            
+            $file->move(public_path('/assets/img/main-news/'), $filename);
             $news->image = $filename;
             }
             
@@ -178,7 +179,7 @@ class NewsController extends Controller
         $news->city_id = $request->city;
         $news->category_id = $request->category;
 
-         if($request->hasfile('image')){
+          if($request->hasfile('image')){
             
             $file = $request->file('image');
             
@@ -190,9 +191,10 @@ class NewsController extends Controller
             if($validator->fails()){
                  return redirect('/news/create')->with('danger', 'Image Must Contain 1920 px by 1000 px ... News Not Added Successfully');
             }else{
-            $imageName = $file->GetClientOriginalName();
+            $imageName = time(). "_".$file->GetClientOriginalName();
             $filename = '/assets/img/main-news/'.$imageName;
-            $file->move('/assets/img/main-news/', $filename);
+            
+            $file->move(public_path('/assets/img/main-news/'), $filename);
             $news->image = $filename;
             }
             

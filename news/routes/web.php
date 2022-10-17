@@ -23,6 +23,9 @@ Route::get('/logout', function(Request $request){
         return redirect('/login');
 });
 Route::get('/user/create', [AuthController::class,'create']);
+Route::post('/user/store', [AuthController::class,'store']);
+Route::get('/user/list', [AuthController::class,'show']);
+Route::get('/user/edit/{id}', [AuthController::class,'edit']);
 
 
 Route::get('/', [NewsController::class,'index']);

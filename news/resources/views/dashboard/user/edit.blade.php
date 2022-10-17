@@ -63,44 +63,50 @@
                                 @csrf
                                 <div class="form-group row"><label class="col-lg-3 col-form-label">Name</label>
 
-                                    <div class="col-lg-9"><input type="text" placeholder="Enter Name" name="name" class="form-control" required> 
+                                    <div class="col-lg-9"><input type="text" placeholder="Enter Name" name="name" class="form-control" value="{{$users->name}}" required > 
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-lg-3 col-form-label">Father Name</label>
 
-                                    <div class="col-lg-9"><input type="text" placeholder="Enter Father Name" class="form-control" name="fname" required> 
+                                    <div class="col-lg-9"><input type="text" placeholder="Enter Father Name" class="form-control" name="fname" value="{{$users->father_name}}" required> 
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-lg-3 col-form-label">Email</label>
 
                                     <div class="col-lg-9"><input type="email" placeholder="Email" class="form-control" 
-                                        name="email"> 
+                                        name="email" value="{{$users->email}}" required> 
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-lg-3 col-form-label">Password</label>
 
-                                    <div class="col-lg-9"><input type="password" placeholder="Password" class="form-control"name="password" required></div>
+                                    <div class="col-lg-9"><input type="text" placeholder="Password" class="form-control"name="password" value="{{$users->password}}" required></div>
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-3 col-form-label">User Image</label>
 
-                                    <div class="col-lg-9"><input type="file"  class="form-control " name="image" required><span>Image Must be 192 px by 192 px & 1 Mb </span>
-
+                                    <div class="col-lg-9"><input type="file"  class="form-control " name="image" required><span>Image Must be 192 px by 192 px & 1 Mb 
+                                    </span>
+                                        
                                     </div> 
+                                     @if ("{{ $users->image }}")
+                        <img src="{{ $users->image }}" height="50px" width="80px;">
+                            @else
+                            <p>No image found</p>
+                            @endif
                                   </div>
                                 <div class="form-group row"><label class="col-lg-3 col-form-label">Address</label>
 
-                                    <div class="col-lg-9"><textarea class="form-control" placeholder="Enter address" required name="address"></textarea>  
+                                    <div class="col-lg-9"><textarea class="form-control" placeholder="Enter address" required name="address">{{$users->address}}</textarea>  
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-lg-3 col-form-label">Phone</label>
 
-                                    <div class="col-lg-9"><input type="number" class="form-control" name="phone" placeholder="eg. 0123 - 4567890" required>  
+                                    <div class="col-lg-9"><input type="number" class="form-control" name="phone" value="{{$users->phone}}" placeholder="eg. 0123 - 4567890" required>  
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        <button class="btn btn-lg btn-success" type="submit">Add User</button>
+                                        <button class="btn btn-lg btn-success" type="submit">Edit User</button>
                                     </div>
                                 </div>
                             </form>

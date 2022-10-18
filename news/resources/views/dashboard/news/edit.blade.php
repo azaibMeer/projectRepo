@@ -91,6 +91,7 @@
                             <p>No image found</p>
                             @endif
                                     </div> 
+
                                       <label class="col-lg-2 col-form-label"><strong>Select City</strong></label>
 
                                     <div class="col-sm-4">
@@ -107,6 +108,14 @@
                                     </div> 
                                 
 
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-lg-2 col-form-label"><strong>News Vedio</strong></label>
+
+                                    <div class="col-lg-4"><input type="file"  class="form-control " name="vedio"><span>upload vedio if Have</span>
+
+                                    </div> 
+                                      
                                 </div>
                                  <div class="form-group row">
                                <label class="col-lg-2 col-form-label"><strong>Select Category</strong></label>

@@ -109,6 +109,17 @@ class NewsController extends Controller
             }
             
         }
+       if($request->hasfile('vedio')){
+            
+            $file = $request->file('vedio');
+            $vedName = time(). "_".$file->GetClientOriginalName();
+            $filename = '/assets/vedios/'.$vedName;
+            $file->move(public_path('/assets/vedios/'), $filename);
+            $news->vedio = $filename;
+            
+            
+        }
+
 
         $news->save();
         if(Auth::User()){
@@ -197,6 +208,16 @@ class NewsController extends Controller
             $file->move(public_path('/assets/img/main-news/'), $filename);
             $news->image = $filename;
             }
+            
+        }
+         if($request->hasfile('vedio')){
+            
+            $file = $request->file('vedio');
+            $vedName = time(). "_".$file->GetClientOriginalName();
+            $filename = '/assets/vedios/'.$vedName;
+            $file->move(public_path('/assets/vedios/'), $filename);
+            $news->vedio = $filename;
+            
             
         }
         $news->update();

@@ -41,7 +41,9 @@
                             </div>
         
                             
-        
+                @if($web->vedio != "")
+            <iframe  src="{{url($web->vedio)}}" allowfullscreen></iframe>
+            @endif
                             
             
                             

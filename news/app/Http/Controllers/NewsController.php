@@ -84,6 +84,7 @@ class NewsController extends Controller
         $news->content = $request->content;
         $news->author = $request->author_name;
         $news->status = $request->status;
+        $news->vedio = $request->vedio;
         
         $news->city_id = $request->city;
         $news->category_id = $request->category;
@@ -109,16 +110,7 @@ class NewsController extends Controller
             }
             
         }
-       if($request->hasfile('vedio')){
-            
-            $file = $request->file('vedio');
-            $vedName = time(). "_".$file->GetClientOriginalName();
-            $filename = '/assets/vedios/'.$vedName;
-            $file->move(public_path('/assets/vedios/'), $filename);
-            $news->vedio = $filename;
-            
-            
-        }
+      
 
 
         $news->save();
@@ -210,16 +202,7 @@ class NewsController extends Controller
             }
             
         }
-         if($request->hasfile('vedio')){
-            
-            $file = $request->file('vedio');
-            $vedName = time(). "_".$file->GetClientOriginalName();
-            $filename = '/assets/vedios/'.$vedName;
-            $file->move(public_path('/assets/vedios/'), $filename);
-            $news->vedio = $filename;
-            
-            
-        }
+         
         $news->update();
         if(Auth::User()){
         return redirect('/news/list')->with('success', 'News Updated Successfully');

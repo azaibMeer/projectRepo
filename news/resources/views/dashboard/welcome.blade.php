@@ -22,6 +22,7 @@
     <link href="/assets/dashboard_assets/css/animate.css" rel="stylesheet">
     <link href="/assets/dashboard_assets/css/style.css" rel="stylesheet">
      <link href="/assets/dashboard_assets/css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+     
 </head>
 
 <body>
@@ -118,7 +119,7 @@
         });
 
     </script>
-    
+     
     
 </body>
 </html>

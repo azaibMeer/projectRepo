@@ -2,23 +2,23 @@
 @section('content')
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-8">
-                    <h2>Add Categories</h2>
+                    <h2>Add Verses</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="{{url('/dashboard')}}">Home</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{url('categories/create')}}">Forms</a>
+                            <a href="{{url('verses/create')}}">Forms</a>
                         </li>
                         <li class="breadcrumb-item active">
-                            <strong>Category</strong>
+                            <strong>Verses</strong>
                         </li>
                     </ol>
                 </div>
                 <div class="col-lg-4">
-                    <a href="{{url('/categories/list')}}" class="btn-secondary btn btn-lg category_add">
+                    <a href="{{url('/verses/list')}}" class="btn-secondary btn btn-lg category_add">
                     
-                    Category List
+                    Verses List
                     </a>
                 </div>
             </div>
@@ -27,10 +27,10 @@
             <div class="row">
 
             
-                <div class="col-lg-5">
+                <div class="col-lg-8">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Add Category</h5>
+                            <h5>Add Verse</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -50,27 +50,18 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="post" action="{{url('/categories/store')}}">
+                            <form method="post" action="{{url('/verses/store')}}">
                                 @csrf
-                                <div class="form-group row"><label class="col-lg-4 col-form-label"><strong>Category Name</strong></label>
+                                <div class="form-group row"><label class="col-lg-4 col-form-label"><strong>Verse Description</strong></label>
 
-                                    <div class="col-lg-8"><input type="text" placeholder="Enter Category" class="form-control" name="category_name" required> 
-                                    </div>
-                                </div>
-                                <div class="form-group row"><label class="col-sm-4 col-form-label"><strong>Category Publish</strong><br/></label>
-
-                                    <div class="col-sm-8">
-                                        
-                                        
-                                        <div class="i-checks"><label> <input type="radio" value="1" name="status" > <i></i> publish </label></div>
-                                        <div class="i-checks"><label> <input type="radio"  value="0" name="status"> <i></i> Not Publish </label></div>
-                                        
+                                    <div class="col-lg-8"><textarea name="name" placeholder="Enter Verse" class="form-control"></textarea> 
                                     </div>
                                 </div>
                                 
+                                
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        <button class="btn btn-lg btn-success" type="submit">Add Category</button>
+                                        <button class="btn btn-lg btn-success" type="submit">Add Verse</button>
                                     </div>
                                 </div>
                             </form>

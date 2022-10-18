@@ -12,6 +12,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\CityDetailController;
+use App\Http\Controllers\VerseController;
 
 
 
@@ -71,6 +72,11 @@ Route::post('/contact/store', [ContactUsController::class,'store']);
 Route::post('/subscribe/store', [SubscribeController::class,'store']);
 		
 
-
-
-
+// verses routes // 
+Route::get('/verses/create', [VerseController::class,'create']);
+/*Route::post('/news/store', [NewsController::class,'store']);
+Route::get('/news/list', [NewsController::class,'show']);
+Route::get('/news/edit/{id}', [NewsController::class,'edit']);
+Route::post('/news/update/{id}', [NewsController::class,'update']);
+Route::get('/news/delete/{id}', [NewsController::class,'destroy']);
+*/

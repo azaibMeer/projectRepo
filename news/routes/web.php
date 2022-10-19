@@ -23,10 +23,7 @@ Route::get('/logout', function(Request $request){
     	$request->session()->regenerateToken();
         return redirect('/login');
 });
-Route::get('/user/create', [AuthController::class,'create']);
-Route::post('/user/store', [AuthController::class,'store']);
-Route::get('/user/list', [AuthController::class,'show']);
-Route::get('/user/edit/{id}', [AuthController::class,'edit']);
+
 
 
 Route::get('/', [NewsController::class,'index']);
@@ -72,11 +69,6 @@ Route::post('/contact/store', [ContactUsController::class,'store']);
 Route::post('/subscribe/store', [SubscribeController::class,'store']);
 		
 
-// verses routes // 
-Route::get('/verses/create', [VerseController::class,'create']);
-/*Route::post('/news/store', [NewsController::class,'store']);
-Route::get('/news/list', [NewsController::class,'show']);
-Route::get('/news/edit/{id}', [NewsController::class,'edit']);
-Route::post('/news/update/{id}', [NewsController::class,'update']);
-Route::get('/news/delete/{id}', [NewsController::class,'destroy']);
-*/
+
+Route::get('/verses/edit/', [VerseController::class,'index']);
+Route::post('/verses/update/', [VerseController::class,'update']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Verse;
+use Auth;
 use Illuminate\Http\Request;
 
 class VerseController extends Controller
@@ -14,7 +15,8 @@ class VerseController extends Controller
      */
     public function index()
     {
-        
+        $data['verse'] = Verse::first();
+        return view("dashboard.verse.edit",$data);
     }
 
     /**
@@ -24,7 +26,7 @@ class VerseController extends Controller
      */
     public function create()
     {
-        return view("dashboard.verse.add");
+        
     }
 
     /**
@@ -35,7 +37,8 @@ class VerseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd($request->all());
+
     }
 
     /**
@@ -46,7 +49,7 @@ class VerseController extends Controller
      */
     public function show(Verse $verse)
     {
-        //
+       
     }
 
     /**
@@ -55,9 +58,10 @@ class VerseController extends Controller
      * @param  \App\Models\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function edit(Verse $verse)
+    public function edit()
     {
-        //
+        
+    
     }
 
     /**
@@ -67,9 +71,14 @@ class VerseController extends Controller
      * @param  \App\Models\Verse  $verse
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Verse $verse)
+    public function update(Request $request)
     {
-        //
+        //dd($request->all());
+        $verse = Verse::first();
+        $verse->description = $request->description;
+        
+        $verse->update();
+        return redirect('/verses/edit')->with('success', ' Updated Successfully');
     }
 
     /**

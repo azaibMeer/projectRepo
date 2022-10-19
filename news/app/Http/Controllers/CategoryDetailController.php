@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Setting;
+use App\Models\Verse;
 use App\Models\News;
 
 class CategoryDetailController extends Controller
@@ -18,6 +19,8 @@ class CategoryDetailController extends Controller
     {   $data['setting'] = Setting::first();
         $data['categories'] = Category::where('status','1')->get();
          $data['web'] = News::where('news_id',$id)->first();
+         $data['verse'] = Verse::where('status','1')->
+                            orderBy('id','DESC')->first();
         return view("layouts.category_detail",$data);
     }
 

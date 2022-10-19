@@ -1,7 +1,7 @@
  <div class="top-header-area">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-6">
+                    <div class="col-lg-2">
                         <ul class="top-header-social">
                             @if($setting->facebook_link != "")
                             <li>
@@ -46,28 +46,22 @@
                                 </a>
                             </li>
                             @endif
+                            
+
                         </ul>
+                       
                     </div>
+                    <div class="col-lg-2">
+                         <p style="color:white; float: center;margin-bottom: 6px
+                         ;margin-right: 40%;">آج کی آيت مبارکہ</p> 
 
-                    <div class="col-lg-6">
-                        <ul class="top-header-others">
-                            <li>
-                                <!-- <div class="languages-list">
-                                    <select>
-                                        <option value="1">English</option>
-                                        <option value="2">العربيّة</option>
-                                        <option value="3">Deutsch</option>
-                                        <option value="3">Português</option>
-                                        <option value="3">简体中文</option>
-                                    </select>
-                                </div> -->
-                            </li>
+                    </div>
+                    <div class="col-lg-8">
 
-                            <li>
-                                <i class='bx bx-user'></i>
-                                <a href="{{url('login')}}">Login</a>
-                            </li>
-                        </ul>
+                        <marquee width="100%" direction="right" style="color:white;" >
+           <strong> {{$verse->description}} <strong>
+            </marquee>
+                         
                     </div>
                 </div>
             </div>

@@ -7,6 +7,7 @@ use App\Models\City;
 use App\Models\News;
 use App\Models\Setting;
 use App\Models\Category;
+use App\Models\Verse;
 
 use Auth;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -30,6 +31,8 @@ class CityController extends Controller
                             ->orderBy('news_id','DESC')
                             ->take(5)
                             ->get();
+         $data['verse'] = Verse::where('status','1')->
+                            orderBy('id','DESC')->first();
          return view("layouts.cities",$data);
     }
 

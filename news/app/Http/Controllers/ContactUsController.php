@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Contact;
+use App\Models\Verse;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\CategoryController;
@@ -19,6 +20,8 @@ class ContactUsController extends Controller
     {   
         $data['setting'] = Setting::first();
        $data['categories'] = Category::where('status','1')->get();
+       $data['verse'] = Verse::where('status','1')->
+                            orderBy('id','DESC')->first();
        return view("layouts.contact",$data);
     }
 

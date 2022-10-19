@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Category;
+use App\Models\Verse;
 use App\Models\Setting;
 use App\Models\News;
 use Auth;
@@ -26,6 +27,8 @@ class CategoryController extends Controller
        
        $data['web'] = News::where('news.category_id',$id)->
                             orderBy('news_id','DESC')->take(6)->get();
+        $data['verse'] = Verse::where('status','1')->
+                            orderBy('id','DESC')->first();
         // dd($data);
         return view('layouts.category',$data);
     }

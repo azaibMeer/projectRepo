@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Category;
 use App\Models\Setting;
 use App\Models\News;
+use App\Models\Verse;
 class CityDetailController extends Controller
 {
     /**
@@ -19,6 +20,8 @@ class CityDetailController extends Controller
         $data['setting'] = Setting::first();
         $data['categories'] = Category::where('status','1')->get();
          $data['web'] = News::where('news_id',$id)->first();
+         $data['verse'] = Verse::where('status','1')->
+                            orderBy('id','DESC')->first();
         return view("layouts.cities_detail",$data);
     }
 

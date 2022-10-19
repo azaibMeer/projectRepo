@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Models\City;
 use App\Models\Setting;
 use App\Models\Program;
+use App\Models\Verse;
 use Illuminate\Http\Request;
 use Validator;
 use Auth;
@@ -33,7 +34,8 @@ class NewsController extends Controller
 
         $data['cities'] = City::where('status','1')->get();
         $data['programs'] = Program::where('status','1')->get();
-        
+        $data['verse'] = Verse::where('status','1')->
+                            orderBy('id','DESC')->first();
 
          return view('layouts.index',$data );
     }

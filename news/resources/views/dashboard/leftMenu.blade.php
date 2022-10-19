@@ -46,20 +46,13 @@
                             
                         </ul>
                     </li>
-                    <li>
-                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Users</span><span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/user/create')}}">Add</a></li>
-                            <li><a href="{{url('/user/list')}}">List</a></li>
-                            
-                        </ul>
-                    </li>
+                    
                     <li>
                         <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Verses</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <li><a href="{{url('/verses/create')}}">Add</a></li>
-                            <li><a href="{{url('/verses/list')}}">List</a></li>
-                            
+                            <!-- <li><a href="{{url('/verses/create')}}">Add</a></li>
+                            <li><a href="{{url('/verses/list')}}">List</a></li> -->
+                            <li><a href="{{url('/verses/edit')}}">update</a></li>
                         </ul>
                     </li>
                   </ul>

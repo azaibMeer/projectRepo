@@ -1,3 +1,4 @@
+
 @extends('dashboard.welcome') 
 @section('content')
 <div class="row wrapper border-bottom white-bg page-heading">
@@ -70,7 +71,7 @@
                                 </div>
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>
 
-                                    <div class="col-lg-10"><!-- <input type="name" placeholder="Enter News Description" class="form-control" name="content" value="{{$news->content}}"  required> --> 
+                                    <div class="col-lg-10">
                                         <textarea class="form-control" name="content" placeholder="Enter News Description" required>{{$news->content}}</textarea>
                                     </div>
                                 </div>
@@ -82,24 +83,20 @@
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label"><strong>News Image</strong></label>
 
-                                    <div class="col-lg-4">
-                                         
-                                    <input type="file"  class="form-control " name="image" value="{{ $news->image }}" required><span>File Must be 1920 px by 1000 px</span>
-                                    @if ("{{ $news->image }}")
-                    <img src="{{ $news->image }}" height="50px" width="80px;">
-                            @else
-                            <p>No image found</p>
-                            @endif
+                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" value="{{ $news->image }}" required><span>File Must be 1920 px by 1000 px</span>
+                                        @if ("{{ $news->image }}")
+                                 <img src="{{ $news->image }}" height="50px" width="80px;">
+                                    @else
+                             <p>No image found</p>
+                                @endif
                                     </div> 
-
                                       <label class="col-lg-2 col-form-label"><strong>Select City</strong></label>
 
-                                    <div class="col-sm-4">
-                               
-                                        <select class="form-control m-b" name="city" >
+                                    <div class="col-sm-4"><select class="form-control m-b" name="city">
                                         <option disabled="">Select City</option>
                                         <option value="0">None</option>
                                         @foreach($cities as $city)
+
                                         <option value="{{$city->id}}"
                                         {{ $city->id == $news->city_id ? 'selected' : '' }}>{{$city->city_name}}</option>
                                         @endforeach
@@ -113,18 +110,22 @@
                                  <div class="form-group row">
                                <label class="col-lg-2 col-form-label"><strong>Select Category</strong></label>
 
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-4">
                                         <select class="form-control m-b" name="category">
-                                    <option disabled="">Select Category</option>
+                                        <option disabled="">Select Category</option>
                                         <option value="0">None</option>
+                                        @foreach($categories as $category)
 
-                                    @foreach($categories as $category)
-                                        <option value="{{$category->category_id}} " {{$category->category_id ==$news->category_id ? 'selected' : ''  }} >{{$category->name}}</option>
+                                        <option value="{{$category->category_id}} " {{$category->category_id ==$news->category_id ? 'selected' : ''  }}>{{$category->name}}</option>
                                         @endforeach
-                                       
                                        
                                         
                                     </select>
+                                    </div>
+                                    <label class="col-lg-2 col-form-label"><strong>Vedio Id</strong></label>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" placeholder="Enter Vedio Id" class="form-control" name="vedio" value="{{ $news->vedio }}"> 
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-sm-2 col-form-label"><strong>News Publish</strong><br/></label>
@@ -132,11 +133,14 @@
                                     <div class="col-sm-10">
                                         
                                         
-                                        <div class="i-checks"><label> <input type="radio" name="status" value="1" 
-                                            {{$news->status == 1 ? 'checked':''}} > <i></i> publish </label></div>
-                                        <div class="i-checks"><label> <input type="radio" name="status" 
-                                            value="0" 
-                                            {{$news->status == 0 ? 'checked':''}} > <i></i> Not Publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio" 
+                                            value="1" 
+                                            {{$news->status == 1 ? 'checked':''}} 
+                                         name="status"> <i></i> publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio" 
+                                        value="0" 
+                                            {{$news->status == 0 ? 'checked':''}} 
+                                         name="status"> <i></i> Not Publish </label></div>
                                         
                                     </div>
                                 </div>
@@ -154,3 +158,7 @@
             
         </div>
                 @endsection
+               
+
+
+

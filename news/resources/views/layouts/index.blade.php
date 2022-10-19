@@ -37,7 +37,7 @@
         </div>
       </div>
      
-      <div class="row" style="margin-top: 10px;">
+      <div class="row" style="margin-top: 25px;">
        
        @for($i=1;$i<=4;$i++)
 
@@ -45,7 +45,7 @@
                             <div class="single-politics-news">
                                 <div class="politics-news-image">
                                     <a href="{{url('/detail/'.$web[$i]->news_id)}}">
-                                        <img src="{{url($web[$i]->image)}}" alt="image">
+                                        <img src="{{url($web[$i]->image)}}" alt="image" height="160px">
                                     </a>
                                 </div>
                                 

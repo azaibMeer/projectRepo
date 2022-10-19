@@ -50,19 +50,25 @@
                         </div>
                     </div>
                 </div>
+                @if($web->vedio != "")
                 <div class="row">
 
-                           
-                    <div class="col-lg-12 col-md-12">
-                        <div class="blog-details-desc">
-                             
-                            <div class="article-image">
+                <div class="col-lg-8 col-md-12">
+                    <div class="section-title" style="margin-top: 10px;"> 
+                       <h2>خبر کی ویڈیو</h2>
+                    </div>
+                    <div class="blog-details-desc">
 
-                            </div>
-        
-                        </div>
+                    <div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
+                         <iframe width="100%" height="100%"
+                                src="{{url('https://www.youtube.com/embed/'.$web->vedio)}}"
+                                frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0">
+                        </iframe>
+                    </div>
                     </div>
                 </div>
+                </div>
+                @endif
             </div>
         </section>
 

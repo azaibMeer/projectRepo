@@ -57,16 +57,34 @@
                         </div>
                     </div>
 
-                    <div class="col-lg-3 col-md-6">
+                    <!-- <div class="col-lg-3 col-md-6">
                         <div class="single-footer-widget">
                             <h2>سبسکرائب</h2>
 
                             <div class="widget-subscribe-content">
-                    <form  method="post" action="{{url('/subscribe/store')}}">
+                <form  method="post" action="{{url('/subscribe/store')}}">
                         @csrf
                                     <input type="email" class="form-control" placeholder="اپنا ای میل درج کریں۔" name="email" required>
                                         <br>
                                     <input type="submit" class="btn btn-primary" value="submit" style="margin-left: 70%;">
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-footer-widget">
+                            <h2>سبسکرائب کریں</h2>
+
+                            <div class="widget-subscribe-content">
+                                <p>پاک عوامی نیوز یوٹیوب چینل کو سبسکرائب کریں اور روزانہ کی بنیاد پر تازہ ترین خبریں دیکھیں شکریہ</p>
+
+                                <form  method="post" action="{{url('/subscribe/store')}}">
+                                     @csrf
+                                    <input type="email"  placeholder="اپنا ای میل درج کریں۔"  name="email" required="" 
+                                    id="subscribe_input">
+                            <input type="submit" class="btn btn-warning btn-lg" value="سبسکرائب کریں" id="subscribe_btn">
                                 </form>
                             </div>
                         </div>

@@ -104,7 +104,7 @@
                                  <div class="form-group row">
                                <label class="col-lg-2 col-form-label"><strong>Select Category</strong></label>
 
-                                    <div class="col-sm-10">
+                                    <div class="col-sm-4">
                                         <select class="form-control m-b" name="category">
                                         <option disabled="">Select Category</option>
                                         <option value="0">None</option>
@@ -115,6 +115,11 @@
                                        
                                         
                                     </select>
+                                    </div>
+                                    <label class="col-lg-2 col-form-label"><strong>Vedio Id</strong></label>
+
+                                    <div class="col-sm-4">
+                                        <input type="text" placeholder="Enter Vedio Id" class="form-control" name="vedio"> 
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-sm-2 col-form-label"><strong>News Publish</strong><br/></label>

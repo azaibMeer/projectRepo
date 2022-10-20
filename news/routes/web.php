@@ -14,6 +14,7 @@ use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\CityDetailController;
 use App\Http\Controllers\VerseController;
 use App\Http\Controllers\SettingController;
+use App\Http\Controllers\ReporterController;
 
 
 
@@ -76,3 +77,8 @@ Route::post('/verses/update/', [VerseController::class,'update']);
 
 Route::get('/setting/edit/', [SettingController::class,'index']);
 Route::post('/setting/update/', [SettingController::class,'update']);
+
+// reporter //
+
+Route::get('/reporter/create', [ReporterController::class,'create']);
+Route::post('/reporter/store', [ReporterController::class,'store']);

@@ -3,22 +3,22 @@
     
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-12">
-                    <h2>Add News</h2>
+                    <h2>Add Reporter</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
                             <a href="{{url('/dashboard')}}">Home</a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="{{url('news/create')}}">Forms</a>
+                            <a href="{{url('reporter/create')}}">Forms</a>
                         </li>
                         <li class="breadcrumb-item active">
-                            <strong>News</strong>
+                            <strong>Reporter</strong>
                         </li>
                     </ol>
                    
-                    <a href="{{url('/news/list')}}" class="btn-secondary btn btn-lg arrange_btn">
+                    <a href="{{url('/reporter/list')}}" class="btn-secondary btn btn-lg arrange_btn">
                     
-                    News List
+                    Reporter List
                     </a>
                 
                 </div>
@@ -43,7 +43,7 @@
           <div class="col-lg-10">
                     <div class="ibox ">
                         <div class="ibox-title">
-                            <h5>Add News</h5>
+                            <h5>Add Reporter</h5>
                             <div class="ibox-tools">
                                 <a class="collapse-link">
                                     <i class="fa fa-chevron-up"></i>
@@ -63,68 +63,65 @@
                             </div>
                         </div>
                         <div class="ibox-content">
-                            <form method="post" action="{{url('/news/store')}}" enctype="multipart/form-data">
+                            <form method="post" action="{{url('/reporter/store')}}" enctype="multipart/form-data">
                                 @csrf
-                                <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Title</strong></label>
+                                <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Reporter Name</strong></label>
 
-                                    <div class="col-lg-10"><input type="text" placeholder="Enter News Title" class="form-control" name="title" required> 
+                                    <div class="col-lg-10"><input type="text" placeholder="Enter Reporter Name" class="form-control" name="name" required> 
                                     </div>
                                 </div>
-                                <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>
+                                <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Father Name</strong></label>
+
+                                    <div class="col-lg-10"><input type="text" placeholder="Enter Father Name" class="form-control" name="father_name" required> 
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Reporter Address</strong></label>
 
                                     <div class="col-lg-10">
-                                        <textarea class="form-control" name="content" placeholder="Enter News Description" required></textarea>
+                                        <textarea class="form-control" name="address" placeholder="Enter Reporter Address" required></textarea>
                                     </div>
                                 </div>
-                                <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Author Name</strong></label>
-
-                                    <div class="col-lg-10"><input type="text" placeholder="Enter Author Name" class="form-control" name="author_name" required> 
-                                    </div>
-                                </div>
+                                
                                 <div class="form-group row">
-                                    <label class="col-lg-2 col-form-label"><strong>News Image</strong></label>
+                                    <label class="col-lg-2 col-form-label"><strong>Reporter Image</strong></label>
 
-                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" required><span>File Must be 1920 px by 1000 px</span>
+                                    <div class="col-lg-4"><div class="custom-file">
+                                <input id="logo" type="file" class="custom-file-input" name="image">
+                                <label for="logo" class="custom-file-label">Choose file...</label>
+                                </div> <span>File Must be 1920 px by 1000 px</span>
 
                                     </div> 
-                                      <label class="col-lg-2 col-form-label"><strong>Select City</strong></label>
+                                      <label class="col-lg-2 col-form-label"><strong>Reporter City</strong></label>
 
                                     <div class="col-sm-4"><select class="form-control m-b" name="city">
-                                        <option disabled="">Select City</option>
-                                        <option value="0">None</option>
-                                        @foreach($cities as $city)
-
-                                        <option value="{{$city->id}}">{{$city->city_name}}</option>
-                                        @endforeach
-                                        
-                                    </select>
+                                    <option disabled="">Select City</option>
+                                       @foreach($cities as $city)
+                                       <option value="{{$city->id}}">{{$city->city_name}}</option>
+                                       @endforeach
+                                     </select>
                                     </div> 
                                 
 
                                 </div>
+                                <div class="form-group row">
+                                    
+                                      <label class="col-lg-2 col-form-label"><strong>Reporter Type</strong></label>
+
+                                    <div class="col-sm-4"><select class="form-control m-b" name="reporter_type">
+                                        <option disabled="">Select Reporter Type</option>
+                                       <option value="0">Buero</option>
+                                       <option value="1">Reporter</option>
+                                       </select>
+                                    </div> 
+                                      <label class="col-lg-2 col-form-label"><strong>Phone Number</strong></label>
+
+                                    <div class="col-sm-4"><input type="number" name="phone" class="form-control" required>
+                                    </div>
                                 
-                                 <div class="form-group row">
-                               <label class="col-lg-2 col-form-label"><strong>Select Category</strong></label>
 
-                                    <div class="col-sm-4">
-                                        <select class="form-control m-b" name="category">
-                                        <option disabled="">Select Category</option>
-                                        <option value="0">None</option>
-                                        @foreach($categories as $category)
-
-                                        <option value="{{$category->category_id}}">{{$category->name}}</option>
-                                        @endforeach
-                                       
-                                        
-                                    </select>
-                                    </div>
-                                    <label class="col-lg-2 col-form-label"><strong>Vedio Id</strong></label>
-
-                                    <div class="col-sm-4">
-                                        <input type="text" placeholder="Enter Vedio Id" class="form-control" name="vedio"> 
-                                    </div>
                                 </div>
-                                <div class="form-group row"><label class="col-sm-2 col-form-label"><strong>News Publish</strong><br/></label>
+                                 
+                                <div class="form-group row"><label class="col-sm-2 col-form-label"><strong>Publish Reporter</strong><br/></label>
 
                                     <div class="col-sm-10">
                                         
@@ -136,7 +133,7 @@
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-lg-offset-2 col-lg-10">
-                                        <button class="btn btn-lg btn-success" type="submit">Add News</button>
+                                        <button class="btn btn-lg btn-success" type="submit">Add Reporter</button>
                                     </div>
                                 </div>
                             
@@ -153,3 +150,4 @@
     
 
             @endsection
+           

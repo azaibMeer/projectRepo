@@ -15,13 +15,14 @@
                             <strong>cities</strong>
                         </li>
                     </ol>
-                </div>
-                <div class="col-lg-4">
-                    <a href="{{url('/cities/create')}}" class="btn-secondary btn btn-lg category_add">
+                    <a href="{{url('/cities/create')}}" class="btn-secondary btn btn-lg arrange_btn">
                     
                     Add city
                     </a>
                 </div>
+                
+                    
+                
                  
 
             </div>

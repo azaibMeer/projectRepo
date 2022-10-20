@@ -2,7 +2,7 @@
 @section('content')
     
 <div class="row wrapper border-bottom white-bg page-heading">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <h2>Add News</h2>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">
@@ -15,13 +15,14 @@
                             <strong>News</strong>
                         </li>
                     </ol>
-                </div>
-                <div class="col-lg-4">
-                    <a href="{{url('/news/list')}}" class="btn-secondary btn btn-lg category_add">
+                   
+                    <a href="{{url('/news/list')}}" class="btn-secondary btn btn-lg arrange_btn">
                     
                     News List
                     </a>
+                
                 </div>
+                
             </div>
 <div class="wrapper wrapper-content animated fadeInRight">
           
@@ -38,7 +39,7 @@
             @endif
             
         </div>
-
+        
           <div class="col-lg-10">
                     <div class="ibox ">
                         <div class="ibox-title">

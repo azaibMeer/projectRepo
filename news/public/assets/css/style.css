@@ -1167,10 +1167,10 @@ Navbar Area CSS
             box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
   }
   .main-responsive-nav .mean-container a.meanmenu-reveal {
-    color: #ffffff;
+    color: black;
   }
   .main-responsive-nav .mean-container a.meanmenu-reveal span {
-    background: #ffffff;
+    background: #0d0657;
     position: relative;
   }
   .main-responsive-nav .logo {

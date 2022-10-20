@@ -15,13 +15,12 @@
                             <strong>News</strong>
                         </li>
                     </ol>
-                </div>
-                <div class="col-lg-4">
-                    <a href="{{url('/news/create')}}" class="btn-secondary btn btn-lg category_add">
+                    <a href="{{url('/news/create')}}" class="btn-secondary btn btn-lg arrange_btn">
                     
                     Add News
                     </a>
                 </div>
+                
                  
 
             </div>

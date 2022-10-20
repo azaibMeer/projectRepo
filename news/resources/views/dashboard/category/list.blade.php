@@ -15,13 +15,14 @@
                             <strong>Category</strong>
                         </li>
                     </ol>
-                </div>
-                <div class="col-lg-4">
-                    <a href="{{url('/categories/create')}}" class="btn-secondary btn btn-lg category_add">
+                    
+                    <a href="{{url('/categories/create')}}" class="btn-secondary btn btn-lg arrange_btn">
                     
                     Add Category
                     </a>
                 </div>
+                
+               
                  
 
             </div>

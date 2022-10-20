@@ -15,13 +15,14 @@
                             <strong>News</strong>
                         </li>
                     </ol>
-                </div>
-                <div class="col-lg-4">
-                    <a href="{{url('/news/list')}}" class="btn-secondary btn btn-lg category_add">
+                    <a href="{{url('/news/list')}}" class="btn-secondary btn btn-lg arrange_btn">
                     
                     News List
                     </a>
                 </div>
+                
+                    
+               
             </div>
 <div class="wrapper wrapper-content animated fadeInRight">
           

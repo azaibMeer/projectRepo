@@ -53,7 +53,7 @@
                     </div>
                     <div class="col-lg-2">
                          <p style="color:white; float: center;margin-bottom: 6px
-                         ;margin-right: 40%;">آج کی آيت مبارکہ</p> 
+                         ;margin-right: 37%;">آج کی آيت مبارکہ</p> 
 
                     </div>
                     <div class="col-lg-8">

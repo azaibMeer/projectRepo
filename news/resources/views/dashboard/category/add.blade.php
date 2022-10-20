@@ -14,13 +14,14 @@
                             <strong>Category</strong>
                         </li>
                     </ol>
-                </div>
-                <div class="col-lg-4">
-                    <a href="{{url('/categories/list')}}" class="btn-secondary btn btn-lg category_add">
+                    <a href="{{url('/categories/list')}}" class="btn-secondary btn btn-lg arrange_btn">
                     
                     Category List
                     </a>
                 </div>
+                
+                    
+             
             </div>
 <div class="wrapper wrapper-content animated fadeInRight">
           

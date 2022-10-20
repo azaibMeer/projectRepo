@@ -13,6 +13,7 @@ use App\Http\Controllers\CityController;
 use App\Http\Controllers\SubscribeController;
 use App\Http\Controllers\CityDetailController;
 use App\Http\Controllers\VerseController;
+use App\Http\Controllers\SettingController;
 
 
 
@@ -72,3 +73,6 @@ Route::post('/subscribe/store', [SubscribeController::class,'store']);
 
 Route::get('/verses/edit/', [VerseController::class,'index']);
 Route::post('/verses/update/', [VerseController::class,'update']);
+
+Route::get('/setting/edit/', [SettingController::class,'index']);
+Route::post('/setting/update/', [SettingController::class,'update']);

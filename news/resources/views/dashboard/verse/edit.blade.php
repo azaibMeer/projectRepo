@@ -15,12 +15,7 @@
                         </li>
                     </ol>
                 </div>
-                <div class="col-lg-4">
-                    <a href="{{url('/verses/list')}}" class="btn-secondary btn btn-lg category_add">
-                    
-                    Verses List
-                    </a>
-                </div>
+                
             </div>
 <div class="wrapper wrapper-content animated fadeInRight">
           

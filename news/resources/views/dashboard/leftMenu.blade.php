@@ -31,7 +31,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Category</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-list-alt"></i> <span class="nav-label">Category</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{url('/categories/create')}}">Add</a></li>
                             <li><a href="{{url('/categories/list')}}">List</a></li>
@@ -39,7 +39,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Cities</span><span class="fa arrow"></span></a>
+                        <a href="#"><i class="fa fa-list-alt"></i> <span class="nav-label">Cities</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
                             <li><a href="{{url('/cities/create')}}">Add</a></li>
                             <li><a href="{{url('/cities/list')}}">List</a></li>
@@ -50,9 +50,15 @@
                     <li>
                         <a href="#"><i class="fa fa-table"></i> <span class="nav-label">Verses</span><span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level collapse">
-                            <!-- <li><a href="{{url('/verses/create')}}">Add</a></li>
-                            <li><a href="{{url('/verses/list')}}">List</a></li> -->
+                            
                             <li><a href="{{url('/verses/edit')}}">update</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa fa-cog"></i> <span class="nav-label">Settings</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            
+                            <li><a href="{{url('/setting/edit')}}">update</a></li>
                         </ul>
                     </li>
                   </ul>

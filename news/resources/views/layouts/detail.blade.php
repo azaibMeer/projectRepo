@@ -20,7 +20,7 @@
                 <div class="section-title"> 
                        <h2>خبر کی تفصیل</h2>
                     </div>
-                <div class="col-lg-10 col-md-12">
+                <div class="col-lg-12 col-md-12">
                     <h1>{{ $web->title}}</h1>
                 </div>
             <div class="row">
@@ -32,19 +32,11 @@
                              </span>
                         </div>
                             <div class="article-image">
-                                <img src="{{ $web->image}}" alt="image">
-                            </div>
-        
-                            <div class="article-content">
-                                    <p>{{ $web->content}}</p>
-                            </div>
-                    </div>
-                </div>
-            </div>
-                @if($web->vedio != "")
+                               
+                               @if($web->vedio != "")
                 <div class="row">
 
-                <div class="col-lg-8 col-md-12">
+                <div class="col-lg-12 col-md-12">
                     <div class="section-title" style="margin-top: 10px;"> 
                        <h2>خبر کی ویڈیو</h2>
                     </div>
@@ -59,9 +51,21 @@
                     </div>
                 </div>
                 </div>
+                @else
+                  <img src="{{ $web->image}}" alt="image">
+
                 @endif
             </div>
             </div>
+            </div>
+        
+                            <div class="article-content">
+                                    <p>{{ $web->content}}</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+                
 
         </section>
 

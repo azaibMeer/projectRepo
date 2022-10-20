@@ -63,7 +63,7 @@
                                 @csrf
                                 <div class="form-group row"><label class="col-lg-4 col-form-label"><strong>Verse Description</strong></label>
 
-                                    <div class="col-lg-8"><textarea name="description" placeholder="Enter Verse" class="form-control">{{$verse->description}}</textarea> 
+                                    <div class="col-lg-8"><textarea name="description" placeholder="Enter Verse" class="form-control" required>{{$verse->description}}</textarea> 
                                     </div>
                                 </div>
                                   

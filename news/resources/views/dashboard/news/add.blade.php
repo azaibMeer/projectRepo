@@ -1,5 +1,6 @@
 @extends('dashboard.welcome') 
 @section('content')
+    
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-8">
                     <h2>Add News</h2>
@@ -70,7 +71,7 @@
                                 </div>
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>
 
-                                    <div class="col-lg-10"><!-- <input type="name" placeholder="Enter News Description" class="form-control" name="content" required>  -->
+                                    <div class="col-lg-10">
                                         <textarea class="form-control" name="content" placeholder="Enter News Description" required></textarea>
                                     </div>
                                 </div>
@@ -137,6 +138,7 @@
                                         <button class="btn btn-lg btn-success" type="submit">Add News</button>
                                     </div>
                                 </div>
+                            
                             </form>
                         </div>
                     </div>
@@ -145,4 +147,8 @@
             
             
         </div>
-                @endsection
+
+
+    
+
+            @endsection

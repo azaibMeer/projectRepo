@@ -12,7 +12,7 @@
 
     <link href="/assets/dashboard_assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/dashboard_assets/font-awesome/css/font-awesome.css" rel="stylesheet">
-
+    <link href="/assets/dashboard_assets/css/plugins/summernote/summernote-bs4.css" rel="stylesheet">
     <!-- Toastr style -->
     <link href="/assets/dashboard_assets/css/plugins/toastr/toastr.min.css" rel="stylesheet">
     <link href="/assets/dashboard_assets/css/plugins/switchery/switchery.css" rel="stylesheet">
@@ -89,6 +89,7 @@
     <script src="/assets/dashboard_assets/js/inspinia.js"></script>
     <script src="/assets/dashboard_assets/js/plugins/pace/pace.min.js"></script>
     <script src="/assets/dashboard_assets/js/plugins/switchery/switchery.js"></script>
+     <script src="/assets/dashboard_assets/js/plugins/summernote/summernote-bs4.js"></script>
 <script>
         $(document).ready(function(){
             $('.dataTables-example').DataTable({
@@ -115,8 +116,9 @@
                 ]
 
             });
-
+            $('.summernote').summernote();
         });
+         
 
     </script>
      

@@ -1,6 +1,8 @@
 @extends('layouts.welcome') 
 @section('content')
 
+        
+
 <section class="main-news-area">
   <div class="container">
     <div class="container-fluid" >
@@ -162,17 +164,17 @@
 
             </div>
           </div>
+
         </div>
       </div>
+      
       
     </div>
   </div>
 
-
-
-
 </section>
 
 
-
 @endsection
+
+

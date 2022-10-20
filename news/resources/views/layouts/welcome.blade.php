@@ -28,6 +28,7 @@
         <link rel="stylesheet" href="/assets/css/responsive.css">
         <!-- RTL CSS -->
         <link rel="stylesheet" href="/assets/css/rtl.css">
+
         
         <title>{{$setting->website_name}}</title>
 
@@ -90,16 +91,9 @@
         <script src="/assets/js/wow.min.js"></script>
         <!-- Custom JS -->
         <script src="/assets/js/main.js"></script>
-        <!-- <script src="/assets/js/highlight.pack.js"></script>
-        <script>
-            $(document).ready(function(){
-            
-    $('#newsTicker2').breakingNews({
-        direction: 'rtl'
-    });
-
-});
-        </script> -->
+       
         
+  
+
     </body>
 </html>

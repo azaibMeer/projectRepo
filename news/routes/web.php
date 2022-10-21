@@ -82,3 +82,7 @@ Route::post('/setting/update/', [SettingController::class,'update']);
 
 Route::get('/reporter/create', [ReporterController::class,'create']);
 Route::post('/reporter/store', [ReporterController::class,'store']);
+Route::get('/reporter/list', [ReporterController::class,'show']);
+Route::get('/reporter/edit/{id}', [ReporterController::class,'edit']);
+Route::post('/reporter/update/{id}', [ReporterController::class,'update']);
+Route::get('/reporter/delete/{id}', [ReporterController::class,'destroy']);

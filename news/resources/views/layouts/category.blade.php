@@ -24,7 +24,7 @@
                             <div class="single-politics-news">
                                 <div class="politics-news-image">
                                     <a href="{{url('/category/detail/'.$web[$i]->news_id)}}">
-                                        <img src="{{url($web[$i]->image)}}" alt="image" height="160px">
+                                        <img src="{{url($web[$i]->image)}}" alt="image" height="160px" width="327px;">
                                     </a>
                                 </div>
                                 

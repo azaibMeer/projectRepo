@@ -454,6 +454,8 @@
     .mean-container a.meanmenu-reveal {
         left: 0 !important;
         right: auto !important;
+        margin-top: 15px;
+        margin-left: 11px;
     }
     .mean-container .mean-nav ul li a.mean-expand {
         width: 85%;

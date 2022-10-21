@@ -129,8 +129,8 @@
                                     <div class="col-sm-10">
                                         
                                         
-                                        <div class="i-checks"><label> <input type="radio" value="1" name="status"> <i></i> publish </label></div>
-                                        <div class="i-checks"><label> <input type="radio"  value="0" name="status"> <i></i> Not Publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio" value="1" name="status" required> <i></i> publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio"  value="0" name="status" required> <i></i> Not Publish </label></div>
                                         
                                     </div>
                                 </div>

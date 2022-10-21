@@ -84,11 +84,12 @@
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label"><strong>News Image</strong></label>
 
-                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" value="{{ $news->image }}" required><span>File Must be 1920 px by 1000 px</span>
+                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" value="{{ $news->image }}"><span>File Must be 1920 px by 1000 px</span>
                                         @if ("{{ $news->image }}")
                                  <img src="{{ $news->image }}" height="50px" width="80px;">
                                     @else
-                             <p>No image found</p>
+                                
+                                <span><strong>no img found</strong></span>
                                 @endif
                                     </div> 
                                       <label class="col-lg-2 col-form-label"><strong>Select City</strong></label>
@@ -117,7 +118,8 @@
                                         <option value="0">None</option>
                                         @foreach($categories as $category)
 
-                                        <option value="{{$category->category_id}} " {{$category->category_id ==$news->category_id ? 'selected' : ''  }}>{{$category->name}}</option>
+                                        <option 
+                                        value="{{$category->category_id}}" {{$category->category_id ==$news->category_id ? 'selected' : ''  }}>{{$category->name}}</option>
                                         @endforeach
                                        
                                         
@@ -134,11 +136,11 @@
                                     <div class="col-sm-10">
                                         
                                         
-                                        <div class="i-checks"><label> <input type="radio" 
+                                        <div class="i-checks"><label> <input type="radio" required
                                             value="1" 
                                             {{$news->status == 1 ? 'checked':''}} 
                                          name="status"> <i></i> publish </label></div>
-                                        <div class="i-checks"><label> <input type="radio" 
+                                        <div class="i-checks"><label> <input type="radio" required 
                                         value="0" 
                                             {{$news->status == 0 ? 'checked':''}} 
                                          name="status"> <i></i> Not Publish </label></div>

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Models\Reporter;
 use App\Models\City;
+use App\Models\Setting;
+use App\Models\Category;
+use App\Models\Verse;
 use Illuminate\Http\Request;
 use Validator;
 class ReporterController extends Controller
@@ -182,6 +185,21 @@ class ReporterController extends Controller
     {
         $reporter = Reporter::find($id);
         $reporter->delete();
-        return redirect('/reporter/list');
+        return redirect('/reporter/list')->with('danger', 'Reporter Deleted Successfully');;
     }
+
+     public function reporters($id)
+    {   
+        $data['setting'] = Setting::first();
+        $data['verse'] = Verse::first();
+        $data['categories'] = Category::where('status','1')->get();
+        $data['reporters'] = Reporter::where('city_id',$id)
+         ->where('status','1')->get();
+         
+        //dd($id,$data['reporters']);
+        return view("layouts.reporter.detail",$data);
+    }
+
+
+
 }

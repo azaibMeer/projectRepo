@@ -86,3 +86,4 @@ Route::get('/reporter/list', [ReporterController::class,'show']);
 Route::get('/reporter/edit/{id}', [ReporterController::class,'edit']);
 Route::post('/reporter/update/{id}', [ReporterController::class,'update']);
 Route::get('/reporter/delete/{id}', [ReporterController::class,'destroy']);
+Route::get('/reporter/detail/{id}', [ReporterController::class,'reporters']);

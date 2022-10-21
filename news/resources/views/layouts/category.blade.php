@@ -9,7 +9,7 @@
                 <div class="row">
                     <div class="politics-news">
                     <div class="section-title"> 
-                        <h2>{{$news->name}}</h2> 
+                        <h2>{{$category->name}}</h2> 
                     </div>
 
                     <div class="row">
@@ -20,11 +20,12 @@
                             if(!isset($web[$i]))
                               continue;
                           @endphp
+                         
                         <div class="col-lg-3 col-md-6">
                             <div class="single-politics-news">
                                 <div class="politics-news-image">
                                     <a href="{{url('/category/detail/'.$web[$i]->news_id)}}">
-                                        <img src="{{url($web[$i]->image)}}" alt="image" height="160px" width="327px;">
+                                        <img src="{{url($web[$i]->image)}}" alt="image">
                                     </a>
                                 </div>
                                 
@@ -37,6 +38,7 @@
                                 </div>
                             </div>
                         </div>
+                       
                         @endfor
                     </div>
                 </div>

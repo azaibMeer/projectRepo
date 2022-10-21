@@ -2,22 +2,13 @@
 @section('content')
 
 
-<div class="page-title-area">
-            <div class="container">
-                <div class="page-title-content">
-                    <h2>خبر کی تفصیل</h2>
-                    <ul>
-                        <li><a href="{{url('/')}}">
-                                        صفحہ اول</a></li>
-                        <li>تفصیل</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
         <section class="news-details-area ptb-50">
 
             <div class="container">
-
+                <div class="section-title"> 
+                      <h2>خبر کی تفصیل</h2>
+                    </div>
                                  <div class="col-lg-12 col-md-12">
                                       <h1>{{ $web->title}}</h1>
                                  </div>

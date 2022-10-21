@@ -1,16 +1,21 @@
 @extends('layouts.welcome') 
 @section('content')
+
 <section class="news-details-area ptb-50">
 
             <div class="container">
 
-                                
+                   <div class="section-title"> 
+                        <h2>{{$news->city_name}}</h2> 
+                        
+                        <a href="{{url('/reporter/detail/'.$news->city_id)}}" style="float: left;margin-top: 15px">
+                         <strong>   {{$news->city_name}} کے نماءندگان
+                         </strong>
+                        </a>
+                        
+                    </div>             
                 <div class="row">
                     <div class="politics-news">
-                    <div class="section-title"> 
-                        <h2>{{$news->city_name}}</h2> 
-                    </div>
-
                     <div class="row">
 
                         @for($i = 0; $i <=5; $i++)
@@ -23,7 +28,7 @@
                             <div class="single-politics-news">
                                 <div class="politics-news-image">
                                     <a href="{{url('/city/detail/'.$web[$i]->news_id)}}">
-                                        <img src="{{url($web[$i]->image)}}" alt="image">
+                                        <img src="{{url($web[$i]->image)}}" alt="image" >
                                     </a>
                                 </div>
                                 

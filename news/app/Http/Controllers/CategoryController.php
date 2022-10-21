@@ -20,17 +20,24 @@ class CategoryController extends Controller
      */
     public function index($id)
     {
+        $data['category'] = Category::where("category_id",$id)->first();
         $data['setting'] = Setting::first();
         $data['categories'] = Category::where('status','1')->get();
        
-       $data['news'] = News::join('categories','categories.category_id','news.category_id')->select('categories.*','news.*')->where('news.category_id',$id)->orderBy('news_id','DESC')->first();
+       /*$data['news'] = News::join('categories','categories.category_id','news.category_id')->select('categories.*','news.*')->where('news.category_id',$id)->orderBy('news_id','DESC')->first();*/
        
        $data['web'] = News::where('news.category_id',$id)->
                             orderBy('news_id','DESC')->take(6)->get();
         $data['verse'] = Verse::where('status','1')->
                             orderBy('id','DESC')->first();
         // dd($data);
+        /*if(count($data['web']) > 0){
+
+
+        return view('layouts.nonews',$data);
+        }*/
         return view('layouts.category',$data);
+
     }
 
     /**

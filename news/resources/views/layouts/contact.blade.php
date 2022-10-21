@@ -2,19 +2,12 @@
 @section('content')
 
 
-<div class="page-title-area">
-            <div class="container">
-                <div class="page-title-content">
-                    <h2>رابطہ کریں </h2>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li>رابطہ کریں </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+
         <section class="contact-area ptb-50">
             <div class="container">
+                <div class="section-title"> 
+                     <h2>رابطہ کریں</h2>
+                    </div>
                 <div class="row">
                                   @if(session()->has('success'))
     <div class="alert alert-success">
@@ -28,6 +21,7 @@
                     <div class="col-lg-12">
                         
                 <div class="contact-form">
+
                             <div class="title">
                                 <h3>فارم کو پُر کریں </h3>
                                 <p></p>

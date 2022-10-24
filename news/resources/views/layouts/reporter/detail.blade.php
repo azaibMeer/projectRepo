@@ -1,5 +1,52 @@
 @extends('layouts.welcome') 
 @section('content')
+<section class="author-area">
+   @if($buero)
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-3">
+                        <div class="author-image">
+                            <img src="{{$buero->image}}" alt="image">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-9">
+                        <div class="author-content">
+                            <h3>{{$buero->name}}</h3>
+                            <span>Buero</span>
+                            <p>{{$buero->address}}</p>
+
+                            <ul class="author-list">
+                                <li>
+                                    <a href="#"> <i class='bx bx-phone'></i>
+                                        {{$buero->phone}}
+                                    </a>
+                                </li>
+
+                                
+                            </ul>
+
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            @else
+                   <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-12">
+                        <div class="author-image">
+                            <h1>سرکاری دفتر موجود نہیں ہے</h1>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>   
+
+            @endif
+           
+        </section>
 <section class="team-area pt-50">
             <div class="container">
                 
@@ -14,11 +61,11 @@
 
                             <div class="content">
                                 <h3>{{$reportar->name}}</h3>
-                                @if($reportar->reporter_type == 1)
+                             
                                 <span>Reporter</span>
-                                @else
-                                <span>Buero</span>
-                                @endif
+                              
+                            
+                            
                             </div>
                         </div>
                     </div> 

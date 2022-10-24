@@ -7,7 +7,7 @@
   <div class="container">
     <div class="container-fluid" >
       <div class="row">
-    <div class="col-md-12" style="display: none">
+     <div class="col-md-12" style="display: ">
       <img src="/assets/img/main-news/ads.png">
     </div>
   </div>

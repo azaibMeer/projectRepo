@@ -193,9 +193,15 @@ class ReporterController extends Controller
         $data['setting'] = Setting::first();
         $data['verse'] = Verse::first();
         $data['categories'] = Category::where('status','1')->get();
+        
         $data['reporters'] = Reporter::where('city_id',$id)
-         ->where('status','1')->get();
-         
+         ->where('status','1')->where('reporter_type', '1')->get();
+        
+        $data['buero'] = Reporter::where('city_id', $id)->
+        where('reporter_type','0')
+        ->orderBy('reporter_id','DESC')->first();
+
+            
         //dd($id,$data['reporters']);
         return view("layouts.reporter.detail",$data);
     }

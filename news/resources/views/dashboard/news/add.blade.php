@@ -83,10 +83,15 @@
                                 </div>
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label"><strong>News Image</strong></label>
+                                    <div class="col-lg-4"><div class="custom-file">
+                                <input id="logo" type="file" class="custom-file-input" name="image" required>
+                                <label for="logo" class="custom-file-label">Choose file...</label>
+                                </div> <span>File Must be 1920 px by 1000 px</span>
 
-                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" required><span>File Must be 1920 px by 1000 px</span>
+                                </div>
+                                    <!-- <div class="col-lg-4"><input type="file"  class="form-control " name="image" required><span>File Must be 1920 px by 1000 px</span>
 
-                                    </div> 
+                                    </div> --> 
                                       <label class="col-lg-2 col-form-label"><strong>Select City</strong></label>
 
                                     <div class="col-sm-4"><select class="form-control m-b" name="city">

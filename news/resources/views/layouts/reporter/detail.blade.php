@@ -14,7 +14,11 @@
 
                             <div class="content">
                                 <h3>{{$reportar->name}}</h3>
-                                <span>Editor</span>
+                                @if($reportar->reporter_type == 1)
+                                <span>Reporter</span>
+                                @else
+                                <span>Buero</span>
+                                @endif
                             </div>
                         </div>
                     </div> 

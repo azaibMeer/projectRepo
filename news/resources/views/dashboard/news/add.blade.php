@@ -70,12 +70,27 @@
                                     <div class="col-lg-10"><input type="text" placeholder="Enter News Title" class="form-control" name="title" required> 
                                     </div>
                                 </div>
-                                <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>
+                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>
 
-                                    <div class="col-lg-10">
+                                    <!-- <div class="col-lg-10">
                                         <textarea class="form-control" name="content" placeholder="Enter News Description" required></textarea>
-                                    </div>
+                                    </div> -->
+                                    <div class="col-lg-10">
+                <div class="ibox ">
+                    
+                    <div class="ibox-content no-padding">
+
+                        <div class="summernote">
+                            
+                           
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
                                 </div>
+                                
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Author Name</strong></label>
 
                                     <div class="col-lg-10"><input type="text" placeholder="Enter Author Name" class="form-control" name="author_name" required> 

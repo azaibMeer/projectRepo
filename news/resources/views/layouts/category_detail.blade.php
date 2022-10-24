@@ -11,15 +11,22 @@
                     </div>
                                  <div class="col-lg-12 col-md-12">
                                       <h1>{{ $web->title}}</h1>
+                                       
                                  </div>
+
                 <div class="row">
 
                            
                     <div class="col-lg-12 col-md-12">
                         <div class="blog-details-desc">
                              <div class="article-content">
-                                  <h6>خبر رساں  : {{$web->author}}</h6>
-                            <span>{{$web->created_at->format('M/d/Y')}}</span>
+                              <span>
+                          <strong> اپ لوڈ کی تاریخ
+
+                         : </strong> 
+                         {{$web->created_at->format('M/d/Y')}}
+                        </span>
+
                              </div>
                             <div class="article-image">
 
@@ -48,7 +55,7 @@
                             </div>
         
                             <div class="article-content">
-                                
+                               
                                 <p>{{ $web->content}}</p>
                                 
                                 

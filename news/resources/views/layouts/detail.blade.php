@@ -2,19 +2,7 @@
 @section('content')
 
 
-<!-- <div class="page-title-area">
-            <div class="container">
-                <div class="page-title-content">
-                    
-                    <ul>
-                        <li>
-                            <a href="{{url('/')}}">حہ اول</a>
-                        </li>
-                        <li>تفصیل</li>
-                    </ul>
-                </div>
-            </div>
-</div> -->
+
         <section class="news-details-area ptb-50">
             <div class="container">
                 <div class="section-title"> 
@@ -27,7 +15,7 @@
                  <div class="col-lg-12 col-md-12">
                     <div class="blog-details-desc">
                         <div class="article-content">
-                            <h6>خبر رساں  : {{$web->author}}</h6>
+                            
                              <span>{{ $web->created_at->format('M/d/Y')}}
                              </span>
                         </div>
@@ -56,12 +44,13 @@
 
                 @endif
             </div>
+            <div class="article-content">
+                                    <p>{{ $web->content}}</p>
+                            </div>
             </div>
             </div>
         
-                            <div class="article-content">
-                                    <p>{{ $web->content}}</p>
-                            </div>
+                            
                     </div>
                 </div>
             </div>

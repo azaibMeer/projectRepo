@@ -31,12 +31,14 @@ class CategoryController extends Controller
         $data['verse'] = Verse::where('status','1')->
                             orderBy('id','DESC')->first();
         // dd($data);
-        /*if(count($data['web']) > 0){
+        if(count($data['web']) > 0){
 
-
-        return view('layouts.nonews',$data);
-        }*/
-        return view('layouts.category',$data);
+            return view('layouts.category',$data);
+        
+        }else{
+            return view('layouts.no_news',$data);
+        }
+        
 
     }
 

@@ -49,8 +49,8 @@
                                     <div class="col-sm-8">
                                         
                                         
-                                        <div class="i-checks"><label> <input type="radio" value="1" name="status" {{$categories->status == 1 ? 'checked':''}}> <i></i> publish </label></div>
-                                        <div class="i-checks"><label> <input type="radio"  value="0" name="status" {{$categories->status == 0 ? 'checked':''}}> <i></i> Not Publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio" value="1" required name="status" {{$categories->status == 1 ? 'checked':''}}> <i></i> publish </label></div>
+                                        <div class="i-checks"><label> <input type="radio"  value="0" required name="status" {{$categories->status == 0 ? 'checked':''}}> <i></i> Not Publish </label></div>
                                         
                                     </div>
                                 </div>

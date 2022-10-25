@@ -56,7 +56,7 @@
         
                             <div class="article-content">
                                
-                                <p>{{ $web->content}}</p>
+                                <p>{!! $web->content !!}</p>
                                 
                                 
                             </div>

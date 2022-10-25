@@ -48,8 +48,9 @@
                 @endif
             </div>
             <div class="article-content">
-                                    <p>{{ $web->content}}</p>
-                            </div>
+                <p>{!! $web->content !!}</p>
+           
+            </div>
             </div>
             </div>
         

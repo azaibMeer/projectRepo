@@ -52,7 +52,7 @@
                                 <strong>  اپ لوڈ کی تاریخ :</strong>
                                 {{$web->created_at->format('M/d/Y')}}
                                 </span>
-                                <p>{{ $web->content}}</p>
+                                <p>{!! $web->content !!}</p>
                                 
                                 
                             </div>

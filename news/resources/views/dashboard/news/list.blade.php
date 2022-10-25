@@ -85,7 +85,7 @@
                     <tr class="gradeU">
                         <td>{{$news_data->news_id}}</td>
                         <td>{{Str::limit($news_data->title, 10, ' ...')}}</td>
-                        <td>{{Str::limit($news_data->content, 30, ' ...')}}</td>
+                        <td>{!! Str::limit (strip_tags($news_data->content),30, '...') !!}</td>
                         <td>
                             <img src="{{ $news_data->image }}" height="30px" width="30px" />
                         </td>

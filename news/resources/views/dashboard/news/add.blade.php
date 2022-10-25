@@ -1,6 +1,8 @@
 @extends('dashboard.welcome') 
 @section('content')
-    
+
+<link href="{{url('/assets/dashboard_assets/css/plugins/summernote/summernote-bs4.css')}}" rel="stylesheet">
+
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-12">
                     <h2>Add News</h2>
@@ -74,16 +76,13 @@
 
                                     <!-- <div class="col-lg-10">
                                         <textarea class="form-control" name="content" placeholder="Enter News Description" required></textarea>
-                                    </div> -->
+                                    </div> --> 
                                     <div class="col-lg-10">
                 <div class="ibox ">
                     
                     <div class="ibox-content no-padding">
 
-                        <div class="summernote">
-                            
-                           
-                        </div>
+                        <textarea class="summernote" name="content"></textarea>
 
                     </div>
                 </div>
@@ -126,8 +125,8 @@
                                  <div class="form-group row">
                                <label class="col-lg-2 col-form-label"><strong>Select Category</strong></label>
 
-                                    <div class="col-sm-4">
-                                        <select class="form-control m-b" name="category">
+                                <div class="col-sm-4">
+                                <select class="form-control m-b" name="category">
                                         <option disabled="">Select Category</option>
                                         <option value="0">None</option>
                                         @foreach($categories as $category)
@@ -168,8 +167,20 @@
             
             
         </div>
+        @endsection
+        @section('scripts')
+
+<script src="{{url('/assets/dashboard_assets/js/plugins/summernote/summernote-bs4.js')}}"></script>
+     <script>
+        $(document).ready(function(){
+
+            $('.summernote').summernote({
+                height: 200
+            });
 
 
-    
+       });
+    </script>
+    @endsection
 
-            @endsection
+            

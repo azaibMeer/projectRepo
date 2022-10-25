@@ -27,9 +27,12 @@
             </div>
             <div class="col-md-6">
               <h3>
-                <a href="{{url('/detail/'.$web[0]->news_id)}}"> {{Str::limit  ($web[0]->title, 95, ' ...')}}</a>
+                <a href="{{url('/detail/'.$web[0]->news_id)}}"> {{Str::limit  ($web[0]->title, 50, ' ...')}}</a>
               </h3>
-              <p> {{Str::limit($web[0]->content, 200, ' ...')}}</p>
+              <p>
+                
+                {!! Str::limit (strip_tags($web[0]->content),300, '...') !!}
+              </p>
               
                 <small class="text-muted">{{ $web[0]->created_at->format('M/d/Y')}}</small>
            

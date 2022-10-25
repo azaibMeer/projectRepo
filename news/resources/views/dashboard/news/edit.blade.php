@@ -1,6 +1,9 @@
 
 @extends('dashboard.welcome') 
 @section('content')
+
+<link href="{{url('/assets/dashboard_assets/css/plugins/summernote/summernote-bs4.css')}}" rel="stylesheet">
+
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-8">
                     <h2>Edit News</h2>
@@ -72,9 +75,19 @@
                                 </div>
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>
 
-                                    <div class="col-lg-10">
+                                 <!--    <div class="col-lg-10">
                                         <textarea class="form-control" name="content" placeholder="Enter News Description" required>{{$news->content}}</textarea>
-                                    </div>
+                                    </div> -->
+                                     <div class="col-lg-10">
+                <div class="ibox ">
+                    
+                    <div class="ibox-content no-padding">
+
+                        <textarea class="summernote" name="content">{{$news->content}}</textarea>
+
+                    </div>
+                </div>
+            </div>
                                 </div>
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Author Name</strong></label>
 
@@ -162,6 +175,16 @@
         </div>
                 @endsection
                
+@section('scripts')
 
+<script src="{{url('/assets/dashboard_assets/js/plugins/summernote/summernote-bs4.js')}}"></script>
+     <script>
+        $(document).ready(function(){
+
+            $('.summernote').summernote();
+
+       });
+    </script>
+    @endsection
 
 

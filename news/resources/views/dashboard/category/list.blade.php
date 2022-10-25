@@ -1,6 +1,6 @@
 @extends('dashboard.welcome') 
 @section('content')
-
+ <link href="{{url('/assets/dashboard_assets/css/plugins/dataTables/datatables.min.css')}}" rel="stylesheet">
 <div class="row wrapper border-bottom white-bg page-heading">
                 <div class="col-lg-8">
                     <h2>Categories List</h2>

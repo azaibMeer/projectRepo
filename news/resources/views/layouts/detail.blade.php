@@ -16,7 +16,10 @@
                     <div class="blog-details-desc">
                         <div class="article-content">
                             
-                             <span>{{ $web->created_at->format('M/d/Y')}}
+                             <span>
+                         <strong>  اپ لوڈ کی تاریخ :</strong>
+                           {{ $web->created_at->format('M/d/Y')}}
+
                              </span>
                         </div>
                             <div class="article-image">

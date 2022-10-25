@@ -5599,6 +5599,7 @@ News Details Area CSS
   font-size: 1rem;
   color:black;
   line-height: 28px;
+  margin-top: 15px;
 }
 
 .blog-details-desc .article-content .features-list {

@@ -21,8 +21,8 @@
                         <div class="blog-details-desc">
                              
                             <div class="article-image">
-                                <h6>خبر رساں  : {{$web->author}}</h6>
-                                <span>{{$web->created_at->format('M/d/Y')}}</span>
+                            
+                
                                 
                                   @if($web->vedio != "")
                 <div class="row">
@@ -48,7 +48,10 @@
                             </div>
         
                             <div class="article-content">
-                                 
+                                 <span>
+                                <strong>  اپ لوڈ کی تاریخ :</strong>
+                                {{$web->created_at->format('M/d/Y')}}
+                                </span>
                                 <p>{{ $web->content}}</p>
                                 
                                 

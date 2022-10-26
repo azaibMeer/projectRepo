@@ -8,7 +8,7 @@
                    <div class="section-title"> 
                         <h2>{{$news->city_name}}</h2> 
                         
-                        <a href="{{url('/reporter/detail/'.$news->city_id)}}" style="float: left;margin-top: 15px">
+                        <a href="{{url('/reporter/detail/'.$news->city_id)}}" style="float: left;margin-top: 10px;font-size: 20px;">
                          <strong>   {{$news->city_name}} کے نماءندگان
                          </strong>
                         </a>
@@ -35,7 +35,7 @@
                                 <div class="politics-news-content">
                                    
                                     <h3>
-                                        <a href="{{url('/city/detail/'.$web[$i]->news_id)}}">{{Str::limit  ($web[$i]->title, 50, ' ...')}}</a>
+                                        <a href="{{url('/city/detail/'.$web[$i]->news_id)}}">{{Str::limit  ($web[$i]->title, 80, ' ...')}}</a>
                                     </h3>
                                      <span>{{$web[$i]->created_at->format('M/d/Y')}}</span>
                                 </div>

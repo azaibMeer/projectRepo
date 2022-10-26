@@ -10,30 +10,18 @@
                       <h2>خبر کی تفصیل</h2>
                     </div>
                                  <div class="col-lg-12 col-md-12">
-                                      <h1>{{ $web->title}}</h1>
+                                      <h1 class="detail_title">
+                                        {{ $web->title}}</h1>
                                        
                                  </div>
 
                 <div class="row">
-
-                           
-                    <div class="col-lg-12 col-md-12">
+                <div class="col-lg-12 col-md-12">
                         <div class="blog-details-desc">
-                             <div class="article-content">
-                              <span>
-                          <strong> اپ لوڈ کی تاریخ
-
-                         : </strong> 
-                         {{$web->created_at->format('M/d/Y')}}
-                        </span>
-
-                             </div>
+                             
                             <div class="article-image">
-
-                                
-                                 @if($web->vedio != "")
+                                @if($web->vedio != "")
                 <div class="row">
-
                 <div class="col-lg-12 col-md-12">
                     <div class="section-title" style="margin-top: 10px;"> 
                        <h2>خبر کی ویڈیو</h2>
@@ -52,17 +40,20 @@
                 @else
                 <img src="{{url($web->image)}}" alt="image">
                 @endif
-                            </div>
-        
-                            <div class="article-content">
-                               
-                                <p>{!! $web->content !!}</p>
-                                
-                                
-                            </div>
-        
-                         </div>
-                    </div>
+                </div>
+                <div class="article-content">
+                    <span>
+                        <strong> اپ لوڈ کی تاریخ: </strong> 
+                        
+                         {{$web->created_at->format('M/d/Y')}}
+                    </span>
+
+                </div>
+                <div class="article-content">
+                    <p>{!! $web->content !!}</p>
+                </div>
+                </div>
+                </div>
                 </div>
                
             </div>

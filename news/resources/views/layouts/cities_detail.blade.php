@@ -12,7 +12,7 @@
                     </div>
 
                                  <div class="col-lg-12 col-md-12">
-                                      <h1>{{ $web->title}}</h1>
+                                      <h1 class="detail_title">{{ $web->title}}</h1>
                                  </div>
                 <div class="row">
 

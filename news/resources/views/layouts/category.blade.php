@@ -32,7 +32,7 @@
                                 <div class="politics-news-content">
                                    
                                     <h3>
-                                        <a href="{{url('/category/detail/'.$web[$i]->news_id)}}"> {{Str::limit  ($web[$i]->title, 50, ' ...')}}</a>
+                                        <a href="{{url('/category/detail/'.$web[$i]->news_id)}}"> {{Str::limit  ($web[$i]->title, 80, ' ...')}}</a>
                                     </h3>
                                      <span>{{$web[$i]->created_at->format('M/d/Y')}}</span>
                                 </div>

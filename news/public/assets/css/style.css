@@ -59,6 +59,8 @@ margin-top: 10px;
     margin-top: 4px;
     border-radius: 0px;
     color:white;
+    background-color: #cc0303;
+    border:none;
 
 }
 a {
@@ -82,7 +84,7 @@ p {
   margin-bottom: 15px;
   line-height: 2;
   color: black;
-  font-weight: 500;
+  font-weight: 600;
   font-family: system-ui;
   font-size: 14px;
 }
@@ -141,6 +143,10 @@ img {
 
 .pt-50 {
   padding-top: 50px;
+}
+
+.detail_title{
+line-height: normal;
 }
 
 /*================================================
@@ -705,7 +711,7 @@ Navbar Area CSS
 }
 
 .main-navbar .navbar .navbar-nav {
- margin-right: 20px;
+ margin-right: 50px;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item {
@@ -714,12 +720,13 @@ Navbar Area CSS
 
 .main-navbar .navbar .navbar-nav .nav-item a {
   color: #09101f;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 500;
-  padding: 20px 10px;
+  /*padding: 20px 10px;*/
   -webkit-transition: 0.5s;
   transition: 0.5s;
   font-family: system-ui;
+  padding-left: 10px;
 }
 
 .main-navbar .navbar .navbar-nav .nav-item a i {
@@ -6035,8 +6042,8 @@ Footer Area CSS
 }
 
 .single-footer-widget .social li a i:hover {
-  background-color: #ff661f;
-  border: 1px solid #ff661f;
+  background-color: #cc0303;
+  border: 1px solid #cc0303;
 }
 
 .single-footer-widget h2 {
@@ -6105,7 +6112,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .useful-links-list li a:hover {
-  color: #ff661f;
+  color: #cc0303;
 }
 
 .single-footer-widget .widget-subscribe-content p {

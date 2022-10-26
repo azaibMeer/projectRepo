@@ -66,7 +66,7 @@
                                     </div>
                                     <div class="col-lg-12 col-md-12">
                                         <div class="form-group">
-                                            <input class="btn btn-primary" type="submit" value="submit">
+                                            <input class="btn btn-primary" type="submit" value="اپنا پیغام بھیجیں">
                                         </div>
                                     </div>
                                     

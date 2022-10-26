@@ -80,7 +80,7 @@ button {
 
 p {
   margin-bottom: 15px;
-  line-height: 1.8;
+  line-height: 2;
   color: black;
   font-weight: 500;
   font-family: system-ui;
@@ -464,7 +464,7 @@ Section Title CSS
 }
 
 .section-title h2 {
-  font-size: 25px;
+  
   margin-bottom: 0;
   display: inline;
 }
@@ -1865,6 +1865,7 @@ Default News Area CSS
   font-size: 20px;
   margin-top: 12px;
   margin-bottom: 12px;
+  line-height: 35px;
 }
 
 .single-politics-news .politics-news-content h3 a {
@@ -3264,9 +3265,10 @@ Widget Sidebar CSS
 
 .widget-area .widget_latest_news_thumb .item .info .title {
   margin-bottom: 0;
-  line-height: 1.4;
-  font-size: 17px;
+  line-height: 30px;
+  font-size: 18px;
   font-weight: bold;
+  margin-block:auto;
 }
 
 .widget-area .widget_latest_news_thumb .item .info .title a {

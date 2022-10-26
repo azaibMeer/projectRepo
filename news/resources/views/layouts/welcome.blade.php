@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="/assets/css/meanmenu.css">
         <!-- Boxicons CSS -->
         <link rel="stylesheet" href="/assets/css/boxicons.min.css">
+        <link rel="stylesheet" href="/assets/css/Mehr-Nastaliq.css">
         <!-- Owl Carousel CSS -->
         <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
         <!-- Owl Carousel Default CSS -->
@@ -33,6 +34,11 @@
         <title>{{$setting->website_name}}</title>
 
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <style>
+            body *{
+                font-family: Mehr-Nastaliq !important;
+            }
+        </style>
     </head>
 
     <body>

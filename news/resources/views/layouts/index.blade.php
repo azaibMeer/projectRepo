@@ -7,7 +7,7 @@
   <div class="container">
     <div class="container-fluid" >
       <div class="row">
-     <div class="col-md-12" style="display: ">
+     <div class="col-md-12" style="display:none">
       <img src="/assets/img/main-news/ads.png">
     </div>
   </div>
@@ -27,11 +27,11 @@
             </div>
             <div class="col-md-6">
               <h3>
-                <a href="{{url('/detail/'.$web[0]->news_id)}}"> {{Str::limit  ($web[0]->title, 50, ' ...')}}</a>
+                <a href="{{url('/detail/'.$web[0]->news_id)}}"> {{Str::limit  ($web[0]->title, 120, ' ...')}}</a>
               </h3>
               <p>
                 
-                {!! Str::limit (strip_tags($web[0]->content),300, '...') !!}
+                {!! Str::limit (strip_tags($web[0]->content),400, '...') !!}
               </p>
               
                 <small class="text-muted">{{ $web[0]->created_at->format('M/d/Y')}}</small>
@@ -54,10 +54,10 @@
                                     </a>
                                 </div>
                                 
-                                <div class="politics-news-content">
+                              <div class="politics-news-content">
                                    
                                     <h3>
-                                        <a href="{{url('/detail/'.$web[$i]->news_id)}}">{{Str::limit($web[$i]->title, 50, ' ...')}}</a>
+                                        <a href="{{url('/detail/'.$web[$i]->news_id)}}">{{Str::limit($web[$i]->title, 70, ' ...')}}</a>
                                     </h3>
                                      <span>{{ $web[$i]->created_at->format('M/d/Y')}}</span>
                                 </div>
@@ -100,11 +100,11 @@
                     <a href="{{url('/detail/'.$citynews[0]->news_id)}}">
                       <img class="card-img-top" src="{{$citynews[0]->image}}">
                     </a>
-                    <h6 class="card-text">
+                    <h5 class="card-text">
                       <a href="{{url('/detail/'.$citynews[0]->news_id)}}">
-                        {{Str::limit($citynews[0]->title, 70, ' ...')}}
+                        {{Str::limit($citynews[0]->title, 100, ' ...')}}
                       </a>
-                    </h6>
+                    </h5>
 
                     <aside class="widget-area">
                       <section class="widget widget_latest_news_thumb">
@@ -123,11 +123,11 @@
                           <div class="info">
                             <h4 class="title usmall">
                             <a href="{{url('/detail/'.$citynews[$i]->news_id)}}">
-                        {{Str::limit($citynews[$i]->title, 40, ' ...')}}
+                        {{Str::limit($citynews[$i]->title, 70, ' ...')}}
                                 
                               </a>
                             </h4>
-                            <span>{{ $citynews[$i]->created_at->format('M/d/Y')}}</span>
+                            
                           </div>
                         </article>
                         

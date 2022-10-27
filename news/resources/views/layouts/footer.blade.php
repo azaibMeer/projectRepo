@@ -43,7 +43,7 @@
 
                     
 
-                    <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-2 col-md-6">
                         <div class="single-footer-widget">
                             <h2>کوئک لنکز</h2>
 
@@ -56,23 +56,34 @@
                             </ul>
                         </div>
                     </div>
-
-                    <!-- <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="single-footer-widget">
-                            <h2>سبسکرائب</h2>
+                          <h2>تازہ ترین پوسٹ</h2>
+                            @foreach($latest as $post)
+                            <div class="post-content">
+                                <div class="row align-items-center">
+                                    <div class="col-md-4">
+                                        <div class="post-image">
+                                            <a href="#">
+                                                <img src="{{$post->image}}" alt="image" height="80px" width="91px">
+                                            </a>
+                                        </div>
+                                    </div>
 
-                            <div class="widget-subscribe-content">
-                <form  method="post" action="{{url('/subscribe/store')}}">
-                        @csrf
-                                    <input type="email" class="form-control" placeholder="اپنا ای میل درج کریں۔" name="email" required>
-                                        <br>
-                                    <input type="submit" class="btn btn-primary" value="submit" style="margin-left: 70%;">
-
-
-                                </form>
+                                    <div class="col-md-8">
+                                        <h4>
+                                            <a href="#">
+                                        {{Str::limit($post->title, 50, ' ...')}}
+                                            </a>
+                                        </h4>
+                                        <span>{{$post->created_at->format('m/d/y')}}</span>
+                                    </div>
+                                </div>
                             </div>
+                            @endforeach
                         </div>
-                    </div> -->
+                    </div>
+
                     <div class="col-lg-3 col-md-6">
                         <div class="single-footer-widget">
                             <h2>سبسکرائب کریں</h2>

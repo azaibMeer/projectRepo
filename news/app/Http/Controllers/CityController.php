@@ -33,6 +33,8 @@ class CityController extends Controller
                             ->get();
          $data['verse'] = Verse::where('status','1')->
                             orderBy('id','DESC')->first();
+        $data['latest'] = News::where('status','1')->
+                            orderBy('news_id','DESC')->take(3)->get();
          return view("layouts.cities",$data);
     }
 

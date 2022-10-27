@@ -3,11 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\News;
 use App\Models\Contact;
 use App\Models\Verse;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\NewsController;
 
 class ContactUsController extends Controller
 {
@@ -22,6 +24,8 @@ class ContactUsController extends Controller
        $data['categories'] = Category::where('status','1')->get();
        $data['verse'] = Verse::where('status','1')->
                             orderBy('id','DESC')->first();
+        $data['latest'] = News::where('status','1')->
+                            orderBy('news_id','DESC')->take(3)->get();
        return view("layouts.contact",$data);
     }
 

@@ -32,7 +32,7 @@
                 </div>
             </div>
             @else
-                   <div class="container">
+                   <div class="container" style="display: none">
                 <div class="row align-items-center">
                     <div class="col-lg-12">
                         <div class="author-image">

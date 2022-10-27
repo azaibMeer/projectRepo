@@ -26,9 +26,9 @@
   }
   .mean-container a.meanmenu-reveal span {
     display: block;
-    background: #000;
+    background: white;
     height: 4px;
-    margin-top: -5px;
+    margin-top: -10px;
     border-radius: 3px;
     position: relative;
     top: 8px;
@@ -252,7 +252,7 @@
     margin-top: 10px;
   }
   .error-content h3 {
-    font-size: 20px;
+    /*font-size: 20px;*/
   }
   .coming-soon-content {
     padding: 30px 25px;

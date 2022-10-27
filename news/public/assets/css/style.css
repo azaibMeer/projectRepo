@@ -495,6 +495,7 @@ Top Header Area CSS
 
 .top-header-area.bg-color .top-header-social li a i {
   background-color: #eeeeee;
+
 }
 
 .top-header-area.bg-color .top-header-social li a i:hover {
@@ -557,6 +558,7 @@ Top Header Area CSS
   background-color: #ffffff;
   color: #0d0657;
   font-size: 16px;
+  border-radius:18px;
   
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -695,7 +697,7 @@ Navbar Area CSS
 .main-navbar .navbar {
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  padding: 0;
+  padding: 5px;
 }
 
 .main-navbar .navbar .navbar-brand {
@@ -1017,7 +1019,7 @@ Navbar Area CSS
   z-index: 999;
   -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
           box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.09);
-  background-color: #ffffff !important;
+  background-color: #cc0303 !important;
   -webkit-animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
           animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
 }
@@ -1157,7 +1159,8 @@ Navbar Area CSS
     font-size: 15px;
   }
   .main-responsive-nav .main-responsive-menu.mean-container .mean-nav ul li a.active {
-    color: #dc472e;
+    color: #0d0657;
+    font-size: 25px;
   }
   .main-responsive-nav .main-responsive-menu.mean-container .mean-nav ul li a i {
     display: none;
@@ -1175,10 +1178,10 @@ Navbar Area CSS
             box-shadow: 0 7px 13px 0 rgba(0, 0, 0, 0.1);
   }
   .main-responsive-nav .mean-container a.meanmenu-reveal {
-    color: black;
+    color: white;
   }
   .main-responsive-nav .mean-container a.meanmenu-reveal span {
-    background: #0d0657;
+    background: white;
     position: relative;
   }
   .main-responsive-nav .logo {
@@ -5081,7 +5084,7 @@ Register Area CSS
 }
 
 .error-content .default-btn:hover {
-  background-color: #dc472e;
+  background-color: #cc0303;
 }
 
 /*================================================
@@ -6089,7 +6092,7 @@ Footer Area CSS
 }
 
 .single-footer-widget .post-content:hover h4 a {
-  color: #ff661f;
+  color: #cc0303;
 }
 
 .single-footer-widget .useful-links-list {
@@ -6100,7 +6103,7 @@ Footer Area CSS
 .single-footer-widget .useful-links-list li {
   list-style-type: none;
   margin-bottom: 15px;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .single-footer-widget .useful-links-list li:last-child {

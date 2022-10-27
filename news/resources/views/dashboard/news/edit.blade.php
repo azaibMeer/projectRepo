@@ -89,11 +89,11 @@
                 </div>
             </div>
                                 </div>
-                                <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Author Name</strong></label>
+                                <!-- <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>Author Name</strong></label>
 
                                     <div class="col-lg-10"><input type="text" placeholder="Enter Author Name" class="form-control" name="author_name" value="{{$news->author}}" required> 
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label"><strong>News Image</strong></label>
 
@@ -184,6 +184,12 @@
             $('.summernote').summernote();
 
        });
+    </script>
+    <script>
+        $('.custom-file-input').on('change', function() {
+   let fileName = $(this).val().split('\\').pop();
+   $(this).next('.custom-file-label').addClass("selected").html(fileName);
+}); 
     </script>
     @endsection
 

@@ -30,6 +30,8 @@ class CategoryController extends Controller
                             orderBy('news_id','DESC')->take(6)->get();
         $data['verse'] = Verse::where('status','1')->
                             orderBy('id','DESC')->first();
+        $data['latest'] = News::where('status','1')->
+                            orderBy('news_id','DESC')->take(3)->get();
         // dd($data);
         if(count($data['web']) > 0){
 

@@ -34,7 +34,9 @@
                 {!! Str::limit (strip_tags($web[0]->content),400, '...') !!}
               </p>
               
-                <small class="text-muted">{{ $web[0]->created_at->format('M/d/Y')}}</small>
+                <small class="text-muted">
+                  {{ $web[0]->created_at->format('M/d/Y')}}
+                </small>
            
             </div>
           </div>
@@ -102,7 +104,7 @@
                     </a>
                     <h5 class="card-text">
                       <a href="{{url('/detail/'.$citynews[0]->news_id)}}">
-                        {{Str::limit($citynews[0]->title, 100, ' ...')}}
+                        {{Str::limit($citynews[0]->title, 55, ' ...')}}
                       </a>
                     </h5>
 

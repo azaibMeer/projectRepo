@@ -37,6 +37,8 @@ class NewsController extends Controller
         $data['verse'] = Verse::where('status','1')->
                             orderBy('id','DESC')->first();
 
+        $data['latest'] = News::where('status','1')->
+                            orderBy('news_id','DESC')->take(3)->get();
          return view('layouts.index',$data );
     }
 
@@ -74,7 +76,7 @@ class NewsController extends Controller
 
         'title' => 'required',
         'content' => 'required',
-        'author_name' => 'required',
+       
         'city' => 'required',
         'category' => 'required',
         'status' => 'required',
@@ -84,7 +86,7 @@ class NewsController extends Controller
         $news = new News();
         $news->title = $request->title;
         $news->content = $request->content;
-        $news->author = $request->author_name;
+        
         $news->status = $request->status;
         $news->vedio = $request->vedio;
         
@@ -178,7 +180,7 @@ class NewsController extends Controller
         $news = News::find($id);
         $news->title = $request->title;
         $news->content = $request->content;
-        $news->author = $request->author_name;
+      
         $news->status = $request->status;
         $news->vedio = $request->vedio;
         

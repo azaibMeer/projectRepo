@@ -4,18 +4,6 @@
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-2">
-                    <p style="color:white; float: center;margin-bottom: 6px
-                         ;margin-right: 37%;"><mark>آج کی آيت مبارکہ </mark></p> 
-
-                    </div>
-                    <div class="col-lg-8">
-
-                        <marquee width="100%" direction="right" style="color:white;" >
-           <strong> {{$verse->description}} <strong>
-            </marquee>
-                         
-                    </div>
-                    <div class="col-lg-2">
                         <ul class="top-header-social">
                             @if($setting->facebook_link != "")
                             <li>
@@ -65,6 +53,18 @@
                         </ul>
                        
                     </div>
+                    <!-- <div class="col-lg-2">
+                    <p><mark>آج کی آيت مبارکہ </mark></p> 
+
+                    </div> -->
+                    <div class="col-lg-8">
+
+                        <marquee width="100%" direction="right" style="color:white;" >
+           <strong> {{$verse->description}} <strong>
+            </marquee>
+                         
+                    </div>
+                    
                     
                 </div>
             </div>

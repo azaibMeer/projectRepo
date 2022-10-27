@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reporter;
+use App\Models\News;
 use App\Models\City;
 use App\Models\Setting;
 use App\Models\Category;
 use App\Models\Verse;
 use Illuminate\Http\Request;
 use Validator;
+use App\Http\Controllers\NewsController;
 class ReporterController extends Controller
 {
     /**
@@ -29,6 +31,7 @@ class ReporterController extends Controller
     public function create()
     {
          $data['cities'] = City::where('status','1')->get();
+
          return view("dashboard.reporter.add",$data);
     }
 
@@ -201,6 +204,8 @@ class ReporterController extends Controller
         where('reporter_type','0')
         ->orderBy('reporter_id','DESC')->first();
 
+        $data['latest'] = News::where('status','1')->
+                            orderBy('news_id','DESC')->take(3)->get();
             
         //dd($id,$data['reporters']);
         return view("layouts.reporter.detail",$data);

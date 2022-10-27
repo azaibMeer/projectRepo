@@ -116,7 +116,8 @@
                                     </div> 
                                       <label class="col-lg-2 col-form-label"><strong>Phone Number</strong></label>
 
-                                    <div class="col-sm-4"><input type="number" name="phone" class="form-control" maxlength="11" required>
+                                    <div class="col-sm-4"><input type="number" name="phone" class="form-control" 
+                                        maxlength="11" required>
                                     </div>
                                 
 
@@ -148,7 +149,13 @@
         </div>
 
 
-    
-
             @endsection
+             @section('scripts')
            
+    <script>
+        $('.custom-file-input').on('change', function() {
+   let fileName = $(this).val().split('\\').pop();
+   $(this).next('.custom-file-label').addClass("selected").html(fileName);
+}); 
+    </script>
+@endsection

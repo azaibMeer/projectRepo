@@ -72,7 +72,7 @@
 
                                     <div class="col-md-8">
                                         <h4>
-                                            <a href="#">
+                                            <a href="{{url('/detail/'.$post->news_id)}}">
                                         {{Str::limit($post->title, 50, ' ...')}}
                                             </a>
                                         </h4>

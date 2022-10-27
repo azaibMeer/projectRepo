@@ -57,11 +57,16 @@
                     <p><mark>آج کی آيت مبارکہ </mark></p> 
 
                     </div> -->
-                    <div class="col-lg-8">
+                    <div class="col-lg-10">
 
-                        <marquee width="100%" direction="right" style="color:white;" >
-           <strong> {{$verse->description}} <strong>
-            </marquee>
+                        <marquee 
+
+                        width="100%" 
+                        direction="right" 
+                        style="color:white;">
+                        <strong> {{$verse->description}}<strong>
+                        
+                        </marquee>
                          
                     </div>
                     

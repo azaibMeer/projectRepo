@@ -35,7 +35,7 @@
               </p>
               
                 <small class="text-muted">
-                  {{ $web[0]->created_at->format(' l , d F , Y')}}
+                  {{ $web[0]->created_at->format('M/d/Y')}}
                 </small>
            
             </div>

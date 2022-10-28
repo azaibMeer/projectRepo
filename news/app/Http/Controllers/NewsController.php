@@ -76,6 +76,7 @@ class NewsController extends Controller
 
         'title' => 'required',
         'content' => 'required',
+        'slug' => 'required',
        
         'city' => 'required',
         'category' => 'required',
@@ -86,6 +87,7 @@ class NewsController extends Controller
         $news = new News();
         $news->title = $request->title;
         $news->content = $request->content;
+        $news->slug = $request->slug;
         
         $news->status = $request->status;
         $news->vedio = $request->vedio;
@@ -180,7 +182,7 @@ class NewsController extends Controller
         $news = News::find($id);
         $news->title = $request->title;
         $news->content = $request->content;
-      
+        $news->slug = $request->slug;
         $news->status = $request->status;
         $news->vedio = $request->vedio;
         

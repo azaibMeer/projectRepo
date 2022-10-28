@@ -19,7 +19,7 @@
           
           <div class="row">
             <div class="col-md-6">
-              <a href="{{url('/detail/'.$web[0]->news_id)}}">
+              <a href="{{url('/detail/'.$web[0]->slug)}}">
                 
                 <img alt="breaking news" src="{{ $web[0]->image}}"  id="breaking_news">
               
@@ -27,7 +27,8 @@
             </div>
             <div class="col-md-6">
               <h3>
-                <a href="{{url('/detail/'.$web[0]->news_id)}}"> {{Str::limit  ($web[0]->title, 120, ' ...')}}</a>
+                <a href="{{url('/detail/'.$web[0]->slug)}}"> 
+                  {{Str::limit  ($web[0]->title, 120, ' ...')}}</a>
               </h3>
               <p>
                 
@@ -51,7 +52,7 @@
         <div class="col-lg-3 col-md-6">
                             <div class="single-politics-news">
                                 <div class="politics-news-image">
-                                    <a href="{{url('/detail/'.$web[$i]->news_id)}}">
+                                    <a href="{{url('/detail/'.$web[$i]->slug)}}">
                                         <img src="{{url($web[$i]->image)}}" alt="image">
                                     </a>
                                 </div>
@@ -59,7 +60,7 @@
                               <div class="politics-news-content">
                                    
                                     <h3>
-                                        <a href="{{url('/detail/'.$web[$i]->news_id)}}">{{Str::limit($web[$i]->title, 80, ' ...')}}</a>
+                                        <a href="{{url('/detail/'.$web[$i]->slug)}}">{{Str::limit($web[$i]->title, 80, ' ...')}}</a>
                                     </h3>
                                      <span>{{ $web[$i]->created_at->format('M/d/Y')}}</span>
                                 </div>
@@ -99,11 +100,11 @@
                 <div class="card-body">
                   <div class="col-lg-12">
                     
-                    <a href="{{url('/detail/'.$citynews[0]->news_id)}}">
+                    <a href="{{url('/detail/'.$citynews[0]->slug)}}">
                       <img class="card-img-top" src="{{$citynews[0]->image}}">
                     </a>
                     <h5 class="card-text">
-                      <a href="{{url('/detail/'.$citynews[0]->news_id)}}">
+                      <a href="{{url('/detail/'.$citynews[0]->slug)}}">
                         {{Str::limit($citynews[0]->title, 55, ' ...')}}
                       </a>
                     </h5>
@@ -117,14 +118,14 @@
                               continue;
                           @endphp
                         <article class="item">
-                          <a href="{{url('/detail/'.$citynews[$i]->news_id)}}" class="thumb">
+                          <a href="{{url('/detail/'.$citynews[$i]->slug)}}" class="thumb">
                             <span  role="img">
                               <img  style="height: 100%" src="{{$citynews[$i]->image}}" >
                             </span>
                           </a>
                           <div class="info">
                             <h4 class="title usmall">
-                            <a href="{{url('/detail/'.$citynews[$i]->news_id)}}">
+                            <a href="{{url('/detail/'.$citynews[$i]->slug)}}">
                         {{Str::limit($citynews[$i]->title, 70, ' ...')}}
                                 
                               </a>

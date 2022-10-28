@@ -70,7 +70,11 @@
                                 @csrf
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Title</strong></label>
 
-                                    <div class="col-lg-10"><input type="name" placeholder="Enter News Title" class="form-control" name="title" value="{{$news->title}}" required> 
+                                    <div class="col-lg-4"><input type="name" placeholder="Enter News Title" class="form-control" name="title" value="{{$news->title}}" required> 
+                                    </div>
+                                    <label class="col-lg-1 col-form-label"><strong>Slug</strong></label>
+
+                                    <div class="col-lg-5"><input type="name" placeholder="Enter News Slug" class="form-control" name="slug" value="{{$news->slug}}" required> 
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>

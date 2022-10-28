@@ -74,7 +74,7 @@
                         <th>News Title</th>
                         <th>News description</th>
                         <th>News Image</th>
-                        <th>Author</th>
+                        
                         <th>status</th>
                         <th>Action</th>
                         
@@ -89,7 +89,7 @@
                         <td>
                             <img src="{{ $news_data->image }}" height="30px" width="30px" />
                         </td>
-                        <td>{{$news_data->author}}</td>
+                       
                         
                         <td>
                             @if($news_data->status == "0")

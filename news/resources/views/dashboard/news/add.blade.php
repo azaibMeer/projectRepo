@@ -69,7 +69,11 @@
                                 @csrf
                                 <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Title</strong></label>
 
-                                    <div class="col-lg-10"><input type="text" placeholder="Enter News Title" class="form-control" name="title" required> 
+                                    <div class="col-lg-4"><input type="text" placeholder="Enter News Title" class="form-control" name="title" required> 
+                                    </div>
+                                    <label class="col-lg-1 col-form-label"><strong> Slug</strong></label>
+
+                                    <div class="col-lg-5"><input type="text" placeholder="Enter News Slug" class="form-control" name="slug" required> 
                                     </div>
                                 </div>
                                  <div class="form-group row"><label class="col-lg-2 col-form-label"><strong>News Description</strong></label>

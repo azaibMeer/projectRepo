@@ -15,11 +15,11 @@ class DetailController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($slug)
     {   
         $data['setting'] = Setting::first();
         $data['categories'] = Category::where('status','1')->get();
-         $data['web'] = News::where('news_id',$id)->first();
+         $data['web'] = News::where('slug',$slug)->first();
          $data['verse'] = Verse::where('status','1')->
                             orderBy('id','DESC')->first();
         $data['latest'] = News::where('status','1')->

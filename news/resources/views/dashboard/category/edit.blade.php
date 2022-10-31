@@ -43,6 +43,11 @@
                                     value="{{ $categories->name}}" required> 
                                     </div>
                                 </div>
+                                <div class="form-group row"><label class="col-lg-4 col-form-label"><strong> Slug</strong></label>
+
+                                    <div class="col-lg-8"><input type="text" placeholder="Enter slug" class="form-control" name="slug" value="{{ $categories->slug}}" required> 
+                                    </div>
+                                </div>
                                 
                                  <div class="form-group row"><label class="col-sm-4 col-form-label"><strong>Category Publish</strong><br/></label>
 

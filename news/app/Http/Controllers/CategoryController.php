@@ -72,12 +72,14 @@ class CategoryController extends Controller
         $request->validate([
 
         'category_name' => 'required',
+        'slug' => 'required',
         'status' => 'required'
 
        ]);
 
         $categories = new Category();
         $categories->name = $request->category_name;
+        $categories->slug = $request->slug;
         $categories->status = $request->status;
         $categories->save();
         return redirect('/categories/list')->with('success', 'Category inserted Successfully');
@@ -131,6 +133,7 @@ class CategoryController extends Controller
         //$data['categories'] = Category::where('category_id',$id)->first();
         $category = Category::find($id);
         $category->name = $request->category_name;
+        $category->slug = $request->slug;
         $category->status = $request->status;
         $category->update();
         return redirect('/categories/list')->with('success', 'Category Updated Successfully');

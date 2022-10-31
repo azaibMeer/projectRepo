@@ -58,6 +58,11 @@
                                     <div class="col-lg-8"><input type="text" placeholder="Enter Category" class="form-control" name="category_name" required> 
                                     </div>
                                 </div>
+                             <div class="form-group row"><label class="col-lg-4 col-form-label"><strong> Slug</strong></label>
+
+                                    <div class="col-lg-8"><input type="text" placeholder="Enter slug" class="form-control" name="slug" required> 
+                                    </div>
+                                </div>   
                                 <div class="form-group row"><label class="col-sm-4 col-form-label"><strong>Category Publish</strong><br/></label>
 
                                     <div class="col-sm-8">

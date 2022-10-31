@@ -65,12 +65,14 @@ class CityController extends Controller
         $request->validate([
 
         'city_name' => 'required',
+        'slug' => 'required',
         'status' => 'required'
 
        ]);
 
         $city = new City();
         $city->city_name = $request->city_name;
+        $city->slug = $request->slug;
         $city->status = $request->status;
         
         $city->save();
@@ -122,6 +124,7 @@ class CityController extends Controller
     {
         $city = City::find($id);
         $city->city_name = $request->city_name;
+        $city->slug = $request->slug;
         $city->status = $request->status;
         $city->update();
         return redirect('/cities/list')->with('success', 'city Updated Successfully');

@@ -87,7 +87,7 @@
                     
                     <div class="ibox-content no-padding">
 
-                        <textarea class="summernote" name="content">{{$news->content}}</textarea>
+                        <textarea class="summernote" name="content" required>{{$news->content}}</textarea>
 
                     </div>
                 </div>

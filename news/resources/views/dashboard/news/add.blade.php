@@ -86,7 +86,9 @@
                     
                     <div class="ibox-content no-padding">
 
-                        <textarea class="summernote" name="content"></textarea>
+                        <textarea class="summernote" name="content" required>
+                            
+                        </textarea>
 
                     </div>
                 </div>

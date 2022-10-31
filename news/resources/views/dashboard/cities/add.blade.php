@@ -19,15 +19,9 @@
                     Cities List
                     </a>
                 </div>
-                
-                    
-                
             </div>
-<div class="wrapper wrapper-content animated fadeInRight">
-          
+        <div class="wrapper wrapper-content animated fadeInRight">
             <div class="row">
-
-            
                 <div class="col-lg-5">
                     <div class="ibox ">
                         <div class="ibox-title">
@@ -56,6 +50,11 @@
                                 <div class="form-group row"><label class="col-lg-4 col-form-label"><strong>City Name</strong></label>
 
                                     <div class="col-lg-8"><input type="name" placeholder="Enter City" class="form-control" name="city_name" required> 
+                                    </div>
+                                </div>
+                                <div class="form-group row"><label class="col-lg-4 col-form-label"><strong>Slug</strong></label>
+
+                                    <div class="col-lg-8"><input type="name" placeholder="Enter Slug" class="form-control" name="slug" required> 
                                     </div>
                                 </div>
                                 <div class="form-group row"><label class="col-sm-4 col-form-label"><strong>City Publish</strong><br/></label>

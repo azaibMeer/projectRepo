@@ -43,6 +43,11 @@
                                     value="{{$cities->city_name}}" required> 
                                     </div>
                                 </div>
+                                 <div class="form-group row"><label class="col-lg-4 col-form-label"><strong>Slug</strong></label>
+
+                                    <div class="col-lg-8"><input type="name" placeholder="Enter Slug" class="form-control" name="slug" value="{{$cities->slug}}" required> 
+                                    </div>
+                                </div>
                                 <div class="form-group row"><label class="col-sm-4 col-form-label"><strong>City Publish</strong><br/></label>
 
                                     <div class="col-sm-8">

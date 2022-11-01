@@ -66,7 +66,7 @@ class ContactUsController extends Controller
         $contact->description = $request->message;
         
         $contact->save();
-        return redirect('/contact')->with('success', 'ہم سے رابطہ کرنے کا شکریہ');
+        return redirect('user/contact')->with('success', 'ہم سے رابطہ کرنے کا شکریہ');
     }
 
     /**
@@ -75,9 +75,10 @@ class ContactUsController extends Controller
      * @param  \App\Models\Contact  $contact
      * @return \Illuminate\Http\Response
      */
-    public function show(Contact $contact)
-    {
-        //
+    public function show()
+    {   
+        $data['contact'] = Contact::get();
+        return view("layouts.contact.list",$data);
     }
 
     /**

@@ -43,7 +43,7 @@
                 </div>
                 </div>
                 @else 
-                <img src="{{url($web->image)}}" alt="image">
+                <img src="{{url($web->image)}}" alt="image" width="100%">
                 @endif
                             </div>
         

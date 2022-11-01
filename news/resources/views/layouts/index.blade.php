@@ -53,7 +53,7 @@
                             <div class="single-politics-news">
                                 <div class="politics-news-image">
                                     <a href="{{url('/detail/'.$web[$i]->slug)}}">
-                                        <img src="{{url($web[$i]->image)}}" alt="image">
+                                        <img src="{{url($web[$i]->image)}}" alt="image" width="100%" height="135px;">
                                     </a>
                                 </div>
                                 
@@ -96,12 +96,14 @@
             @endphp
             <div class="col-md-4" style="margin-bottom: 10px;">
               <div class="card">
+                <a href="{{url('/city/'.$city->id)}}">
                 <h5 class="card-header">{{$city->city_name}}</h5>
+                </a>
                 <div class="card-body">
                   <div class="col-lg-12">
                     
                     <a href="{{url('/detail/'.$citynews[0]->slug)}}">
-                      <img class="card-img-top" src="{{$citynews[0]->image}}">
+                      <img class="card-img-top" src="{{$citynews[0]->image}}" height="177px">
                     </a>
                     <h5 class="card-text">
                       <a href="{{url('/detail/'.$citynews[0]->slug)}}">

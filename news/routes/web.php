@@ -30,7 +30,7 @@ Route::get('/logout', function(Request $request){
 
 Route::get('/', [NewsController::class,'index']);
 Route::get('/detail/{slug}', [DetailController::class,'index']);
-Route::get('category/{id}', [CategoryController::class,'index']);
+Route::get('/topics/{slug}', [CategoryController::class,'index']);
 Route::get('category/detail/{id}', [CategoryDetailController::class,'index']);
 Route::get('/dashboard', [DashboardController::class,'index']);
 Route::get('/login', [AuthController::class,'index'])->name('login');
@@ -64,8 +64,9 @@ Route::get('/news/edit/{id}', [NewsController::class,'edit']);
 Route::post('/news/update/{id}', [NewsController::class,'update']);
 Route::get('/news/delete/{id}', [NewsController::class,'destroy']);
 
-Route::get('/contact', [ContactUsController::class,'index']);
+Route::get('user/contact', [ContactUsController::class,'index']);
 Route::post('/contact/store', [ContactUsController::class,'store']);
+Route::get('/contact/list', [ContactUsController::class,'show']);
 
 
 Route::post('/subscribe/store', [SubscribeController::class,'store']);

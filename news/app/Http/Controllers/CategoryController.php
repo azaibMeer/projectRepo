@@ -18,16 +18,23 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($slug)
     {
-        $data['category'] = Category::where("category_id",$id)->first();
+        $category = Category::where("slug",$slug)->first();
         $data['setting'] = Setting::first();
         $data['categories'] = Category::where('status','1')->get();
        
+       $data['category'] = $category;
+
+       $category_id = $category->category_id; 
+
+
+       //dd($category_id,$category);
        /*$data['news'] = News::join('categories','categories.category_id','news.category_id')->select('categories.*','news.*')->where('news.category_id',$id)->orderBy('news_id','DESC')->first();*/
        
-       $data['web'] = News::where('news.category_id',$id)->
+       $data['web'] = News::where('news.category_id',$category_id)->
                             orderBy('news_id','DESC')->take(6)->get();
+                            //dd($data['web']);
         $data['verse'] = Verse::where('status','1')->
                             orderBy('id','DESC')->first();
         $data['latest'] = News::where('status','1')->

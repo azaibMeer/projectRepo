@@ -101,7 +101,7 @@
                                 <div class="form-group row">
                                     <label class="col-lg-2 col-form-label"><strong>News Image</strong></label>
 
-                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" value="{{ $news->image }}"><span>File Must be 1920 px by 1000 px</span>
+                                    <div class="col-lg-4"><input type="file"  class="form-control " name="image" value="{{ $news->image }}">
                                         @if ("{{ $news->image }}")
                                  <img src="{{ $news->image }}" height="50px" width="80px;">
                                     @else

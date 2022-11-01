@@ -106,8 +106,7 @@
                                     <div class="col-lg-4"><div class="custom-file">
                                 <input id="logo" type="file" class="custom-file-input" name="image" required>
                                 <label for="logo" class="custom-file-label">Choose file...</label>
-                                </div> <span>File Must be 1920 px by 1000 px</span>
-
+                                </div> 
                                 </div>
                                     <!-- <div class="col-lg-4"><input type="file"  class="form-control " name="image" required><span>File Must be 1920 px by 1000 px</span>
 
@@ -137,7 +136,7 @@
                                         <option value="0">None</option>
                                         @foreach($categories as $category)
 
-                                        <option value="{{$category->category_id}}">{{$category->name}}</option>
+                                        <option value="{{$category->category_id}}">{{$category->slug}}</option>
                                         @endforeach
                                        
                                         

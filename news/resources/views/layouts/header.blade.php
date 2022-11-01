@@ -110,14 +110,14 @@
                                 </li>
                                 @foreach($categories as $category)
                                 <li class="nav-item">
-                                    <a href="{{url('category/'.$category->category_id)}}" class="nav-link active">
+                                    <a href="{{url('/topics/'.$category->slug)}}" class="nav-link active">
                                         {{ $category->name }}
                                     </a>
                                     
                                 </li>
                         @endforeach
                                   <li class="nav-item">
-                                    <a href="{{ url('/contact') }}" class="nav-link active">
+                                    <a href="{{ url('user/contact') }}" class="nav-link active">
                                         رابطہ کریں
                                     </a>
                                     

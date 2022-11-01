@@ -99,21 +99,11 @@ class NewsController extends Controller
         if($request->hasfile('image')){
             
             $file = $request->file('image');
-            
-            $fileArray = array('image'=>$file);
-            $rules = array(
-                'image' => 'required|image|dimensions:width=1920,height=1000'
-            );
-            $validator = Validator::make($fileArray,$rules);
-            if($validator->fails()){
-                 return redirect('/news/create')->with('danger', 'Image Must Contain 1920 px by 1000 px ... News Not Added Successfully');
-            }else{
             $imageName = time(). "_".$file->GetClientOriginalName();
             $filename = '/assets/img/main-news/'.$imageName;
-            
             $file->move(public_path('/assets/img/main-news/'), $filename);
             $news->image = $filename;
-            }
+            
             
         }
       
@@ -189,24 +179,14 @@ class NewsController extends Controller
         $news->city_id = $request->city;
         $news->category_id = $request->category;
 
-          if($request->hasfile('image')){
+         if($request->hasfile('image')){
             
             $file = $request->file('image');
-            
-            $fileArray = array('image'=>$file);
-            $rules = array(
-                'image' => 'required|image|dimensions:width=1920,height=1000'
-            );
-            $validator = Validator::make($fileArray,$rules);
-            if($validator->fails()){
-                 return redirect('/news/create')->with('danger', 'Image Must Contain 1920 px by 1000 px ... News Not Added Successfully');
-            }else{
             $imageName = time(). "_".$file->GetClientOriginalName();
             $filename = '/assets/img/main-news/'.$imageName;
-            
             $file->move(public_path('/assets/img/main-news/'), $filename);
             $news->image = $filename;
-            }
+            
             
         }
          

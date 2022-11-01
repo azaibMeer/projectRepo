@@ -96,7 +96,7 @@
             @endphp
             <div class="col-md-4" style="margin-bottom: 10px;">
               <div class="card">
-                <a href="{{url('/city/'.$city->id)}}">
+                <a href="{{url('/city/'.$city->slug)}}">
                 <h5 class="card-header">{{$city->city_name}}</h5>
                 </a>
                 <div class="card-body">
@@ -107,7 +107,7 @@
                     </a>
                     <h5 class="card-text">
                       <a href="{{url('/detail/'.$citynews[0]->slug)}}">
-                        {{Str::limit($citynews[0]->title, 55, ' ...')}}
+                        {{Str::limit($citynews[0]->title, 50, ' ...')}}
                       </a>
                     </h5>
 
@@ -142,7 +142,7 @@
                   </div>
                 </div>
                 <div class="card-footer">
-                  <a href="{{url('/city/'.$city->id)}}" class="btn btn-primary">مزید دیکھے
+                  <a href="{{url('/city/'.$city->slug)}}" class="btn btn-primary">مزید دیکھے
                   </a>
                 </div>
               </div>

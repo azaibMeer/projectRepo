@@ -193,6 +193,11 @@ class ReporterController extends Controller
 
      public function reporters($id)
     {   
+
+        /* $city = City::where("id",$id)->first();
+        $data['cities'] = $city;
+        $id = $city->slug;
+        dd($id);*/
         $data['setting'] = Setting::first();
         $data['verse'] = Verse::first();
         $data['categories'] = Category::where('status','1')->get();
@@ -203,6 +208,8 @@ class ReporterController extends Controller
         $data['buero'] = Reporter::where('city_id', $id)->
         where('reporter_type','0')
         ->orderBy('reporter_id','DESC')->first();
+
+       
 
         $data['latest'] = News::where('status','1')->
                             orderBy('news_id','DESC')->take(3)->get();

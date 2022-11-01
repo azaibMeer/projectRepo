@@ -31,7 +31,7 @@ Route::get('/logout', function(Request $request){
 Route::get('/', [NewsController::class,'index']);
 Route::get('/detail/{slug}', [DetailController::class,'index']);
 Route::get('/topics/{slug}', [CategoryController::class,'index']);
-Route::get('category/detail/{id}', [CategoryDetailController::class,'index']);
+/*Route::get('category/detail/{id}', [CategoryDetailController::class,'index']);*/
 Route::get('/dashboard', [DashboardController::class,'index']);
 Route::get('/login', [AuthController::class,'index'])->name('login');
 Route::post('/dashboard', [AuthController::class,'login']);
@@ -52,8 +52,8 @@ Route::post('/cities/update/{id}', [CityController::class,'update']);
 Route::get('/cities/delete/{id}', [CityController::class,'destroy']);
 
 
-Route::get('/city/{id}', [CityController::class,'index']);
-Route::get('city/detail/{id}', [CityDetailController::class,'index']);
+Route::get('/city/{slug}', [CityController::class,'index']);
+/*Route::get('city/detail/{id}', [CityDetailController::class,'index']);*/
 
 
 // News routes // 
@@ -87,4 +87,4 @@ Route::get('/reporter/list', [ReporterController::class,'show']);
 Route::get('/reporter/edit/{id}', [ReporterController::class,'edit']);
 Route::post('/reporter/update/{id}', [ReporterController::class,'update']);
 Route::get('/reporter/delete/{id}', [ReporterController::class,'destroy']);
-Route::get('/reporter/detail/{id}', [ReporterController::class,'reporters']);
+Route::get('/reporter/{id}', [ReporterController::class,'reporters']);

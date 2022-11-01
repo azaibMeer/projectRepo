@@ -24,7 +24,7 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="single-politics-news">
                                 <div class="politics-news-image">
-                                    <a href="{{url('/category/detail/'.$web[$i]->news_id)}}">
+                                    <a href="{{url('/detail/'.$web[$i]->slug)}}">
                                         <img src="{{url($web[$i]->image)}}" alt="image" height="135px;" width="100%;">
                                     </a>
                                 </div>
@@ -32,7 +32,7 @@
                                 <div class="politics-news-content">
                                    
                                     <h3>
-                                        <a href="{{url('/category/detail/'.$web[$i]->news_id)}}"> {{Str::limit  ($web[$i]->title, 80, ' ...')}}</a>
+                                        <a href="{{url('/detail/'.$web[$i]->slug)}}"> {{Str::limit  ($web[$i]->title, 80, ' ...')}}</a>
                                     </h3>
                                      <span>{{$web[$i]->created_at->format('M/d/Y')}}</span>
                                 </div>

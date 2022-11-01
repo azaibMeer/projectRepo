@@ -1,7 +1,7 @@
 @extends('layouts.welcome') 
 @section('content')
 
-
+@if($web)
 
         <section class="news-details-area ptb-50">
             <div class="container">
@@ -63,6 +63,7 @@
                 
 
         </section>
-
-                  
+        @else
+        <h1 style="text-align: center;">یہ صفحہ دستیاب نہیں ہے۔</h1>
+             @endif     
         @endsection

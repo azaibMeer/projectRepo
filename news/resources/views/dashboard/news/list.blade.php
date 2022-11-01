@@ -71,7 +71,8 @@
                     <thead >
                     <tr>
                         <th>News Id </th>
-                        <th>News Title</th>
+                        <th>News title</th>
+                        <th>News slug</th>
                         <th>News description</th>
                         <th>News Image</th>
                         
@@ -84,7 +85,8 @@
                     @foreach($news as $news_data)
                     <tr class="gradeU">
                         <td>{{$news_data->news_id}}</td>
-                        <td>{{Str::limit($news_data->title, 10, ' ...')}}</td>
+                        <td>{!! Str::limit (strip_tags($news_data->title),30, '...') !!}</td>
+                        <td>{!! Str::limit (strip_tags($news_data->slug),15, '...') !!}</td>
                         <td>{!! Str::limit (strip_tags($news_data->content),30, '...') !!}</td>
                         <td>
                             <img src="{{ $news_data->image }}" height="30px" width="30px" />

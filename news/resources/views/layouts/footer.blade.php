@@ -50,7 +50,7 @@
                             <ul class="useful-links-list">
                                  @foreach($categories as $category)
                                 <li>
-                                    <a href="{{url('category/'.$category->category_id)}}">{{ $category->name }}</a>
+                                    <a href="{{url('/topics/'.$category->slug)}}">{{ $category->name }}</a>
                                 </li>
                                     @endforeach
                             </ul>
@@ -64,7 +64,7 @@
                                 <div class="row align-items-center">
                                     <div class="col-md-4">
                                         <div class="post-image">
-                                            <a href="#">
+                                <a href="{{url('/detail/'.$post->slug)}}">
                                                 <img src="{{$post->image}}" alt="image" height="80px" width="91px">
                                             </a>
                                         </div>
@@ -72,7 +72,7 @@
 
                                     <div class="col-md-8">
                                         <h4>
-                                            <a href="{{url('/detail/'.$post->news_id)}}">
+                                        <a href="{{url('/detail/'.$post->slug)}}">
                                         {{Str::limit($post->title, 50, ' ...')}}
                                             </a>
                                         </h4>

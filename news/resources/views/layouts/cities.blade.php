@@ -8,7 +8,7 @@
                    <div class="section-title"> 
                         <h2>{{$news->city_name}}</h2> 
                         
-                        <a href="{{url('/reporter/detail/'.$news->city_id)}}" style="float: left;margin-top: 10px;font-size: 20px;">
+                        <a href="{{url('/reporter/'.$news->city_id)}}" style="float: left;margin-top: 10px;font-size: 20px;">
                          <strong>   {{$news->city_name}} کے نماءندگان
                          </strong>
                         </a>
@@ -27,15 +27,15 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="single-politics-news">
                                 <div class="politics-news-image">
-                                    <a href="{{url('/city/detail/'.$web[$i]->news_id)}}">
-                                        <img src="{{url($web[$i]->image)}}" alt="image" >
+                                    <a href="{{url('/detail/'.$web[$i]->slug)}}">
+                                        <img src="{{url($web[$i]->image)}}" alt="image" width="100%" height="135px" >
                                     </a>
                                 </div>
                                 
                                 <div class="politics-news-content">
                                    
                                     <h3>
-                                        <a href="{{url('/city/detail/'.$web[$i]->news_id)}}">{{Str::limit  ($web[$i]->title, 80, ' ...')}}</a>
+                                        <a href="{{url('/detail/'.$web[$i]->slug)}}">{{Str::limit  ($web[$i]->title, 80, ' ...')}}</a>
                                     </h3>
                                      <span>{{$web[$i]->created_at->format('M/d/Y')}}</span>
                                 </div>

@@ -18,15 +18,19 @@ class CityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($id)
+    public function index($slug)
     {
          
          $data['setting'] = Setting::first();
          
         $data['categories'] = Category::where('status','1')->get();
 
+        $city = City::where("slug",$slug)->first();
+        $data['cities'] = $city;
+        $id = $city->id;
+        
         $data['news'] = News::join('cities','cities.id','news.city_id')->select('cities.*','news.*')->where('news.city_id',$id)->orderBy('news_id','DESC')->first();
-
+        //dd($data['news']);
          $data['web'] = News::where('city_id',$id)->where('status','1')
                             ->orderBy('news_id','DESC')
                             ->take(5)

@@ -1,11 +1,14 @@
 @extends('layouts.welcome') 
 @section('content')
 <style>
-      .slider { width: 100%; padding-bottom: 25%; }
+      .slider { width: 100%;}
       .slider img { width: 100%; }
       .wrapper { width: 100%; margin: 0; }
       @media only screen and (min-width: 1024px) {
-        .wrapper { width: 1024px; margin: auto; }
+        .wrapper { margin: auto; }
+      }
+      .image {
+          height:190px;
       }
     </style>
         
@@ -13,18 +16,19 @@
 <section class="main-news-area">
   <div class="container">
     <div class="container-fluid" >
-      <div class="row">
-     <div class="col-md-12" >
+     
+     
       <div class="wrapper">
-      <div id="myslider" class="slider">
-        <img src="/assets/img/main-news/ads.png"/ height="256px">
-        <img src="https://picsum.photos/1024/256"/>
+      <div id="myslider" class="slider" style="height: 190px ! important;">
+        <img src="/assets/img/main-news/ads.png"/ class="image">
+        <img src="/assets/img/main-news/ads.png"/ class="image">
+        
         
       </div>
     </div>
      <!--  <img src="/assets/img/main-news/ads.png"> -->
-    </div>
-  </div>
+    
+ 
       <div class="row" style="margin-top: 15px;">
         <div class="col-md-12">
           <div class="section-title">

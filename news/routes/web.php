@@ -15,6 +15,7 @@ use App\Http\Controllers\CityDetailController;
 use App\Http\Controllers\VerseController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ReporterController;
+use App\Http\Controllers\AdsController;
 
 
 
@@ -88,3 +89,7 @@ Route::get('/reporter/edit/{id}', [ReporterController::class,'edit']);
 Route::post('/reporter/update/{id}', [ReporterController::class,'update']);
 Route::get('/reporter/delete/{id}', [ReporterController::class,'destroy']);
 Route::get('/reporter/{id}', [ReporterController::class,'reporters']);
+
+
+Route::get('/ads/create', [AdsController::class,'create']);
+Route::post('/ads/store', [AdsController::class,'store']);

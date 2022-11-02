@@ -93,3 +93,7 @@ Route::get('/reporter/{id}', [ReporterController::class,'reporters']);
 
 Route::get('/ads/create', [AdsController::class,'create']);
 Route::post('/ads/store', [AdsController::class,'store']);
+Route::get('/ads/list', [AdsController::class,'show']);
+Route::get('/ads/edit/{id}', [AdsController::class,'edit']);
+Route::post('/ads/update/{id}', [AdsController::class,'update']);
+Route::get('/ads/delete/{id}', [AdsController::class,'destroy']);

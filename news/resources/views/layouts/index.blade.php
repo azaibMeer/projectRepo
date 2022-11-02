@@ -1,7 +1,7 @@
 @extends('layouts.welcome') 
 @section('content')
 <style>
-      .slider { width: 100%;}
+      .slider { width: 100%; height: 190px ! important;}
       .slider img { width: 100%; }
       .wrapper { width: 100%; margin: 0; }
       @media only screen and (min-width: 1024px) {
@@ -9,6 +9,7 @@
       }
       .image {
           height:190px;
+          width:1092px !important;
       }
     </style>
         
@@ -19,10 +20,13 @@
      
      
       <div class="wrapper">
-      <div id="myslider" class="slider" style="height: 190px ! important;">
-        <img src="/assets/img/main-news/ads.png"/ class="image">
-        <img src="/assets/img/main-news/ads.png"/ class="image">
-        
+      <div id="myslider" class="slider">
+
+        @foreach($ads as $slider)
+        <a href="{{$slider->link}}" target="_blank">
+        <img src="{{$slider->image}}" class="image" / >
+        </a>
+        @endforeach
         
       </div>
     </div>

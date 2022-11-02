@@ -82,6 +82,7 @@
                         <ul class="nav nav-second-level collapse">
                             
                             <li><a href="{{url('/ads/create')}}">Add</a></li>
+                            <li><a href="{{url('/ads/list')}}">List</a></li>
                             
                         </ul>
                     </li>

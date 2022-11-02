@@ -88,8 +88,7 @@
                                 <div class="col-lg-4"><div class="custom-file">
                                 <input id="logo" type="file" class="custom-file-input" name="image">
                                 <label for="logo" class="custom-file-label">Choose file...</label>
-                                </div><span>File Must be 550 px by 550 px
-                                </span>
+                                </div>
                                 <br>
                                 @if($reporter->image)
                                 <img src="{{$reporter->image}}" height="50px" width="50px;">

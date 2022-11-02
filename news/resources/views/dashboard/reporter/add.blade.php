@@ -88,7 +88,7 @@
                             <div class="col-lg-4"><div class="custom-file">
                                 <input id="logo" type="file" class="custom-file-input" name="image" required>
                                 <label for="logo" class="custom-file-label">Choose file...</label>
-                                </div> <span>File Must be 550 px by 550 px</span>
+                                </div> 
 
                                 </div> 
                                       <label class="col-lg-2 col-form-label"><strong>Reporter City</strong></label>

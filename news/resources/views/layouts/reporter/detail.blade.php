@@ -6,7 +6,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-3">
                         <div class="author-image">
-                            <img src="{{$buero->image}}" alt="image">
+                            <img src="{{$buero->image}}" alt="image" height="260px">
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@
                    <div class="col-lg-3 col-md-6">
                         <div class="single-team-box">
                             <div class="image">
-                                <img src="{{$reportar->image}}" alt="image">
+                                <img src="{{$reportar->image}}" alt="image" height="261px">
                         </div>
 
                             <div class="content">

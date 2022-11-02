@@ -8,6 +8,7 @@ use App\Models\City;
 use App\Models\Setting;
 use App\Models\Program;
 use App\Models\Verse;
+use App\Models\Ads;
 use Illuminate\Http\Request;
 use Validator;
 use Auth;
@@ -39,6 +40,7 @@ class NewsController extends Controller
 
         $data['latest'] = News::where('status','1')->
                             orderBy('news_id','DESC')->take(3)->get();
+        $data['ads'] = Ads::orderBy('id','DESC')->take(3)->get();
          return view('layouts.index',$data );
     }
 
@@ -77,10 +79,10 @@ class NewsController extends Controller
         'title' => 'required',
         'content' => 'required',
         'slug' => 'required',
-       
         'city' => 'required',
+        'image' => 'required',
         'category' => 'required',
-        'status' => 'required',
+        'status' => 'required'
          ]);
 
         

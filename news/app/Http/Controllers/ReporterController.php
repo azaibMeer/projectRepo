@@ -68,21 +68,12 @@ class ReporterController extends Controller
         if($request->hasfile('image')){
             
             $file = $request->file('image');
-            
-            $fileArray = array('image'=>$file);
-            $rules = array(
-                'image' => 'required|image|dimensions:width=550,height=550'
-            );
-            $validator = Validator::make($fileArray,$rules);
-            if($validator->fails()){
-                 return redirect('/reporter/create')->with('danger', 'Image Must Contain 550 px by 550 px ... Reporter Not Added Successfully');
-            }else{
             $imageName = time(). "_".$file->GetClientOriginalName();
             $filename = '/assets/img/reporter_img/'.$imageName;
             
             $file->move(public_path('/assets/img/reporter_img/'), $filename);
             $reporter->image = $filename;
-            }
+        
             
         }
       
@@ -154,21 +145,12 @@ class ReporterController extends Controller
         if($request->hasfile('image')){
             
             $file = $request->file('image');
-            
-            $fileArray = array('image'=>$file);
-            $rules = array(
-                'image' => 'required|image|dimensions:width=550,height=550'
-            );
-            $validator = Validator::make($fileArray,$rules);
-            if($validator->fails()){
-                 return redirect('/reporter/create')->with('danger', 'Image Must Contain 550 px by 550 px ... Reporter Not Edit Successfully');
-            }else{
             $imageName = time(). "_".$file->GetClientOriginalName();
             $filename = '/assets/img/reporter_img/'.$imageName;
             
             $file->move(public_path('/assets/img/reporter_img/'), $filename);
             $reporter->image = $filename;
-            }
+           
             
         }
       

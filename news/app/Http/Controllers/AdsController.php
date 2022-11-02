@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Ads;
 use Illuminate\Http\Request;
-
+use Auth;
 class AdsController extends Controller
 {
     /**
@@ -39,21 +39,22 @@ class AdsController extends Controller
         $request->validate([
 
         'link' => 'required',
+        'image' => 'required'
         
         
 
        ]);
 
-        $Ads = new Ads();
-        $Ads->link = $request->link;
+        $ads = new Ads();
+        $ads->link = $request->link;
 
         if($request->hasfile('image')){
             
             $file = $request->file('image');
             $imageName = time(). "_".$file->GetClientOriginalName();
-            $filename = '/assets/img/ads/'.$imageName;
-            $file->move(public_path('/assets/img/ads/'), $filename);
-            $Ads->image = $filename;
+            $filename = '/assets/img/main-news/'.$imageName;
+            $file->move(public_path('/assets/img/main-news/'), $filename);
+            $ads->image = $filename;
 
 
             
@@ -61,8 +62,8 @@ class AdsController extends Controller
         }
 
 
-        $Ads->save();
-        return redirect('/ads/create')->with('success', 'Category inserted Successfully');
+        $ads->save();
+        return redirect('/ads/list')->with('success', 'Ads inserted Successfully');
     }
 
     /**
@@ -71,9 +72,10 @@ class AdsController extends Controller
      * @param  \App\Models\Ads  $ads
      * @return \Illuminate\Http\Response
      */
-    public function show(Ads $ads)
-    {
-        //
+    public function show()
+    {   
+        $data['ads'] = Ads::get();
+        return view("dashboard.ads.list",$data);
     }
 
     /**
@@ -82,9 +84,11 @@ class AdsController extends Controller
      * @param  \App\Models\Ads  $ads
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ads $ads)
-    {
-        //
+    public function edit($id)
+    {   
+
+        $data['ad'] = Ads::where('id',$id)->first();
+        return view("dashboard.ads.edit",$data);
     }
 
     /**
@@ -94,9 +98,35 @@ class AdsController extends Controller
      * @param  \App\Models\Ads  $ads
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Ads $ads)
+    public function update(Request $request, $id)
     {
-        //
+        //dd($request->all());
+
+         $request->validate([
+
+        'link' => 'required',
+        
+         ]);
+
+        $ads = Ads::find($id);
+        $ads->link = $request->link;
+          if($request->hasfile('image')){
+            
+            $file = $request->file('image');
+            $imageName = time(). "_".$file->GetClientOriginalName();
+            $filename = '/assets/img/main-news/'.$imageName;
+            $file->move(public_path('/assets/img/main-news/'), $filename);
+            $ads->image = $filename;
+            
+            
+        }
+
+        $ads->update();
+        if(Auth::User()){
+        return redirect('/ads/list')->with('success', 'ad Updated Successfully');
+        }else{
+            return redirect("/login")->with('danger', 'please login first');
+        }
     }
 
     /**
@@ -105,8 +135,10 @@ class AdsController extends Controller
      * @param  \App\Models\Ads  $ads
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Ads $ads)
+    public function destroy($id)
     {
-        //
+        $ads = Ads::find($id);
+        $ads->delete();
+        return redirect('/ads/list')->with('danger', 'Ad delete Successfully');
     }
 }

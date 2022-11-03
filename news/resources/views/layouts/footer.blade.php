@@ -62,15 +62,9 @@
                             @foreach($latest as $post)
                             <div class="post-content">
                                 <div class="row align-items-center">
-                                    <div class="col-md-4">
-                                        <div class="post-image">
-                                <a href="{{url('/detail/'.$post->slug)}}">
-                                                <img src="{{$post->image}}" alt="image" height="80px" width="91px">
-                                            </a>
-                                        </div>
-                                    </div>
+                                    
 
-                                    <div class="col-md-8">
+                                    <div class="col-md-12">
                                         <h4>
                                         <a href="{{url('/detail/'.$post->slug)}}">
                                         {{Str::limit($post->title, 50, ' ...')}}
@@ -98,6 +92,17 @@
                             <input type="submit" class="btn btn-warning btn-lg" value="سبسکرائب کریں" id="subscribe_btn">
                                 </form>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 col-md-6 col-sm-3">
+                        <div class="single-footer-widget">
+                            <footer style="color:white; float:left">  {{ now()->year }} Pak  Awami News. All Rights  Reserved  &copy;  </footer>
+                             <footer style="color:white; float:right">Created By
+                                <a href="http://www.technidersolutions.com/" target="_blank" style="color:#ffa500">Technider Solutions</a>
+                             </footer>
+
                         </div>
                     </div>
                 </div>

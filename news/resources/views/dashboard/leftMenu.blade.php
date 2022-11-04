@@ -83,6 +83,15 @@
                             
                         </ul>
                     </li>
+                    <li>
+                        <a href="#"><i class="fa fa-list"></i> <span class="nav-label">Programs</span><span class="fa arrow"></span></a>
+                        <ul class="nav nav-second-level collapse">
+                            
+                            <li><a href="{{url('/program/create')}}">Add</a></li>
+                            <li><a href="{{url('/program/list')}}">List</a></li>
+                            
+                        </ul>
+                    </li>
                   </ul>
 
             </div>

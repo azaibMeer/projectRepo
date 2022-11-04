@@ -34,7 +34,10 @@ class NewsController extends Controller
 
 
         $data['cities'] = City::where('status','1')->get();
-        $data['programs'] = Program::where('status','1')->get();
+
+        $data['programs'] = Program::where('status','1')->
+                    orderBy('id','DESC')->take(8)->get();
+
         $data['verse'] = Verse::where('status','1')->
                             orderBy('id','DESC')->first();
 
@@ -208,7 +211,7 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-         $news = News::find($id);
+        $news = News::find($id);
         $news->delete();
         return redirect('/news/list')->with('danger', 'news delete Successfully');
     }

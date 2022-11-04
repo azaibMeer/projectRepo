@@ -153,10 +153,10 @@
                                     <div class="col-sm-10">
                                         
                                         
-                                        <div class="i-checks"><label> <input type="radio" required
+                                        <div class="i-checks"><label> <input type="radio" name="status" required
                                             value="1" 
                                             {{$news->status == 1 ? 'checked':''}} 
-                                         name="status"> <i></i> publish </label></div>
+                                         > <i></i> publish </label></div>
                                         <div class="i-checks"><label> <input type="radio" required 
                                         value="0" 
                                             {{$news->status == 0 ? 'checked':''}} 

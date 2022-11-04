@@ -16,6 +16,7 @@ use App\Http\Controllers\VerseController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\ReporterController;
 use App\Http\Controllers\AdsController;
+use App\Http\Controllers\ProgramController;
 
 
 
@@ -97,3 +98,12 @@ Route::get('/ads/list', [AdsController::class,'show']);
 Route::get('/ads/edit/{id}', [AdsController::class,'edit']);
 Route::post('/ads/update/{id}', [AdsController::class,'update']);
 Route::get('/ads/delete/{id}', [AdsController::class,'destroy']);
+
+// programs //
+
+Route::get('/program/create', [ProgramController::class,'create']);
+Route::post('/program/store', [ProgramController::class,'store']);
+Route::get('/program/list', [ProgramController::class,'show']);
+Route::get('/program/edit/{id}', [ProgramController::class,'edit']);
+Route::post('/program/update/{id}', [ProgramController::class,'update']);
+Route::get('/program/delete/{id}', [ProgramController::class,'destroy']);

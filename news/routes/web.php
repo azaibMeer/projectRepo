@@ -44,6 +44,7 @@ Route::get('user/contact', [ContactUsController::class,'index']);
 Route::group(['middleware'=> 'admin'],function(){
 
 
+
 // category routes // 
 Route::get('/categories/create', [CategoryController::class,'create']);
 Route::post('/categories/store', [CategoryController::class,'store']);

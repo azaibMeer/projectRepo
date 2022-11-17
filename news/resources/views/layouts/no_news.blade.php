@@ -9,9 +9,9 @@
         
                             <h3>خبر موجود نہیں ہے</h3>
                             
-        
                             <a href="{{url('/')}}" class="default-btn">
-                                Go to home
+                            Go to home
+                            
                             </a>
                         </div>
                     </div>

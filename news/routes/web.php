@@ -33,10 +33,17 @@ Route::get('/logout', function(Request $request){
 Route::get('/', [NewsController::class,'index']);
 Route::get('/detail/{slug}', [DetailController::class,'index']);
 Route::get('/topics/{slug}', [CategoryController::class,'index']);
+Route::get('/city/{slug}', [CityController::class,'index']);
 /*Route::get('category/detail/{id}', [CategoryDetailController::class,'index']);*/
+
 Route::get('/dashboard', [DashboardController::class,'index']);
 Route::get('/login', [AuthController::class,'index'])->name('login');
 Route::post('/dashboard', [AuthController::class,'login']);
+Route::get('user/contact', [ContactUsController::class,'index']);
+
+Route::group(['middleware'=> 'admin'],function(){
+
+
 // category routes // 
 Route::get('/categories/create', [CategoryController::class,'create']);
 Route::post('/categories/store', [CategoryController::class,'store']);
@@ -54,7 +61,7 @@ Route::post('/cities/update/{id}', [CityController::class,'update']);
 Route::get('/cities/delete/{id}', [CityController::class,'destroy']);
 
 
-Route::get('/city/{slug}', [CityController::class,'index']);
+
 /*Route::get('city/detail/{id}', [CityDetailController::class,'index']);*/
 
 
@@ -66,9 +73,10 @@ Route::get('/news/edit/{id}', [NewsController::class,'edit']);
 Route::post('/news/update/{id}', [NewsController::class,'update']);
 Route::get('/news/delete/{id}', [NewsController::class,'destroy']);
 
-Route::get('user/contact', [ContactUsController::class,'index']);
+
 Route::post('/contact/store', [ContactUsController::class,'store']);
 Route::get('/contact/list', [ContactUsController::class,'show']);
+Route::get('/db/record', [ContactUsController::class,'duplicateRecord']);
 
 
 Route::post('/subscribe/store', [SubscribeController::class,'store']);
@@ -107,3 +115,7 @@ Route::get('/program/list', [ProgramController::class,'show']);
 Route::get('/program/edit/{id}', [ProgramController::class,'edit']);
 Route::post('/program/update/{id}', [ProgramController::class,'update']);
 Route::get('/program/delete/{id}', [ProgramController::class,'destroy']);
+
+
+});
+

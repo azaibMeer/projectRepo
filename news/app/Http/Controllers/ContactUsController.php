@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\News;
 use App\Models\Contact;
+use App\Models\User;
 use App\Models\Verse;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NewsController;
-
+use DB;
 class ContactUsController extends Controller
 {
     /**
@@ -114,4 +115,11 @@ class ContactUsController extends Controller
     {
         //
     }
+
+
+    public function duplicateRecord(Contact $contact)
+    {
+        
+    }
+
 }

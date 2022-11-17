@@ -185,7 +185,7 @@
              <div class="owl-carousel owl-theme">
             @foreach($programs as $program)
                 <div class="item">
-                    <a href="#">
+                    <a href="{{$program->slug}}">
                     <img src="{{$program->image}}">
                     </a>
                     </a>
